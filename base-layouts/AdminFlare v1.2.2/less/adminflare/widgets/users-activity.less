@@ -1,0 +1,79 @@
+//
+// Widgets / Users Activity
+// --------------------------------------------------
+
+.widget-users-activity {
+  .activity {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    min-height: 37px;
+    padding: 11px 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    & > img, & > i {
+      display: inline-block;
+      height: 35px;
+      width: 35px;
+    }
+
+    & > img {
+      .border-radius(3px);
+    }
+
+    & > i {
+      color: #aaa;
+      font-size: 21px;
+      height: 28px;
+      line-height: 30px;
+      margin-right: 10px;
+      position: relative;
+      top: 3px;
+    }
+
+    & > i:after {
+      background: #e7e7e7;
+      content: "";
+      display: block;
+      height: 6px;
+      left: 30px;
+      width: 6px;
+      position: relative;
+      top: -18px;
+      .border-radius(20px);
+    }
+
+    & > span {
+      color: #888;
+      display: block;
+      float: right;
+      font-size: 11px;
+      margin-top: -3px;
+    }
+
+    & > div {
+      margin-bottom: -38px;
+      margin-left: 95px;
+      margin-right: 25px;
+      position: relative;
+      top: -38px;
+
+      .comment {
+        color: #999;
+        display: block;
+        line-height: 17px !important;
+        padding-top: 4px;
+      }
+    }
+  }
+}
+
+.widget-users-activity,
+.widget-users-activity {
+  .activity {
+    margin: 0 -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

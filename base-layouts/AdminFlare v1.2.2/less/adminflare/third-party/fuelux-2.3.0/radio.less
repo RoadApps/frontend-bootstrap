@@ -1,0 +1,42 @@
+.radio-custom {
+	i {
+		background-image: url("@{imagesPath}/form.png");
+		background-position: 0 -23px;
+
+		&.checked {
+			/* checked */
+			background-position: -48px -23px;
+		}
+
+		&.disabled {
+			/* disabled */
+			background-position: -64px -23px;
+
+			&.checked {
+				/* disabled and checked */
+				background-position: -80px -23px;
+			}
+		}
+	}
+}
+
+.radio-custom:hover {
+	i {
+		background-position: -16px -23px;
+
+		&.checked {
+			/* checked */
+			background-position: -32px -23px;
+		}
+
+		&.disabled {
+			/* disabled */
+			background-position: -64px -23px;
+
+			&.checked {
+				/* disabled and checked */
+				background-position: -80px -23px;
+			}
+		}
+	}
+}

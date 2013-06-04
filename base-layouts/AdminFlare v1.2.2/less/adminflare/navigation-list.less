@@ -1,0 +1,31 @@
+//
+// Navigation lists
+// --------------------------------------------------
+
+.nav-list {
+  & > li > a {
+    color: #777777;
+    font-size: 13px;
+  }
+  
+  // Hover state
+  & > li > a:hover {
+    color: #444;
+  }
+  
+  // Active state
+  & > li.active {
+    background: @activeHighlightColor;
+  }
+  
+  & > li.active > a,
+  & > li.active > a:hover {
+    cursor: default;
+    background: @activeHighlightColor;
+  }
+  
+  // Navigation header
+  .nav-header {
+    color: @activeHighlightColor;
+  }
+}

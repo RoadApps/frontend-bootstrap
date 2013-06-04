@@ -1,0 +1,71 @@
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+
+.pagination {
+  ul {
+    .box-shadow(none);
+  }
+
+  ul > li > a,
+  ul > li > span {
+    border: 1px solid #ddd;
+    color: #777777;
+    margin-right: 5px;
+    .border-radius(~"3px !important");
+  }
+
+  ul > li > span {
+    border: none;
+  }
+
+  ul > li > a:focus {
+    background: none;
+  }
+  
+  ul > li > a:hover {
+    background: none;
+    border-color: @activeHighlightColor;
+    color: #444;
+  }
+  
+  ul > li.active > a,
+  ul > li.active > a:hover,
+  ul > li.active > a:focus,
+  ul > li.active > span {
+    background: @activeHighlightColor;
+    border-color: @activeHighlightColor;
+    color: #fff;
+    font-weight: 700;
+  }
+  
+  ul > li.disabled > a:hover {
+    border-color: #ddd;
+  }
+}
+
+
+// Pager pagination
+// --------------------------------------------------
+
+.pager {  
+  li > a, li > span {
+    border-color: #ddd;
+    color: #777777;
+    font-size: 14px;
+  }
+  
+  li > a:focus {
+    background: none;
+  }
+
+  li > a:hover {
+    background: none;
+    border-color: @activeHighlightColor;
+    color: #444;
+  }
+  
+  li.disabled > a:hover {
+    border-color: #ddd;
+  }
+}

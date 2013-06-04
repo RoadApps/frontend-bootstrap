@@ -1,0 +1,151 @@
+//
+// Tabs
+// --------------------------------------------------
+
+.nav {
+  .dropdown-toggle .caret {
+    border-top-color: #999999;
+  }
+
+  .dropdown-toggle:hover .caret {
+    border-top-color: #444444;
+  }
+}
+
+
+// Tabs
+// ----
+
+.nav-tabs {
+  border-bottom: 2px solid #e1e1e1;
+  margin-bottom: 12px;
+  .box-shadow(rgba(255, 255, 255, 0.75) 0 1px 0);
+  
+  & > li > a,
+  & > li > a:focus,
+  & > li > a:active {
+    background: none;
+    border: none;
+    color: #999999;
+    font-size: 14px;
+    margin-bottom: -1px;
+    padding: 3px 15px;
+  }
+
+  & > li > a:hover {
+    background: none;
+    color: #444;
+  }
+  
+  & > .active > a,
+  & > .active > a:focus,
+  & > .active > a:active,
+  & > .active > a:hover {
+    background: none;
+    border: none;
+    border-bottom: 2px solid @activeHighlightColor;
+    color: #444;
+  }
+}
+
+
+// BOTTOM
+// ------
+
+.tabs-below {
+  .nav-tabs {
+    border-top: 2px solid #e1e1e1;
+    .box-shadow(rgba(255, 255, 255, 0.75) 0 1px 0 inset);
+    
+    & > li > a {
+      margin-bottom: 0;
+      margin-top: -1px;
+      padding: 4px 15px;
+    }
+    
+    & > .active > a,
+    & > .active > a:hover {
+      border: none;
+      border-top: 2px solid @activeHighlightColor;
+      padding-top: 2px;
+    }
+  }
+}
+
+
+// LEFT
+// ------
+
+.tabs-left {
+  .nav-tabs {
+    border-right: 2px solid #e1e1e1;
+    .box-shadow(rgba(255, 255, 255, 0.75) 1px 0 0);
+    
+    & > li > a {
+      margin-bottom: 0;
+      margin-right: -2px;
+    }
+    
+    & > .active > a,
+    & > .active > a:hover {
+      border: none;
+      border-right: 2px solid @activeHighlightColor;
+      padding-right: 13px;
+    }
+  }
+}
+
+
+// RIGHT
+// ------
+
+.tabs-right {
+  .nav-tabs {
+    border-left: 2px solid #e1e1e1;
+    .box-shadow(rgba(255, 255, 255, 0.75) 1px 0 0 inset);
+    
+    & > li > a {
+      margin-bottom: 0;
+      margin-left: -2px;
+    }
+    
+    & > .active > a,
+    & > .active > a:hover {
+      border: none;
+      border-left: 2px solid @activeHighlightColor;
+      padding-left: 13px;
+    }
+  }
+}
+
+
+// STACKED NAV
+// -----------
+
+.nav-tabs.nav-stacked {
+  & > li > a {
+    padding: 7px 18px;
+  }
+
+  & > li > a,
+  & > li > a:focus,
+  & > li > a:active,
+  & > li > a:hover {
+    border: 1px solid #ddd;
+  }
+
+  & > .active > a,
+  & > .active > a:hover {
+    padding-left: 30px;
+    
+    &:before {
+      background: @activeHighlightColor;
+      content: " ";
+      display: block;
+      height: 5px;
+      margin: 8px 0 0 -11px;
+      position: absolute;
+      width: 5px;
+    }
+  }
+}

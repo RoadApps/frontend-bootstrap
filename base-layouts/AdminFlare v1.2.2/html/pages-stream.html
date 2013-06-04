@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>
+		AdminFlare - Pages - Stream
+	</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+
+	<script src="assets/javascripts/1.2.2/adminflare-demo-init.min.js" type="text/javascript"></script>
+
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+		// Include Bootstrap stylesheet 
+		document.write('<link href="assets/css/' + DEMO_ADMINFLARE_VERSION + '/' + DEMO_CURRENT_THEME + '/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" id="bootstrap-css">');
+		// Include AdminFlare stylesheet 
+		document.write('<link href="assets/css/' + DEMO_ADMINFLARE_VERSION + '/' + DEMO_CURRENT_THEME + '/adminflare.min.css" media="all" rel="stylesheet" type="text/css" id="adminflare-css">');
+		// Include AdminFlare page stylesheet 
+		document.write('<link href="assets/css/' + DEMO_ADMINFLARE_VERSION + '/pages.min.css" media="all" rel="stylesheet" type="text/css">');
+	</script>
+	
+	<script src="assets/javascripts/1.2.2/modernizr-jquery.min.js" type="text/javascript"></script>
+	<script src="assets/javascripts/1.2.2/adminflare-demo.min.js" type="text/javascript"></script>
+	<script src="assets/javascripts/1.2.2/bootstrap.min.js" type="text/javascript"></script>
+	<script src="assets/javascripts/1.2.2/adminflare.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var events = [
+				{ type: 'user-event', message: 'User logged in.', icon: '<img src="assets/images/avatar.png" alt="">', caption: 'Moderator' },
+				{ type: 'server-error', message: 'Error 500: Syntax error in index.php at line 461.' },
+				{ type: 'server-warning', message: 'Warning: Processor load 92%.' },
+				{ type: 'server-success', message: 'Server up.' },
+				{ type: 'mailer', message: 'Newsletter has been sent at 1258 emails.' },
+				{ type: 'shop', message: 'Item "T-shirt Be Happy" has been sold for $20.' },
+				{ type: 'cron', message: 'Job "Clean DB" has been completed.' }
+			], addEvent = function () {
+				var event = $.extend({}, events[events.push(events.shift()) - 1]);
+				$('#stream-example').afStream('addEvent', event);
+			};
+	
+			$('#stream-example').afStream({
+				event_types: {
+					'user-event': { },
+					'server-error': {
+						icon: '<i class="icon-hdd" />',
+						caption: 'System'
+					},
+					'server-warning': {
+						icon: '<i class="icon-hdd" />',
+						caption: 'System'
+					},
+					'server-success': {
+						icon: '<i class="icon-hdd" />',
+						caption: 'System'
+					},
+					'mailer': {
+						icon: '<i class="icon-envelope" />',
+						caption: 'Mailer'
+					},
+					'shop': {
+						icon: '<i class="icon-tag" />',
+						caption: 'Shop'
+					},
+					'cron': {
+						icon: '<i class="icon-time" />',
+						caption: 'Cron Daemon'
+					}
+				},
+				update_interval: 3, // seconds
+				time_update_interval: 1, // seconds
+				onUpdate: addEvent
+			});
+
+			$('.filters input').click(function () {
+				$('#stream-example').afStream(
+					($(this).is(':checked')) ? 'showEvents' : 'hideEvents',
+					$(this).attr('data-event-types')
+				);
+			});
+
+			$('#refresh-interval').change(function () {
+				$('#stream-example').afStream('setUpdateInterval', $(this).val());
+			});
+
+			$('#show-last-n-events').change(function () {
+				$('#stream-example').afStream('setShowLimit', $(this).val());
+			});
+
+			$('#add-event').click(addEvent);
+		});
+
+		var toggleSelection = function () {
+			var $checked = $("input:checked").click();
+			$("input:not(:checked)").click();
+			$checked.click();
+
+		}, selectAll = function () {
+			$("input:not(:checked)").click();
+
+		}, unselectAll = function () {
+			$("input:checked").click();
+
+		}, clearAll = function () {
+			$('#stream-example').afStream('clearAllEvents');
+
+		};
+	</script>
+
+	<style type="text/css">
+		.stream-event-server-error i {
+			background: #d54848;
+			color: #fff;
+		}
+
+		.stream-event-server-warning i {
+			background: #ecad3f;
+			color: #fff;
+		}
+
+		.stream-event-server-success i {
+			background: #71c73e;
+			color: #fff;
+		}
+
+		.stream-event-mailer i {
+			background: #77b7c5;
+			color: #fff;
+		}
+
+		.stream-event-cron i {
+			background: #ddd;
+		}
+
+		.stream-event-shop i {
+			background: #7764ae;
+			color: #fff;
+		}
+	</style>
+</head>
+<body class="pages-stream">
+<script type="text/javascript">demoSetBodyLayout();</script>
+	<!-- Main navigation bar
+		================================================== -->
+	<header class="navbar navbar-fixed-top" id="main-navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="logo" href="#"><img alt="Af_logo" src="assets/images/af-logo.png"></a>
+
+				<a class="btn nav-button collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-reorder"></span>
+				</a>
+
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <i class=" icon-caret-down"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li class="nav-header">Nav header</li>
+								<li><a href="#">Separated link</a></li>
+								<li><a href="#">One more separated link</a></li>
+							</ul>
+						</li>
+						<li class="divider-vertical"></li>
+					</ul>
+					<form class="navbar-search pull-left" action="" _lpchecked="1">
+						<input type="text" class="search-query" placeholder="Search" style="width: 120px">
+					</form>
+					<ul class="nav pull-right">
+						<li>
+							<ul class="messages">
+								<li>
+									<a href="#"><i class="icon-warning-sign"></i> 2<span class="		responsive-text"> alerts</span></a>
+								</li>
+								<li>
+									<a href="#"><i class="icon-envelope"></i> 25<span class="		responsive-text"> new messages</span></a>
+								</li>
+							</ul>
+						</li>
+						<li class="separator"></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle usermenu" data-toggle="dropdown">
+								<img alt="Avatar" src="assets/images/avatar.png">
+								<span>&nbsp;&nbsp;Admin</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Profile</a>
+								</li>
+								<li>
+									<a href="#">Settings</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="index.html">Sign In</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- / Main navigation bar -->
+	
+	<!-- Left navigation panel
+		================================================== -->
+	<nav id="left-panel">
+		<div id="left-panel-content">
+			<ul>
+				<li>
+					<a href="dashboard.html"><span class="icon-dashboard"></span>Dashboard</a>
+				</li>
+				<li>
+					<a href="layout.html"><span class="icon-th-large"></span>Layout</a>
+				</li>
+				<li>
+					<a href="typography.html"><span class="icon-font"></span>Typography</a>
+				</li>
+				<li>
+					<a href="forms.html"><span class="icon-edit"></span>Forms</a>
+				</li>
+				<li>
+					<a href="tables.html"><span class="icon-table"></span>Tables</a>
+				</li>
+				
+				<li>
+					<a href="components.html"><span class="icon-inbox"></span>Components</a>
+				</li>
+				<li>
+					<a href="javascript.html"><span class="icon-cog"></span>JavaScript</a>
+				</li>
+				<li class="lp-dropdown">
+					<a href="#" class="lp-dropdown-toggle" id="extras-dropdown"><span class="icon-reorder"></span>Extras</a>
+					<ul class="lp-dropdown-menu" data-dropdown-owner="extras-dropdown">
+						<li>
+							<a tabindex="-1" href="extras-icons.html"><span class="icon-coffee"></span>Icons</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="extras-charts.html"><span class="icon-bar-chart"></span>Charts</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="extras-widgets.html"><span class="icon-star"></span>Widgets</a>
+						</li>
+					</ul>
+				</li>
+				<li class="lp-dropdown active">
+					<a href="#" class="lp-dropdown-toggle" id="pages-dropdown"><span class="icon-file-alt"></span>Pages</a>
+					<ul class="lp-dropdown-menu simple" data-dropdown-owner="pages-dropdown">
+						<li>
+							<a tabindex="-1" href="index.html"><i class="icon-signin"></i>&nbsp;&nbsp;Sign In</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-signup.html"><i class="icon-check"></i>&nbsp;&nbsp;Sign Up</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-messages.html"><i class="icon-envelope-alt"></i>&nbsp;&nbsp;Messages</a>
+						</li>
+						<li class="active">
+							<a tabindex="-1" href="pages-stream.html"><i class="icon-leaf"></i>&nbsp;&nbsp;Stream</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-pricing.html"><i class="icon-money"></i>&nbsp;&nbsp;Pricing</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-invoice.html"><i class="icon-pencil"></i>&nbsp;&nbsp;Invoice</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="icon-caret-down"></div>
+		<div class="icon-caret-up"></div>
+	</nav>
+	<!-- / Left navigation panel -->
+	
+	<!-- Page content
+		================================================== -->
+	<section class="container">
+
+		<!-- ================================================== -->
+		<section class="row-fluid non-gutter-grid">
+			<div class="row-fluid">
+				<div class="span4">&nbsp;</div>
+				<div class="span8">
+					<h3 class="box-header">
+						<i class="icon-leaf"></i> Live stream
+						<button class="btn btn-primary btn-mini pull-right" id="add-event"><i class="icon-refresh"></i></button></h3>
+				</div>
+			</div>
+			<div class="box">
+				<!-- Filters and settings
+					================================================== -->
+				<div class="span4">
+					<div class="panel">
+						<div class="filters">
+							<h5 style="margin-top: -20px">
+								FILTERS
+								<div class="btn-group pull-right">
+									<a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">
+										<i class="icon-check"></i>
+										<i class="icon-caret-down"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="javascript:toggleSelection()" id="toggle-selection">Toggle Selection</a>
+										</li>
+										<li>
+											<a href="javascript:selectAll()" id="select-all">Select All</a>
+										</li>
+										<li>
+											<a href="javascript:unselectAll()" id="unselect-all">Unselect All</a>
+										</li>
+										<li class="divider"></li>
+										<li>
+											<a href="javascript:clearAll()" id="clear-all">Clear All</a>
+										</li>
+									</ul>
+								</div>
+							</h5>
+							<ul>
+								<li>
+									<label for="show-user-events">
+										<i class="icon-user"></i>&nbsp;&nbsp;User events
+									</label>
+									<div class="pull-right">
+										<input type="checkbox" checked="checked" id="show-user-events" data-event-types="user-event">
+									</div>
+								</li>
+								<li>
+									<label for="show-server-events">
+										<i class="icon-hdd"></i>&nbsp;&nbsp;System events
+									</label>
+									<div class="pull-right">
+										<input type="checkbox" checked="checked" id="show-server-events" data-event-types="server-error, server-warning, server-success">
+									</div>
+								</li>
+								<li>
+									<label for="show-mailer-events">
+										<i class="icon-envelope"></i>&nbsp;&nbsp;Mailer events
+									</label>
+									<div class="pull-right">
+										<input type="checkbox" checked="checked" id="show-mailer-events" data-event-types="mailer">
+									</div>
+								</li>
+								<li>
+									<label for="show-shop-events">
+										<i class="icon-tag"></i>&nbsp;&nbsp;Shop events
+									</label>
+									<div class="pull-right">
+										<input type="checkbox" checked="checked" id="show-shop-events" data-event-types="shop">
+									</div>
+								</li>
+								<li>
+									<label for="show-cron-events">
+										<i class="icon-time"></i>&nbsp;&nbsp;Cron events
+									</label>
+									<div class="pull-right">
+										<input type="checkbox" checked="checked" id="show-cron-events" data-event-types="cron">
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="settings">
+							<h5>SETTINGS</h5>
+							<ul>
+								<li>
+									<label for="refresh-interval">Refresh interval:</label>
+									<div class="span5 pull-right">
+										<select id="refresh-interval">
+											<option value="1">1 second</option>
+											<option value="3" selected="selected">3 seconds</option>
+											<option value="5">5 seconds</option>
+											<option value="10">10 seconds</option>
+											<option value="0">No refresh</option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<label for="show-last-n-events">Show last:</label>
+									<div class="span5 pull-right">
+										<select id="show-last-n-events">
+											<option value="0" selected="selected">All events</option>
+											<option value="3">3 events</option>
+											<option value="5">5 events</option>
+											<option value="10">10 events</option>
+											<option value="20">20 events</option>
+										</select>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- / Filters and settings -->
+
+				<!-- Stream
+					================================================== -->
+				<div class="span8">
+					<div class="widget-stream" id="stream-example"></div>
+				</div>
+				<!-- / Stream -->
+			</div>
+		</section>
+			
+		<!-- Page footer
+			================================================== -->
+		<footer id="main-footer">
+			Copyright © 2013 <a href="#">Your Company</a>, all rights reserved.
+			<a href="#" class="pull-right" id="on-top-link">
+				On Top &nbsp;<i class=" icon-chevron-up"></i>
+			</a>
+		</footer>
+		<!-- / Page footer -->
+	</section>
+</body>
+</html>

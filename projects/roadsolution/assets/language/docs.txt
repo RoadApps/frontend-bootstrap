@@ -1,0 +1,80 @@
+
+// en: English
+
+// Page Login
+#forgot Forgot?
+#signin Sign In
+#orsignin ...or sign in with
+
+// Navigation Left
+#nav-dashboard Dashboard
+#nav-import Import
+#nav-parameters Parameters
+#nav-simulate Simulate
+#nav-routes Routes
+#nav-export Export
+
+// Page Dashboard
+#title-dashboard Dashboard - Road Solution
+
+// Page Import
+#title-import Import - Road Solution
+#vehicles Vehicles
+#orders Orders
+#location Location
+#name Name
+#time Time
+#example Example
+#example1 Example
+#example2 Example
+#submit Submit
+#submit1 Submit
+
+#pane Pane
+#fleet Fleet
+#size Size
+#type Type
+
+#ctrc CTRC
+#weight Weight
+#value Value ($)
+#volume Volume
+
+
+// Page Export
+#title-export Export - Road Solution
+#export Export
+#sync Sync
+#sync1 Sync
+#tofile To File:
+#tomobile To Mobile:
+#todevice To Device:
+
+// Page Parameters
+#title-parameters Parameters - Road Solution
+#restrictions Restrictions
+#strategies Strategies
+#resources Resources
+#btsimulate Simulate
+
+// Page Simulate
+#title-simulate Simulate - Road Solution
+#progress Progress
+#parameters Parameters
+
+#amount Amount
+#unitcapacity Unit. Cap.
+#totalcapacity Total Cap.
+
+#totalweight Tot. Weight
+#totalvalue Tot. Value
+#totalvolume Tot. Volume
+
+// Page Routes
+#title-routes Routes - Road Solution
+#createroutes Create Routes
+#createroute Create Route
+#addparade Add Parade
+
+// Footer
+#allreserved , all rights reserved.

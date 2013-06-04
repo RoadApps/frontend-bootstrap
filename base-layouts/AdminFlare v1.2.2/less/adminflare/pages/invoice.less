@@ -1,0 +1,143 @@
+.invoice {
+  color: #484848;
+  padding: 1px 40px 0 40px;
+
+  .header {
+    background: #f7f7f7;
+    border-bottom: 8px solid #f1f1f1;
+    margin: 0 -40px;
+    padding: 40px 40px 40px 40px;
+    width: 100%;
+
+    h3 {
+      float: left;
+      font-size: 19px;
+      font-weight: 600;
+      height: 55px;
+      line-height: 23px;
+      margin: 0;
+      padding: 0 0 0 50px;
+      word-wrap: none;
+    }
+
+    small {
+      color: #a0a0a0;
+      font-size: 12px;
+    }
+
+    img {
+      display: block;
+      height: 55px;
+      margin: 0 0 -50px -50px;
+      width: 40px;
+    }
+
+    address {
+      border-left: 5px solid #e8e8e8;
+      color: #959595;
+      display: block;
+      float: left;
+      font-size: 12px;
+      line-height: 15px;
+      margin: 6px 0 0 30px;
+      padding-left: 10px;
+    }
+
+    .pull-right {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+  }
+
+  .row-fluid {
+    padding: 30px 0;
+  }
+
+  .span6:nth-child(1) {
+    .box-sizing(border-box);
+    font-size: 14px;
+    line-height: 19px;
+    height: 60px;
+    padding-left: 70px;
+    
+    &:before {
+      background: #f7f7f7;
+      .border-radius(999px);
+      color: #888888;
+      content: "TO";
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      height: 52px;
+      line-height: 52px;
+      margin: 4px 0 0 -70px;
+      position: absolute;
+      text-align: center;
+      width: 52px;
+    }
+  }
+
+  .span6:nth-child(2) {
+    background: #f7f7f7;
+    .box-sizing(border-box);
+    color: #888888;
+    font-weight: 600;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 25px;
+
+    span {
+      color: #444;
+      font-size: 24px;
+    }
+  }
+
+  hr {
+    border: none;
+    border-bottom: 3px solid #f1f1f1;
+    margin: 0 -40px;
+  }
+
+  table {
+    width: 100%;
+
+    thead {
+      background: #f7f7f7;
+      color: #888;
+      font-size: 12px;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #f1f1f1;
+      font-size: 14px;
+
+      &:last-child {
+        border: none;
+        padding-bottom: 0;
+      }
+    }
+
+    th,
+    td {
+      border-left: 1px solid #fff;
+      font-weight: 600;
+      padding: 7px 0 7px 15px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    td {
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+  }
+
+  .description {
+    color: #aaa;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    padding-top: 4px;
+  }
+}

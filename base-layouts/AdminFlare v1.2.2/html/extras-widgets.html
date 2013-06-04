@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>
+		AdminFlare - Extras - Widgets
+	</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+
+	<script src="assets/javascripts/1.2.2/adminflare-demo-init.min.js" type="text/javascript"></script>
+
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+		// Include Bootstrap stylesheet 
+		document.write('<link href="assets/css/' + DEMO_ADMINFLARE_VERSION + '/' + DEMO_CURRENT_THEME + '/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" id="bootstrap-css">');
+		// Include AdminFlare stylesheet 
+		document.write('<link href="assets/css/' + DEMO_ADMINFLARE_VERSION + '/' + DEMO_CURRENT_THEME + '/adminflare.min.css" media="all" rel="stylesheet" type="text/css" id="adminflare-css">');
+	</script>
+	
+	<script src="assets/javascripts/1.2.2/modernizr-jquery.min.js" type="text/javascript"></script>
+	<script src="assets/javascripts/1.2.2/adminflare-demo.min.js" type="text/javascript"></script>
+	<script src="assets/javascripts/1.2.2/bootstrap.min.js" type="text/javascript"></script>
+	<script src="assets/javascripts/1.2.2/adminflare.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			prettyPrint();
+			$('a[rel=tooltip]').tooltip();
+
+
+			/* Pie charts widget
+				================================================== */
+			var easyPieChartDefaults = {
+				animate: 2000,
+				scaleColor: false,
+				lineWidth: 12,
+				lineCap: 'square',
+				size: 100,
+				trackColor: '#e5e5e5'
+			}
+			$('#easy-pie-chart-1').easyPieChart($.extend({}, easyPieChartDefaults, {
+				barColor: '#3da0ea'
+			}));
+			$('#easy-pie-chart-2').easyPieChart($.extend({}, easyPieChartDefaults, {
+				barColor: '#e7912a'
+			}));
+			$('#easy-pie-chart-3').easyPieChart($.extend({}, easyPieChartDefaults, {
+				barColor: '#bacf0b'
+			}));
+			$('#easy-pie-chart-4').easyPieChart($.extend({}, easyPieChartDefaults, {
+				barColor: '#4ec9ce'
+			}));
+			$('#easy-pie-chart-5').easyPieChart($.extend({}, easyPieChartDefaults, {
+				barColor: '#ec7337'
+			}));
+			$('#easy-pie-chart-6').easyPieChart($.extend({}, easyPieChartDefaults, {
+				barColor: '#f377ab'
+			}));
+
+
+			/* Styled pie charts widget
+				================================================== */
+			var styledPieChartOptions = {
+				animate: 2000,
+				scaleColor: false,
+				lineWidth: 12,
+				lineCap: 'square',
+				size: 100,
+				trackColor: 'rgba(255, 255, 255, 0.2)',
+				barColor: 'rgba(255, 255, 255, 1)'
+			}
+			$('.styled-pie-chart-example').easyPieChart(styledPieChartOptions);
+
+
+			/* Tasks widget
+				================================================== */
+			$('#widget-tasks-example').afTasks({
+				completeCallback: function (elem, event) {
+					// alert('Task completed!');
+				},
+				cancelCallback: function (elem, event) {
+					// alert('Task completion cancelled!');
+				},
+				clearCallback: function (elem) {
+					// alert('Completed tasks removed!');
+				}
+			});
+
+
+			/* Chat widget
+				================================================== */
+			$("#textarea-chat-example").autosize();
+
+
+			/* Stars rating widget
+				================================================== */
+			var current_rating = 3.4;
+
+			$('#stars-rating-example').afStarsRating({
+				current_rating: current_rating,
+				onSetRating: function (elem, value) {
+					$('#your-rating-example').text(value);
+				}
+			});
+			$('#current-rating-example').text(current_rating);
+			$('#your-rating-example').text('0');
+
+			$('#set-rating-example').click(function(){
+				$('#stars-rating-example').afStarsRating('setCurrentRating', 2.3);
+				$('#current-rating-example').text('2.3');
+			});
+
+
+			/* Status panel widget
+				================================================== */
+			sparkline_colors = ['#71c73e', '#77b7c5', '#d54848', '#6c42e5', '#e8e64e', '#dd56e6', '#ecad3f', '#618b9d', '#b68b68', '#36a766', '#3156be', '#00b3ff', '#646464', '#a946e8', '#9d9d9d'];
+
+			$('#status-example-hits-per-hour').sparkline(
+				[628, 1305, 1021, 956, 1119],
+				{
+					type: 'bar',
+					barColor: sparkline_colors[3],
+					width: 60,
+					barWidth: 15
+				}
+			);
+
+			$('#status-example-daily-hits').sparkline(
+				[10638, 8756, 10241, 11812, 11077],
+				{
+					type: 'line',
+					spotColor: false,
+					minSpotColor: false,
+					maxSpotColor: false,
+					highlightLineColor: false,
+					highlightSpotColor: 'red',
+					lineColor: sparkline_colors[2],
+					fillColor: 'rgba(0,0,0,0.03)',
+					width: 100,
+					barWidth: 15,
+					lineWidth: 2
+				}
+			);
+
+			$('#status-example-resources').sparkline(
+				[35, 15, 50],
+				{
+					type: 'pie',
+					width: 60,
+					height: 60,
+					sliceColors: sparkline_colors,
+					disableTooltips: true
+				}
+			);
+
+
+			/* Stream widget
+				================================================== */
+			var events = [
+				{ type: 'user-event', message: 'User logged in.', icon: '<img src="assets/images/avatar.png" alt="">', caption: 'Moderator' },
+				{ type: 'server-error', message: 'Error 500: Syntax error in index.php at line 461.' },
+				{ type: 'server-warning', message: 'Warning: Processor load 92%.' },
+				{ type: 'server-success', message: 'Server up.' },
+				{ type: 'mailer', message: 'Newsletter has been sent at 1258 emails.' },
+				{ type: 'shop', message: 'Item "T-shirt Be Happy" has been sold for $20.' },
+				{ type: 'cron', message: 'Job "Clean DB" has been completed.' }
+			]
+	
+			$('#stream-example').afStream({
+				event_types: {
+					'user-event': { },
+					'server-error': {
+						icon: '<i class="icon-hdd" />',
+						caption: 'System'
+					},
+					'server-warning': {
+						icon: '<i class="icon-hdd" />',
+						caption: 'System'
+					},
+					'server-success': {
+						icon: '<i class="icon-hdd" />',
+						caption: 'System'
+					},
+					'mailer': {
+						icon: '<i class="icon-envelope" />',
+						caption: 'Mailer'
+					},
+					'shop': {
+						icon: '<i class="icon-tag" />',
+						caption: 'Shop'
+					},
+					'cron': {
+						icon: '<i class="icon-time" />',
+						caption: 'Cron Daemon'
+					}
+				},
+				height: 370,
+				update_interval: 3, // seconds
+				time_update_interval: 1, // seconds
+				onUpdate: function () {
+					var event = $.extend({}, events[events.push(events.shift()) - 1]);
+					$('#stream-example').afStream('addEvent', event);
+				}
+			});
+		});
+	</script>
+
+	<style type="text/css">
+		.status-example { line-height: 0; position:relative; top: 22px }
+
+		#stream-example {
+			margin-top: -15px !important;
+		}
+
+		#stream-example .stream-empty {
+			margin-top: 15px;
+		}
+
+		.stream-event-server-error i {
+			background: #d54848;
+			color: #fff;
+		}
+
+		.stream-event-server-warning i {
+			background: #ecad3f;
+			color: #fff;
+		}
+
+		.stream-event-server-success i {
+			background: #71c73e;
+			color: #fff;
+		}
+
+		.stream-event-mailer i {
+			background: #77b7c5;
+			color: #fff;
+		}
+
+		.stream-event-cron i {
+			background: #ddd;
+		}
+
+		.stream-event-shop i {
+			background: #7764ae;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+<script type="text/javascript">demoSetBodyLayout();</script>
+	<!-- Main navigation bar
+		================================================== -->
+	<header class="navbar navbar-fixed-top" id="main-navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="logo" href="#"><img alt="Af_logo" src="assets/images/af-logo.png"></a>
+
+				<a class="btn nav-button collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-reorder"></span>
+				</a>
+
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <i class=" icon-caret-down"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li class="nav-header">Nav header</li>
+								<li><a href="#">Separated link</a></li>
+								<li><a href="#">One more separated link</a></li>
+							</ul>
+						</li>
+						<li class="divider-vertical"></li>
+					</ul>
+					<form class="navbar-search pull-left" action="" _lpchecked="1">
+						<input type="text" class="search-query" placeholder="Search" style="width: 120px">
+					</form>
+					<ul class="nav pull-right">
+						<li>
+							<ul class="messages">
+								<li>
+									<a href="#"><i class="icon-warning-sign"></i> 2<span class="		responsive-text"> alerts</span></a>
+								</li>
+								<li>
+									<a href="#"><i class="icon-envelope"></i> 25<span class="		responsive-text"> new messages</span></a>
+								</li>
+							</ul>
+						</li>
+						<li class="separator"></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle usermenu" data-toggle="dropdown">
+								<img alt="Avatar" src="assets/images/avatar.png">
+								<span>&nbsp;&nbsp;Admin</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Profile</a>
+								</li>
+								<li>
+									<a href="#">Settings</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="index.html">Sign In</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- / Main navigation bar -->
+	
+	<!-- Left navigation panel
+		================================================== -->
+	<nav id="left-panel">
+		<div id="left-panel-content">
+			<ul>
+				<li>
+					<a href="dashboard.html"><span class="icon-dashboard"></span>Dashboard</a>
+				</li>
+				<li>
+					<a href="layout.html"><span class="icon-th-large"></span>Layout</a>
+				</li>
+				<li>
+					<a href="typography.html"><span class="icon-font"></span>Typography</a>
+				</li>
+				<li>
+					<a href="forms.html"><span class="icon-edit"></span>Forms</a>
+				</li>
+				<li>
+					<a href="tables.html"><span class="icon-table"></span>Tables</a>
+				</li>
+				
+				<li>
+					<a href="components.html"><span class="icon-inbox"></span>Components</a>
+				</li>
+				<li>
+					<a href="javascript.html"><span class="icon-cog"></span>JavaScript</a>
+				</li>
+				<li class="lp-dropdown active">
+					<a href="#" class="lp-dropdown-toggle" id="extras-dropdown"><span class="icon-reorder"></span>Extras</a>
+					<ul class="lp-dropdown-menu" data-dropdown-owner="extras-dropdown">
+						<li>
+							<a tabindex="-1" href="extras-icons.html"><span class="icon-coffee"></span>Icons</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="extras-charts.html"><span class="icon-bar-chart"></span>Charts</a>
+						</li>
+						<li class="active">
+							<a tabindex="-1" href="extras-widgets.html"><span class="icon-star"></span>Widgets</a>
+						</li>
+					</ul>
+				</li>
+				<li class="lp-dropdown">
+					<a href="#" class="lp-dropdown-toggle" id="pages-dropdown"><span class="icon-file-alt"></span>Pages</a>
+					<ul class="lp-dropdown-menu simple" data-dropdown-owner="pages-dropdown">
+						<li>
+							<a tabindex="-1" href="index.html"><i class="icon-signin"></i>&nbsp;&nbsp;Sign In</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-signup.html"><i class="icon-check"></i>&nbsp;&nbsp;Sign Up</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-messages.html"><i class="icon-envelope-alt"></i>&nbsp;&nbsp;Messages</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-stream.html"><i class="icon-leaf"></i>&nbsp;&nbsp;Stream</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-pricing.html"><i class="icon-money"></i>&nbsp;&nbsp;Pricing</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-invoice.html"><i class="icon-pencil"></i>&nbsp;&nbsp;Invoice</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="icon-caret-down"></div>
+		<div class="icon-caret-up"></div>
+	</nav>
+	<!-- / Left navigation panel -->
+	
+	<!-- Page content
+		================================================== -->
+	<section class="container">
+	
+		<!-- ================================================== -->
+		<section class="row-fluid">
+
+			<!-- Support tickets
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">
+					<i class="icon-bullhorn"></i>
+					Support tickets
+				</h3>
+				<div class="box widget-support-tickets">
+					<div class="ticket">
+						<span class="label label-success">Completed</span>
+						<a href="#" title="">Server unavaible<span>[#201798]</span></a>
+						<img src="assets/images/avatar.png" alt="Avatar">
+						<span class="opened-by">
+							Opened by <a href="#" title="">First User</a> <br>
+							Jan 28, 2012 10:24
+						</span>
+					</div>
+
+					<div class="ticket">
+						<span class="label label-warning">Pending</span>
+						<a href="#" title="">Mobile App Problem<span>[#201797]</span></a>
+						<img src="assets/images/avatar.png" alt="Avatar">
+						<span class="opened-by">
+							Opened by <a href="#">Second User</a> <br>
+							Jan 28, 2012 10:24
+						</span>
+					</div>
+
+					<div class="ticket">
+						<span class="label label-info">In progress</span>
+						<a href="#" title="">
+							<i class="icon-warning-sign text-error"></i>PayPal issue<span>[#201796]</span>
+						</a>
+						<img src="assets/images/avatar.png" alt="Avatar">
+						<span class="opened-by">
+							Opened by <a href="#">Third User</a> <br>
+							Jan 28, 2012 10:24
+						</span>
+					</div>
+
+					<div class="ticket">
+						<span class="label label-important">Rejected</span>
+						<a href="#" title="">IE7 problem<span>[#201795]</span></a>
+						<img src="assets/images/avatar.png" alt="Avatar">
+						<span class="opened-by">
+							Opened by <a href="#">Fourth User</a> <br>
+							Jan 28, 2012 10:24
+						</span>
+					</div>
+
+					<div class="ticket">
+						<span class="label label-success">Completed</span>
+						<a href="#" title="">Server unavaible<span>[#201794]</span></a>
+						<img src="assets/images/avatar.png" alt="Avatar">
+						<span class="opened-by">
+							Opened by <a href="#">Fifth User</a> <br>
+							Jan 28, 2012 10:24
+						</span>
+					</div>
+
+					<div class="widget-actions">
+						<a href="#" class="btn btn-mini" title="">Show more</a>
+					</div>
+				</div>
+			</div>
+			<!-- / Support tickets -->
+
+			<!-- Comments
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">
+					<i class="icon-comment-alt"></i>
+					Comments
+				</h3>
+				<div class="box widget-comments">
+					<div class="comment">
+						<img src="assets/images/avatar.png" alt="">
+						<div class="content">
+							<span class="commented-by">
+								<a href="#" title="">First User</a> commented on <a href="#" title="">Article Name</a>
+							</span>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore.
+							<span class="actions">
+								<a href="#"><i class="icon-pencil"></i>Edit</a>
+								<a href="#" class="comment-remove"><i class="icon-trash"></i>Remove</a>
+								<span class="pull-right">2 hours ago</span>
+							</span>
+						</div>
+					</div>
+
+					<div class="comment">
+						<img src="assets/images/avatar.png" alt="">
+						<div class="content">
+							<span class="commented-by">
+								<a href="#" title="">Second User</a> commented on <a href="#" title="">Article Name</a>
+							</span>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore.
+							<span class="actions">
+								<a href="#"><i class="icon-pencil"></i>Edit</a>
+								<a href="#" class="comment-remove"><i class="icon-trash"></i>Remove</a>
+								<span class="pull-right">2 hours ago</span>
+							</span>
+						</div>
+					</div>
+
+					<div class="comment">
+						<img src="assets/images/avatar.png" alt="">
+						<div class="content">
+							<span class="commented-by">
+								<a href="#" title="">Third User</a> commented on <a href="#" title="">Article Name</a>
+							</span>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore.
+							<span class="actions">
+								<a href="#"><i class="icon-pencil"></i>Edit</a>
+								<a href="#" class="comment-remove"><i class="icon-trash"></i>Remove</a>
+								<span class="pull-right">2 hours ago</span>
+							</span>
+						</div>
+					</div>
+
+					<div class="comment">
+						<img src="assets/images/avatar.png" alt="">
+						<div class="content">
+							<span class="commented-by">
+								<a href="#" title="">Fourth User</a> commented on <a href="#" title="">Article Name</a>
+							</span>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore.
+							<span class="actions">
+								<a href="#"><i class="icon-pencil"></i>Edit</a>
+								<a href="#" class="comment-remove"><i class="icon-trash"></i>Remove</a>
+								<span class="pull-right">2 hours ago</span>
+							</span>
+						</div>
+					</div>
+
+					<div class="widget-actions">
+						<a href="#" class="btn btn-mini" title="">Show more</a>
+					</div>
+				</div>
+			</div>
+			<!-- / Comments -->
+		</section>
+
+		<!-- ================================================== -->
+		<section class="row-fluid">
+
+			<!-- Threads
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">
+					<i class="icon-comments-alt"></i>
+					Threads
+				</h3>
+				<div class="box widget-threads">
+					<div class="thread">
+						<img src="assets/images/avatar.png" alt="">
+						<div class="content">
+							<span>14h</span>
+							<div>
+								<a href="#">Lorem ipsum dolor sit amet</a><br>
+								asked by <a href="#" title="">First User</a> in <a href="#" title="">Forum name</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="thread">
+						<img src="assets/images/avatar.png" alt="">
+						<div class="content">
+							<span>14h</span>
+							<div>
+								<a href="#">Lorem ipsum dolor sit amet</a><br>
+								asked by <a href="#" title="">Second User</a> in <a href="#" title="">Forum name</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="thread">
+						<img src="assets/images/avatar.png" alt="">
+						<div class="content">
+							<span>14h</span>
+							<div>
+								<a href="#">Lorem ipsum dolor sit amet</a><br>
+								asked by <a href="#" title="">Third User</a> in <a href="#" title="">Forum name</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="thread">
+						<img src="assets/images/avatar.png" alt="">
+						<div class="content">
+							<span>14h</span>
+							<div>
+								<a href="#">Lorem ipsum dolor sit amet</a><br>
+								asked by <a href="#" title="">Fourth User</a> in <a href="#" title="">Forum name</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="widget-actions">
+						<a href="#" class="btn btn-mini" title="">Show more</a>
+					</div>
+				</div>
+			</div>
+			<!-- / Threads -->
+
+			<!-- Users activity
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">
+					<i class="icon-time"></i>
+					Users activity
+				</h3>
+				<div class="box widget-users-activity">
+					<div class="activity">
+						<span class="pull-right">12h</span>
+						<i class="icon-ok" style="color: #9bb921"></i>
+						<img src="assets/images/avatar.png" alt="">
+						<div>
+							<a href="#" title="">First User</a> followed <a href="#" title="">Second User</a>
+						</div>
+					</div>
+
+					<div class="activity">
+						<span class="pull-right">12h</span>
+						<i class="icon-remove" style="color: #dc6343"></i>
+						<img src="assets/images/avatar.png" alt="">
+						<div>
+							<a href="#" title="">First User</a> unfollowed <a href="#" title="">Second User</a>
+						</div>
+					</div>
+
+					<div class="activity">
+						<span class="pull-right">12h</span>
+						<i class="icon-comment" style="color: #639ad9"></i>
+						<img src="assets/images/avatar.png" alt="">
+						<div>
+							<a href="#" title="">First User</a> commented <a href="#" title="">Article name</a>
+							<span class="comment">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+							</span>
+						</div>
+					</div>
+
+					<div class="activity">
+						<span class="pull-right">12h</span>
+						<i class="icon-edit" style="color: #f3a139"></i>
+						<img src="assets/images/avatar.png" alt="">
+						<div>
+							<a href="#" title="">First User</a> posted in <a href="#" title="">Forum name</a>
+							<span class="comment">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+							</span>
+						</div>
+					</div>
+
+					<div class="widget-actions">
+						<a href="#" class="btn btn-mini" title="">Show more</a>
+					</div>
+				</div>
+			</div>
+			<!-- / Users activity -->
+		</section>
+
+		<!-- ================================================== -->
+		<section class="row-fluid">
+
+			<!-- Tasks
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">
+					<i class="icon-book"></i>
+					Tasks
+				</h3>
+				<div class="box widget-tasks" id="widget-tasks-example">
+					<div class="task">
+						<span class="label label-warning pull-right">High</span>
+						<div><input type="checkbox"></div>
+						<a href="#">A very important task<span>1 hour left</span></a>
+					</div>
+					<div class="task">
+						<span class="label label-warning pull-right">High</span>
+						<div><input type="checkbox"></div>
+						<a href="#">A very important task<span>58 minutes left</span></a>
+					</div>
+
+					<div class="task">
+						<div><input type="checkbox"></div>
+						<a href="#">A regular task</a>
+					</div>
+					<div class="task">
+						<div><input type="checkbox"></div>
+						<a href="#">A regular task</a>
+					</div>
+					<div class="task">
+						<div><input type="checkbox"></div>
+						<a href="#">A regular task</a>
+					</div>
+
+					<div class="task">
+						<span class="label pull-right">Low</span>
+						<div><input type="checkbox"></div>
+						<a href="#">An unimportant task</a>
+					</div>
+					<div class="task">
+						<span class="label pull-right">Low</span>
+						<div><input type="checkbox"></div>
+						<a href="#">An unimportant task</a>
+					</div>
+
+					<div class="widget-actions">
+						<a href="javascript:$('#widget-tasks-example').afTasks('clearCompletedTasks')" class="btn btn-mini" title="">Clear completed tasks</a>
+						<a href="#" class="btn btn-mini" title="">Show more</a>
+					</div>
+				</div>
+			</div>
+			<!-- / Tasks -->
+
+			<!-- Statistics
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">
+					<i class="icon-signal"></i>
+					Statistics
+				</h3>
+				<div class="box no-border no-padding widget-statistics">					
+					<div>
+						<div class="counter small">
+							<span>
+							897
+							</span>
+						</div>
+						<div class="counter-label">
+							Visits Today
+						</div>
+					</div>
+					
+					<div>
+						<div class="counter small">
+							<span>
+							563
+							</span>
+						</div>
+						<div class="counter-label">
+							Unique Visits
+						</div>
+					</div>
+					
+					<div>
+						<div class="counter small">
+							<span>
+							65
+							</span>
+						</div>
+						<div class="counter-label">
+							Posts
+						</div>
+					</div>
+					
+					<div>
+						<div class="counter small">
+							<span>
+							865
+							</span>
+						</div>
+						<div class="counter-label">
+							Total Comments
+						</div>
+					</div>
+					
+					<div>
+						<div class="counter small">
+							<span>
+							14
+							</span>
+						</div>
+						<div class="counter-label">
+							Pending Comments
+						</div>
+					</div>
+					
+					<div>
+						<div class="counter small">
+							<span>
+							11
+							</span>
+						</div>
+						<div class="counter-label">
+							Support Requests
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- / Statistics -->
+		</section>
+
+		<!-- ================================================== -->
+		<section class="row-fluid">
+			<div class="span6">
+				<!-- Chat
+					================================================== -->
+				<h3 class="box-header">
+					<i class="icon-comments"></i>
+					Chat
+				</h3>
+				<div class="box widget-chat">
+					<div class="message">
+						<img src="assets/images/avatar.png" alt="">
+						<div>
+							<a href="#" title="">First User</a> says:
+							<span class="pull-right">2 minutes ago</span>
+							<div>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+							</div>
+						</div>
+					</div>
+
+					<div class="message right">
+						<img src="assets/images/avatar.png" alt="">
+						<div>
+							<a href="#" title="">Second User</a> says:
+							<span class="pull-right">2 minutes ago</span>
+							<div>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+							</div>
+						</div>
+					</div>
+
+					<div class="message">
+						<img src="assets/images/avatar.png" alt="">
+						<div>
+							<a href="#" title="">First User</a> says:
+							<span class="pull-right">2 minutes ago</span>
+							<div>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+							</div>
+						</div>
+					</div>
+
+					<div class="message right">
+						<img src="assets/images/avatar.png" alt="">
+						<div>
+							<a href="#" title="">Second User</a> says:
+							<span class="pull-right">2 minutes ago</span>
+							<div>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+							</div>
+						</div>
+					</div>
+
+					<div class="message">
+						<img src="assets/images/avatar.png" alt="">
+						<div>
+							<a href="#" title="">First User</a> says:
+							<span class="pull-right">2 minutes ago</span>
+							<div>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+							</div>
+						</div>
+					</div>
+
+					<div class="widget-actions">
+						<form class="form-inline">
+							<button class="btn btn-primary">
+								Send
+							</button>
+							<div>
+								<textarea rows="1" id="textarea-chat-example"></textarea>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- / Chat -->
+
+				<!-- Stars rating
+					================================================== -->
+				<h3 class="box-header">
+					<i class="icon-star"></i>
+					Stars rating
+				</h3>
+				<div class="box">
+					<span id="stars-rating-example"></span>&nbsp;&nbsp;&nbsp;
+					Current rating: <strong id="current-rating-example">0</strong>&nbsp;&nbsp;&nbsp;
+					Your rating: <strong id="your-rating-example">0</strong><br><br>
+					<button id="set-rating-example" class="btn btn-mini">Set current rating = 2.3</button>
+				</div>
+				<!-- / Stars rating -->
+			</div>
+
+			<div class="span6">
+				<!-- Messages
+					================================================== -->
+				<h3 class="box-header">
+					<i class="icon-download-alt"></i>
+					Messages
+				</h3>
+				<div class="box widget-messages">
+					<div class="message unread">
+						<div class="action-checkbox">
+							<input type="checkbox" name="" value="">
+						</div>
+						<a href="#" title="" class="from">First User</a>
+						<div class="date">
+							18 jan
+						</div>
+						<a href="#" title="" class="title">Message Title 1</a>
+					</div>
+					<div class="message unread">
+						<div class="action-checkbox">
+							<input type="checkbox" name="" value="">
+						</div>
+						<a href="#" title="" class="from">Second User</a>
+						<div class="date">
+							18 jan
+						</div>
+						<a href="#" title="" class="title">Message Title 2</a>
+					</div>
+					<div class="message">
+						<div class="action-checkbox">
+							<input type="checkbox" name="" value="">
+						</div>
+						<a href="#" title="" class="from">Third User</a>
+						<div class="date">
+							18 jan
+						</div>
+						<a href="#" title="" class="title">Message Title 3</a>
+					</div>
+					<div class="message">
+						<div class="action-checkbox">
+							<input type="checkbox" name="" value="">
+						</div>
+						<a href="#" title="" class="from">Fourth User</a>
+						<div class="date">
+							18 jan
+						</div>
+						<a href="#" title="" class="title">Message Title 4</a>
+					</div>
+					<div class="message">
+						<div class="action-checkbox">
+							<input type="checkbox" name="" value="">
+						</div>
+						<a href="#" title="" class="from">Fifth User</a>
+						<div class="date">
+							18 jan
+						</div>
+						<a href="#" title="" class="title">Message Title 5</a>
+					</div>
+					<div class="message">
+						<div class="action-checkbox">
+							<input type="checkbox" name="" value="">
+						</div>
+						<a href="#" title="" class="from">Sixth User</a>
+						<div class="date">
+							18 jan
+						</div>
+						<a href="#" title="" class="title">Message Title 6</a>
+					</div>
+					<div class="message">
+						<div class="action-checkbox">
+							<input type="checkbox" name="" value="">
+						</div>
+						<a href="#" title="" class="from">Seventh User</a>
+						<div class="date">
+							18 jan
+						</div>
+						<a href="#" title="" class="title">Message Title 7</a>
+					</div>
+					<div class="message">
+						<div class="action-checkbox">
+							<input type="checkbox" name="" value="">
+						</div>
+						<a href="#" title="" class="from">Eigtht User</a>
+						<div class="date">
+							18 jan
+						</div>
+						<a href="#" title="" class="title">Message Title 8</a>
+					</div>
+					<div class="message">
+						<div class="action-checkbox">
+							<input type="checkbox" name="" value="">
+						</div>
+						<a href="#" title="" class="from">Ninth User</a>
+						<div class="date">
+							18 jan
+						</div>
+						<a href="#" title="" class="title">Message Title 9</a>
+					</div>
+
+					<div class="widget-actions">
+						<a href="#" class="btn btn-mini" title="">Show more</a>
+					</div>
+				</div>
+				<!-- / Messages -->
+
+				<!-- Stream
+				================================================== -->
+				<h3 class="box-header">
+					<i class="icon-reorder"></i>
+					Stream
+				</h3>
+				<div class="box">
+					<div class="widget-stream" id="stream-example"></div>
+				</div>
+				<!-- / Stream -->
+			</div>
+		</section>
+
+		<!-- Status panel
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">Status panel</h3>
+			<div class="well box no-padding non-gutter-grid widget-status-panel">
+				<div class="span3 status">
+					<div class="value">
+						<div id="status-example-hits-per-hour" class="status-example"></div>
+					</div>
+					<a href="javascript:void(0)" rel="tooltip" data-original-title="+163 hits" class="icon-info-sign"></a>
+					<div class="caption">
+						Hits per hour
+					</div>
+				</div>
+				<div class="span3 status">
+					<div class="value">
+						<div id="status-example-daily-hits" class="status-example"></div>
+					</div>
+					<a href="javascript:void(0)" rel="tooltip" data-original-title="-735 hits" class="icon-info-sign"></a>
+					<div class="caption">
+						Daily Hits
+					</div>
+				</div>
+				<div class="span3 status">
+					<div class="value" style="color: #71c73e">
+						<strong>Good</strong>
+					</div>
+					<div class="caption">
+						Remote status
+					</div>
+				</div>
+
+				<div class="span3 status">
+					<div class="value">
+						<div id="status-example-resources" class="status-example"></div>
+					</div>
+					<div class="caption">
+						Resources
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / Status panel -->
+
+		<!-- Pie charts
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Pie charts
+			</h3>
+			<div class="box widget-pie-charts">
+				
+				<div class="span2 pie-chart">
+					<div id="easy-pie-chart-1" data-percent="58">
+						58%
+					</div>
+					<div class="caption">
+						New Visits
+					</div>
+				</div>
+				
+				<div class="span2 pie-chart">
+					<div id="easy-pie-chart-2" data-percent="43">
+						43%
+					</div>
+					<div class="caption">
+						Bounce Rate
+					</div>
+				</div>
+
+				<div class="span2 pie-chart">
+					<div id="easy-pie-chart-3" data-percent="91">
+						91%
+					</div>
+					<div class="caption">
+						Server Load
+					</div>
+				</div>
+
+				<div class="span2 pie-chart">
+					<div id="easy-pie-chart-4" data-percent="82">
+						752MB
+					</div>
+					<div class="caption">
+						Used RAM
+					</div>
+				</div>
+
+				<div class="span2 pie-chart">
+					<div id="easy-pie-chart-5" data-percent="35">
+						35%
+					</div>
+					<div class="caption">
+						Processor Load
+					</div>
+				</div>
+
+				<div class="span2 pie-chart">
+					<div id="easy-pie-chart-6" data-percent="77">
+						1.5TB
+					</div>
+					<div class="caption">
+						Bandwidth
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / Pie charts -->
+
+		<!-- Styled pie charts
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Styled pie charts
+			</h3>
+			<div class="box no-border widget-pie-charts">
+				
+				<div class="row-fluid" style="margin-bottom: 20px">
+					<div class="span2 pie-chart styled blue">
+						<div class="styled-pie-chart-example" data-percent="58">
+							58%
+						</div>
+						<div class="caption">
+							Some Caption
+						</div>
+					</div>
+	
+					<div class="span2 pie-chart styled green">
+						<div class="styled-pie-chart-example" data-percent="58">
+							58%
+						</div>
+						<div class="caption">
+							Some Caption
+						</div>
+					</div>
+	
+					<div class="span2 pie-chart styled red">
+						<div class="styled-pie-chart-example" data-percent="58">
+							58%
+						</div>
+						<div class="caption">
+							Some Caption
+						</div>
+					</div>
+	
+					<div class="span2 pie-chart styled purple">
+						<div class="styled-pie-chart-example" data-percent="58">
+							58%
+						</div>
+						<div class="caption">
+							Some Caption
+						</div>
+					</div>
+	
+					<div class="span2 pie-chart styled orange">
+						<div class="styled-pie-chart-example" data-percent="58">
+							58%
+						</div>
+						<div class="caption">
+							Some Caption
+						</div>
+					</div>
+	
+					<div class="span2 pie-chart styled dark-blue">
+						<div class="styled-pie-chart-example" data-percent="58">
+							58%
+						</div>
+						<div class="caption">
+							Some Caption
+						</div>
+					</div>
+				</div>
+
+				<div class="row-fluid">
+					<div class="span2 pie-chart styled brown">
+						<div class="styled-pie-chart-example" data-percent="58">
+							58%
+						</div>
+						<div class="caption">
+							Some Caption
+						</div>
+					</div>
+
+					<div class="span2 pie-chart styled cyan">
+						<div class="styled-pie-chart-example" data-percent="58">
+							58%
+						</div>
+						<div class="caption">
+							Some Caption
+						</div>
+					</div>
+
+					<div class="span2 pie-chart styled dark-grey">
+						<div class="styled-pie-chart-example" data-percent="58">
+							58%
+						</div>
+						<div class="caption">
+							Some Caption
+						</div>
+					</div>
+
+					<div class="span2 pie-chart styled light-grey">
+						<div class="styled-pie-chart-example" data-percent="58">
+							58%
+						</div>
+						<div class="caption">
+							Some Caption
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / Styled pie charts -->
+			
+		<!-- Page footer
+			================================================== -->
+		<footer id="main-footer">
+			Copyright © 2013 <a href="#">Your Company</a>, all rights reserved.
+			<a href="#" class="pull-right" id="on-top-link">
+				On Top &nbsp;<i class=" icon-chevron-up"></i>
+			</a>
+		</footer>
+		<!-- / Page footer -->
+	</section>
+</body>
+</html>

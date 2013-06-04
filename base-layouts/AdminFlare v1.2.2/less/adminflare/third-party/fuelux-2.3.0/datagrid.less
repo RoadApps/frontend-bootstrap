@@ -1,0 +1,64 @@
+.datagrid {
+	thead {
+		.sorted {
+			background: darken(@tableBackgroundAccent, 3%);
+			padding-right: 8px;
+
+			i {
+				margin: 3px 0 0 0;
+			}
+		}
+
+		.sortable:hover {
+			background: darken(@tableBackgroundAccent, 3%);
+		}
+	}
+
+	tfoot {
+		.datagrid-footer-left .grid-pagesize {
+			margin-left: 24px;
+			margin-right: 5px;
+		}
+
+		.datagrid-footer-left .grid-pagesize:before {
+			background: #ddd;
+			content: "";
+			display: block;
+			height: 17px;
+			margin: 7px 0 0 -15px;
+			position: absolute;
+			width: 1px;
+		}
+
+		.datagrid-footer-right {
+			.grid-pager {
+				.grid-prevpage {
+					margin-right: 5px;
+				}
+
+				.grid-nextpage {
+					margin-left: 5px;
+				}
+
+				.dropdown-menu {
+					min-width: 80px;
+					text-align: center;
+				}
+
+				.combobox {
+					width: 80px;
+					margin-left: 5px;
+					margin-right: 5px;
+
+					> button, > input {
+						display: inline-block;
+						width: 34px;
+					}
+				}
+			}
+			select { display: none;}
+		}
+
+	}
+
+}

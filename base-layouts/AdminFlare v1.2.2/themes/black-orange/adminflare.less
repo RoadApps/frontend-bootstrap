@@ -1,0 +1,96 @@
+// ### Paths
+@import '../paths.less';
+
+// ### Variables
+@import 'variables.less';
+
+// ### Bootstrap mixins
+@import "../../less/bootstrap-2.3.1/mixins.less";
+
+// ### AdminFlare imports
+@import "../../less/adminflare/basic.less";
+@import "../../less/adminflare/mixins.less";
+@import "../../less/adminflare/utilities.less";
+@import "../../less/adminflare/boxes.less";
+@import "../../less/adminflare/main-panels.less";
+@import "../../less/adminflare/dropdowns.less";
+@import "../../less/adminflare/buttons.less";
+@import "../../less/adminflare/progress-bars.less";
+@import "../../less/adminflare/labels.less";
+@import "../../less/adminflare/badges.less";
+@import "../../less/adminflare/counters.less";
+@import "../../less/adminflare/alerts.less";
+@import "../../less/adminflare/forms.less";
+@import "../../less/adminflare/navigation-list.less";
+@import "../../less/adminflare/pagination.less";
+@import "../../less/adminflare/breadcrumbs.less";
+@import "../../less/adminflare/tabs.less";
+@import "../../less/adminflare/pills.less";
+@import "../../less/adminflare/responsive.less";
+@import "../../less/adminflare/charts.less";
+@import "../../less/adminflare/wells.less";
+
+// ### Widgets
+@import "../../less/adminflare/widgets/basic.less";
+@import "../../less/adminflare/widgets/support-tickets.less";
+@import "../../less/adminflare/widgets/comments.less";
+@import "../../less/adminflare/widgets/threads.less";
+@import "../../less/adminflare/widgets/users-activity.less";
+@import "../../less/adminflare/widgets/pie-charts.less";
+@import "../../less/adminflare/widgets/pie-charts-responsive.less";
+@import "../../less/adminflare/widgets/tasks.less";
+@import "../../less/adminflare/widgets/statistics.less";
+@import "../../less/adminflare/widgets/chat.less";
+@import "../../less/adminflare/widgets/messages.less";
+@import "../../less/adminflare/widgets/status-panel.less";
+@import "../../less/adminflare/widgets/status-panel-responsive.less";
+@import "../../less/adminflare/widgets/stars-rating.less";
+@import "../../less/adminflare/widgets/status-panel.less";
+@import "../../less/adminflare/widgets/stream.less";
+
+// ### Plugins
+@import "../../less/prettify.less";
+@import "../../less/bootstrap-colorpicker/colorpicker.less";
+@import "../../less/bootstrap-datepicker/datepicker.less";
+@import "../../less/adminflare/third-party/bootstrap-datepicker/datepicker.less";
+@import "../../less/bootstrap-wysihtml5-0.0.2/bootstrap-wysihtml5.less";
+@import "../../less/bootstrap-notify-1.0.0/bootstrap-notify.less";
+@import "../../less/bootstrap-notify-1.0.0/bootstrap-notify-adminflare.less";
+@import "../../less/jquery-toggles/jquery-toggles.less";
+@import "../../less/bootstrap-editable-1.4.3/bootstrap-editable.less";
+@import "../../less/adminflare/third-party/bootstrap-editable-1.4.3/bootstrap-editable.less";
+@import "../../less/bootstrap-editable-1.4.3/bootstrap-editable-address.less";
+@import "../../less/bootstrap-timepicker/timepicker.less";
+@import "../../less/fuelux-2.3.0/checkbox.less";
+@import "../../less/adminflare/third-party/fuelux-2.3.0/checkbox.less";
+@import "../../less/fuelux-2.3.0/combobox.less";
+@import "../../less/fuelux-2.3.0/radio.less";
+@import "../../less/adminflare/third-party/fuelux-2.3.0/radio.less";
+@import "../../less/fuelux-2.3.0/select.less";
+@import "../../less/fuelux-2.3.0/spinner.less";
+@import "../../less/adminflare/third-party/fuelux-2.3.0/spinner.less";
+@import "../../less/fuelux-2.3.0/datagrid.less";
+@import "../../less/adminflare/third-party/fuelux-2.3.0/datagrid.less";
+@import "../../less/fuelux-2.3.0/wizard.less";
+@import "../../less/adminflare/third-party/fuelux-2.3.0/wizard.less";
+@import "../../less/easy-pie-chart-1.0.1/easy-pie-chart.less";
+
+
+// ### Some additional styles
+.btn-primary { .btn-orange; }
+.nav-button { .btn-black; }
+.progress { .progress.progress-orange; }
+.progress.progress-striped { .progress.progress-orange.progress-striped; }
+.badge.badge-primary { .badge.badge-orange; }
+.label.label-primary { .label.label-orange; }
+.primary-background { background: @activeHighlightColor !important; }
+
+#main-navbar .navbar-inner {
+  border-bottom-color: darken(@topPanelBgStartColor, 10%);
+  .box-shadow(none);
+
+  .separator, .divider-vertical {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left-color: 1px solid rgba(0, 0, 0, 0.7);
+  }
+}

@@ -1,0 +1,85 @@
+//
+// Counters
+// --------------------------------------------------
+
+.counter,
+.counter-separated {
+  display: block;
+  float: left;
+  
+  // Number
+  span {
+    display: inline-block;
+    border: 1px solid #333333;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 700;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 6px 2px 6px;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.7) 0px -1px 0;
+    .border-radius(3px);
+    .box-shadow(~"rgba(255, 255, 255, 0.7) 0px 1px 0px, rgba(255, 255, 255, 0.2) 0px 1px 0px inset");
+    #gradient > .vertical(#555555, #444444);
+
+    // IE 7 - 9 hacks
+    .ieBackground(darken(#555555, 5%));
+    
+    // Box divider
+    &:before {
+      background: #333333;
+      content: " ";
+      display: block;
+      font-size: 0px;
+      height: 1px;
+      left: -6px;
+      padding: 0 6px;
+      position: relative;
+      top: 16px;
+      width: 100%;
+      .box-sizing(content-box);
+      .box-shadow(rgba(255, 255, 255, 0.1) 0px 1px 0px);
+    }
+  }
+
+  // Small size
+  &.small span {
+    height: 26px;
+    line-height: 26px;
+    font-size: 20px;
+
+    // Box divider
+    &:before {
+      top: 14px;
+    }
+  }
+}
+
+.counter-separated {
+  // Number
+  span {
+    float: left;
+    margin-right: 5px;
+    padding: 0 5px 2px 5px;
+
+    // Box divider
+    &:before {
+      padding: 0 5px;
+      left: -5px;
+    }
+  }
+
+  // Small size
+  &.small span {
+    margin-right: 3px;
+    padding: 0 4px 2px 4px;
+
+    // Box divider
+    &:before {
+      padding: 0 4px;
+      left: -4px;
+      top: 14px;
+    }
+  }
+}

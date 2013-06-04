@@ -1,0 +1,105 @@
+//
+// Widgets / Pie Charts
+// --------------------------------------------------
+
+.widget-pie-charts {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+
+  h3 {
+    margin: 0;
+    padding: 0 0 10px 10px;
+  }
+
+  .caption {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .pie-chart {
+    &,
+    & div {
+      text-align: center;
+    }
+
+    & div {
+      display: inline-block;
+    }
+  }
+}
+
+// === Styled pie charts
+
+.widget-pie-charts {
+  &.styled .pie-chart, .pie-chart.styled {
+    border: 1px solid;
+    color: #fff;
+    padding-top: 15px;
+    .border-radius(3px);
+    .box-shadow(rgba(255, 255, 255, 0.2) 0 1px 0 inset);
+  }
+
+  &.styled .caption, .pie-chart.styled .caption {
+    border-top: 1px solid;
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    height: 34px;
+    line-height: 34px;
+    margin-top: 15px;
+    padding: 0;
+    .box-shadow(rgba(255, 255, 255, 0.2) 0 1px 0 inset);
+    .text-shadow(rgba(0, 0, 0, 0.3) 0 -1px 0);
+  }
+}
+
+.styled-pie-chart(@bgColor) {
+  background: @bgColor;
+  border-color: darken(@bgColor, 15%);
+  .caption {
+    border-top-color: darken(@bgColor, 15%);
+  }
+}
+
+.widget-pie-charts {
+  &.blue .pie-chart, .pie-chart.blue {
+    .styled-pie-chart(#3da0ea);
+  }
+
+  &.green .pie-chart, .pie-chart.green {
+    .styled-pie-chart(#71c73e);
+  }
+
+  &.red .pie-chart, .pie-chart.red {
+    .styled-pie-chart(#d54f4f);
+  }
+
+  &.purple .pie-chart, .pie-chart.purple {
+    .styled-pie-chart(#8262dd);
+  }
+
+  &.orange .pie-chart, .pie-chart.orange {
+    .styled-pie-chart(#eba72f);
+  }
+
+  &.dark-blue .pie-chart, .pie-chart.dark-blue {
+    .styled-pie-chart(#618b9d);
+  }
+
+  &.brown .pie-chart, .pie-chart.brown {
+    .styled-pie-chart(#b68b68);
+  }
+
+  &.dark-grey .pie-chart, .pie-chart.dark-grey {
+    .styled-pie-chart(#646464);
+  }
+
+  &.light-grey .pie-chart, .pie-chart.light-grey {
+    .styled-pie-chart(#9d9d9d);
+  }
+
+  &.cyan .pie-chart, .pie-chart.cyan {
+    .styled-pie-chart(#4ec0ce);
+  }
+}

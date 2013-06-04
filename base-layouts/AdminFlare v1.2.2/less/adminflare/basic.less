@@ -1,0 +1,95 @@
+//
+// Basic styles
+// --------------------------------------------------
+
+body {
+  background-image: url("@{imagesPath}/body-bg.png");
+  min-width: @bodyMinWidth;
+  padding: 62px 0 0 (@leftPanelWidth + @gridGutterWidth);
+  .box-sizing(border-box);
+}
+
+legend {
+  font-size: 18px;
+}
+
+table {
+  font-size: 13px;
+}
+
+a:active,
+a:focus {
+  background: none;
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  .box-shadow(~"rgba(255, 255, 255, 0.75) 0 1px 0, rgba(255, 255, 255, 0.75) 0 1px 0");
+}
+
+a,
+input,
+button {
+  outline: 0 !important;
+}
+
+#main-navbar .container {
+  width: @leftPanelWidth + @gridGutterWidth + @gridRowWidth;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: @gridRowWidth;
+}
+
+.placeholder {
+  color: #b2b2b2 !important;
+}
+
+.fluid-layout {
+  .container,
+  #main-navbar .container {
+    padding-right: @gridGutterWidth;
+    width: auto;
+  }
+
+  .container > .row-fluid,
+  .container .no-border {
+    padding-right: 0;
+  }
+}
+
+.centered-layout {
+  padding-left: @leftPanelWidth;
+
+  // Center container
+  .container {
+    margin: 0 auto;
+    padding-right: 0;
+    .box-sizing(border-box);
+  }
+
+  #main-navbar .container {
+    padding-right: @gridGutterWidth;
+    width: auto;
+  }
+}
+
+
+
+// Common responsive styles
+// --------------------------------------------------
+
+.nav-button {
+  display: none;
+  float: right;
+  font-size: 17px;
+  margin-right: 12px;
+}
+
+.responsive-text {
+  display: none;
+}

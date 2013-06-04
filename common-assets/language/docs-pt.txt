@@ -1,0 +1,85 @@
+﻿
+// pt: Portuguese
+
+// Page Login
+#forgot Esqueceu?
+#signin Entrar
+#signup Cadastrar
+#orsignin ...ou entrar como
+#header-text Road Solution é uma plataforma de aplicações focada na indústria de transportes rodoviários. Aqui você encontra aplicações para resolver problemas relacionados à otimização de rotas, rastreamento de veículos e logística.
+#signup-text Cadastre-se agora e seja notificado quando lançarmos nossa versão beta!
+#confirm-message Obrigado por seu cadastro!
+#alert-message Por favor, insira um e-mail válido.
+
+// Navigation Left
+#nav-dashboard Painel
+#nav-import Importar
+#nav-parameters Parâmetros
+#nav-simulate Simular
+#nav-routes Rotas
+#nav-export Exportar
+
+// Page Dashboard
+#title-dashboard Painel - Road Solution
+
+// Page Import
+#title-import Importar - Road Solution
+#vehicles Veículos
+#orders Ordens
+#location Localização
+#name Nome
+#time Tempo
+#example Exemplo
+#example1 Exemplo
+#example2 Exemplo
+#submit Enviar
+#submit1 Enviar
+
+#pane Placa
+#fleet Frota
+#size Capacidade
+#type Tipo
+
+#ctrc Conhecimento
+#weight Peso
+#value Valor (R$)
+#volume Volume
+
+
+// Page Export
+#title-export Exportar - Road Solution
+#export Exportar
+#sync Sicronizar
+#sync1 Sicronizar
+#tofile Para Arquivo:
+#tomobile Para Celular:
+#todevice Para Dispositivo:
+
+// Page Parameters
+#title-parameters Parâmetros - Road Solution
+#restrictions Restrições
+#strategies Estratégias
+#resources Recursos
+#btsimulate Simular
+
+// Page Simulate
+#title-simulate Simular - Road Solution
+#progress Progresso
+#parameters Parâmetros
+
+#amount Quantidade
+#unitcapacity Cap. Unit.
+#totalcapacity Cap. Total
+
+#totalweight Tot. Peso
+#totalvalue Tot. Valor
+#totalvolume Tot. Volume
+
+// Page Routes
+#title-routes Routes - Road Solution
+#createroutes Criar Rotas
+#createroute Criar Rota
+#addparade Adicionar Parada
+
+// Footer
+#allreserved , todos os direitos reservados.

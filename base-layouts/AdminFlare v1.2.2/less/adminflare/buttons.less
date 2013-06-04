@@ -1,0 +1,282 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+// Core
+.btn {
+  .buttonBackground(#f2f2f2, #e8e8e8, @textColor, ~"#fff 0 1px 0");
+  .box-shadow(#fff 0 1px 0 inset);
+  border: 1px solid #c4c4c4;
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    background: #ededed;
+    border: 1px solid #d8d8d8;
+    color: #888888;
+    .opacity(100);
+    .text-shadow(~"none !important");
+    
+    &:active,
+    &.active {
+      background: #ededed;
+      .box-shadow(~"none !important");
+    }
+  }
+
+  // Button dropdown caret
+  .caret {
+    border-top-color: @textColor;
+  }
+}
+
+// Active state and opened button dropdown
+.btn:active,
+.btn.active,
+.open .dropdown-toggle
+{ 
+  background-color: darken(#f2f2f2, 5%);
+  .box-shadow(~"rgba(0, 0, 0, 0.1) 0 1px 3px inset !important");
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-blue,
+.btn-orange,
+.btn-green,
+.btn-cyan,
+.btn-red,
+.btn-black,
+.btn-black.dropdown-toggle,
+.btn-pink,
+.btn-info,
+.btn-warning,
+.btn-success,
+.btn-danger,
+.btn-inverse {
+  color: #fff;
+  .text-shadow(rgba(0, 0, 0, 0.4) 0 -1px 0);
+  .box-shadow(rgba(255,255,255,.3) 0 1px 0px inset);
+  
+  // Button dropdown caret
+  .caret {
+    border-top-color: #fff;
+  }
+}
+
+// Blue button
+.btn-blue {
+  .buttonBackground(#3da0ea, #3983de);
+  border-color: #3c6791;
+
+  &.disabled,
+  &[disabled] {
+    background: #6ea8e6;
+    border-color: #668db2;
+
+    // Active state
+    &:active,
+    &.active {
+      background: #6ea8e6;
+    }
+  }
+
+  // Opened button dropdown
+  .open &.dropdown-toggle { 
+    background: darken(#3983de, 1%) !important;
+  }
+}
+
+// Orange/Warning button
+.btn-orange,
+.btn-warning {
+  .buttonBackground(#f2ac1e, #e7912a);
+  border-color: #c07c1e;
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    background: #ecac58;
+    border-color: #c79856;
+
+    // Active state
+    &:active,
+    &.active {
+      background: #ecac58;
+    }
+  }
+
+  // Opened button dropdown
+  .open &.dropdown-toggle { 
+    background: darken(#e7912a, 1%) !important;
+  }
+}
+
+// Green/Success button
+.btn-green,
+.btn-success {
+  .buttonBackground(#bacf0b, #98ba09);
+  border-color: #7c9710;
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    background: #acc352;
+    border-color: #98aa4f;
+
+    // Active state
+    &:active,
+    &.active {
+      background: #acc352;
+    }
+  }
+
+  // Opened button dropdown
+  .open &.dropdown-toggle { 
+    background: darken(#98ba09, 1%) !important;
+  }
+}
+
+// Cyan/Info button
+.btn-cyan,
+.btn-info {
+  .buttonBackground(#4ec9ce, #45b4bf);
+  border-color: #36919b;
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    background: #7cc3ca;
+    border-color: #6eadb3;
+    
+    // Active state
+    &:active,
+    &.active {
+      background: #7cc3ca;
+    }
+  }
+
+  // Opened button dropdown
+  .open &.dropdown-toggle { 
+    background: darken(#45b4bf, 1%) !important;
+  }
+}
+
+// Red/Danger button
+.btn-red,
+.btn-danger {
+  .buttonBackground(#ec7337, #d85837);
+  border-color: #a1391e;
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    background: #e07e63;
+    border-color: #b86a57;
+
+    // Active state
+    &:active,
+    &.active {
+      background: #e07e63;
+    }
+  }
+
+  // Opened button dropdown
+  .open &.dropdown-toggle { 
+    background: darken(#d85837, 1%) !important;
+  }
+}
+
+// Black/Inverse button
+.btn-black,
+.btn-inverse {
+  .buttonBackground(#616161, #505050);
+  border-color: #2b2b2b;
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    background: #7a7a7a;
+    border-color: #5e5e5e;
+
+    // Active state
+    &:active,
+    &.active {
+      background: #7a7a7a;
+    }
+  }
+
+  // Opened button dropdown
+  .open &.dropdown-toggle { 
+    background: darken(#505050, 1%) !important;
+  }
+}
+
+// Pink button
+.btn-pink {
+  .buttonBackground(#f377ab, #e3649a);
+  border-color: #b4366b;
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    background: #f083b1;
+    border-color: #c06e90;
+
+    // Active state
+    &:active,
+    &.active {
+      background: #f083b1;
+    }
+  }
+
+  // Opened button dropdown
+  .open &.dropdown-toggle { 
+    background: darken(#e3649a, 1%) !important;
+  }
+}
+
+
+// Link buttons
+// --------------------------------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  background: none !important;
+  border: none !important;
+  color: @linkColor;
+
+  // Hover state
+  &:hover {
+    color: @linkColorHover;
+    background: none !important;
+  }
+
+  // Active state
+  &:active,
+  &.active {
+    color: @linkColorHover;
+    background: none !important;
+    .box-shadow(~"none !important");
+  }
+}
+
+// Opened button dropdown
+.open .btn-link.dropdown-toggle { 
+  background: none !important;
+}
+
+
+// Appended buttons
+// --------------------------------------------------
+
+.input-append .btn-group .btn:first-child {
+  .border-top-left-radius(0);
+  .border-bottom-left-radius(0);
+}

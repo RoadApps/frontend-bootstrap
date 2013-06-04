@@ -1,0 +1,88 @@
+//
+// Charts
+// --------------------------------------------------
+
+// Resets
+.graph-container,
+.graph-container div,
+.graph-container a,
+.graph-container span {
+  margin: 0;
+  padding: 0;
+}
+
+// Gradinet and Rounded Corners
+.graph-container {
+  position: relative;
+
+  & > div {
+    width: inherit;
+    height: inherit;
+  }
+}
+
+.graph-info {
+  width: auto;
+  margin-bottom: 8px;
+  background-color: fadeout(#d6d6d6, 90%);
+  .border-radius(3px);
+}
+
+// Text Styles
+.tickLabel {
+  font-size: 12px;
+  color: #666;
+}
+
+// Tooltip
+#tooltip {
+  position: absolute;
+  display: none;
+  padding: 5px 10px;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  .border-radius(3px);
+}
+
+// Links
+.graph-info span {
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  text-decoration: none;
+  cursor: default;
+  padding-left: 24px;
+
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 32px;
+  color: #646464;
+}
+
+// Color Circle for Links
+.graph-info i {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 8px;
+  height: 8px;
+  top: 13px;
+  left: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+// Hide the First and Last Y Label
+.yAxis .tickLabel:first-child,
+.yAxis .tickLabel:last-child { display: none; }
+
+// Clear Floats
+.graph-info:before, .graph-info:after,
+.graph-container:before, .graph-container:after {
+  content: '';
+  display: block;
+  clear: both;
+}

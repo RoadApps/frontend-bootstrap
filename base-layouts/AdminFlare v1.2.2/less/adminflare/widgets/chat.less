@@ -1,0 +1,100 @@
+//
+// Widgets / Chat
+// --------------------------------------------------
+
+.widget-chat {
+  .message {
+    padding: 10px 0;
+    .clearfix();
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    & > img {
+      display: block;
+      float: left;
+      height: 40px;
+      margin-bottom: -40px;
+      width: 40px;
+      .border-radius(3px);
+    }
+
+    & > div {
+      display: block;
+      float: left;
+      font-size: 12px;
+      margin-top: -3px;
+      padding-left: 55px;
+      width: 100%;
+      .box-sizing(border-box);
+
+      & > div {
+        background: rgba(0, 0, 0, 0.04);
+        font-size: 13px;
+        padding: 7px 12px 9px 12px;
+        .border-radius(3px); 
+
+        &:before {
+          border-bottom: 6px solid transparent; 
+          border-right: 6px solid rgba(0, 0, 0, 0.04);
+          border-top: 6px solid transparent;
+          content: "";
+          display: block;
+          height: 0; 
+          margin: 0 0 -12px -18px;
+          position: relative;
+          width: 0;
+        }
+      }
+
+      & > span {
+        color: #bbb;
+      }
+    }
+
+    &.right {
+      & > div > div:before {
+        border-left: 6px solid rgba(0, 0, 0, 0.04); 
+        border-right: none;
+        float: right;
+        left: 18px;
+        margin-left: 0;
+      }
+
+
+      & > img {
+        float: right;
+      }
+
+      & > div {
+        padding-left: 0;
+        padding-right: 55px;
+      }
+    }
+  }
+
+  .widget-actions {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin-top: 10px;
+  }
+
+  form {
+    margin: 0;
+
+    & > div {
+      margin: -30px 100px 0 0;
+
+      textarea, input[type=text] {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      width: 70px;
+    }
+  }
+}
+      

@@ -1,0 +1,68 @@
+//
+// Widgets / Threads
+// --------------------------------------------------
+
+.widget-threads {
+  .thread {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 8px 0 4px 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    & > img {
+      display: block;
+      float: left;
+      height: 40px;
+      margin-top: 5px;
+      width: 40px;
+      .border-radius(3px);
+    }
+  }
+
+  .content {
+    margin: 0 0 10px 50px;
+    padding-top: 4px;
+
+    & > div {
+      color: #999;
+    }
+
+    & > div a:nth-child(n+2) {
+      color: #555;
+    }
+
+    & > div {
+      margin-right: 32px;
+
+      a:first-child {
+        font-size: 14px;
+      }
+
+      a:nth-child(n+2) {
+        font-style: normal;
+      }
+
+      a:nth-child(n+2):hover {
+        color: #444;
+      }
+    }
+
+    & > span {
+      color: #888;
+      display: block;
+      float: right;
+      font-size: 11px;
+    }
+  }
+}
+
+.box.widget-threads,
+.box .widget-threads {
+  .thread {
+    margin: 0 -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

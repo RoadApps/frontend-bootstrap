@@ -1,0 +1,112 @@
+//
+// Responsive: Navbar
+// --------------------------------------------------
+
+// TABLETS AND BELOW
+// -----------------
+@media (max-width: @navbarCollapseWidth) {
+  .nav-button {
+    display: block;
+  }
+
+  #main-navbar .container {
+    padding-right: 0 !important;
+  }
+
+  .responsive-text {
+    display: inline;
+  }
+  
+  #main-navbar {
+    position: fixed;
+    top: 0;
+    margin-bottom: 0;
+
+    .navbar-inner {
+      padding: 0;
+    }
+
+    .nav-collapse {
+      clear: both;
+  
+      // Block-level the nav
+      .nav {
+        float: none;
+        margin: 6px 0 !important;
+
+        .nav-header {
+          color: rgba(255, 255, 255, .5);
+          padding-left: 14px;
+        }
+      }
+
+      .nav > li,
+      .messages > li {
+        display: block;
+        float: none;
+      }
+
+      .nav > li > a:focus,
+      .messages > li a:focus,
+      .dropdown-menu a:focus {
+        background: none;
+      }
+
+      .messages > li > a {
+        font-size: 12px;
+        font-weight: 600;
+  
+        i {
+          display: none;
+        }
+      }
+
+      .messages > li + li {
+        margin: 0;
+      }
+
+      & > .nav > .divider-vertical,
+      & > .nav > .separator {
+        display: none;
+      }
+
+      .navbar-search {
+        border-top: 1px solid rgba(0, 0, 0, 0.18);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+        .box-shadow(~"rgba(255, 255, 255, 0.15) 0 1px 0, rgba(255, 255, 255, 0.15) 0 1px 0 inset");
+      }
+
+      input {
+        width: 100% !important;
+        .box-sizing(border-box);
+      }
+
+      // Nav and dropdown links in navbar
+      .nav > li > a,
+      .dropdown-menu a {
+        padding: 9px 15px !important;
+        font-size: 12px !important;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .nav > li > a:hover,
+      .dropdown-menu a:hover {
+        background: none;
+        .box-shadow(none);
+        .opacity(80);
+        .transition(opacity s);
+      }
+
+      li.active > a:hover,
+      li.open > a:hover,
+      li.active > a:focus,
+      li.open > a:focus {
+        background: rgba(0, 0, 0, 0.15);
+        .box-shadow(rgba(0, 0, 0, 0.1) 0px 1px 5px inset);
+        .opacity(100);
+        .transition(opacity 0s);
+      }
+    }
+  }
+}

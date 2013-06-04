@@ -1,0 +1,67 @@
+@import "wysiwyg-color.less";
+
+ul {
+	&.wysihtml5-toolbar {
+		margin: 0;
+		padding: 0;
+		display: block;
+
+		&::after {
+			clear: both;
+			display: table;
+			content: "";
+		}
+
+		& > li {
+			float: left;
+			display: list-item;
+			list-style: none;
+			margin: 0 5px 10px 0;
+		}
+
+		a[data-wysihtml5-command=bold] {
+			font-weight: bold;
+		}
+
+		a[data-wysihtml5-command=italic] {
+			font-style: italic;
+		}
+
+		a[data-wysihtml5-command=underline] {
+			text-decoration: underline;
+		}
+
+		div.wysihtml5-colors {
+  			display:block;
+  			width: 50px;
+  			height: 20px;
+  			margin-top: 2px;
+  			margin-left: 5px;
+  			position: absolute;
+  			pointer-events: none;
+		}
+
+
+		a.wysihtml5-colors-title {
+  			padding-left: 70px;
+		}
+
+		.btn i {
+			display: inline-block;
+			position: relative;
+			font-size: 14px;
+		}
+
+	}
+	
+	&.wysihtml5-commands-disabled .dropdown-menu {
+		display: none !important;
+	}
+}
+
+.wysihtml5-command-active,
+.wysihtml5-toolbar .open .dropdown-toggle,
+.wysihtml5-toolbar .open .dropdown-toggle:active {
+  background: darken(#f2f2f2, 5%) !important;
+  .box-shadow(~"rgba(0, 0, 0, 0.1) 0 1px 3px inset !important");
+}

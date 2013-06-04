@@ -1,0 +1,45 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+.rounded-borders {
+  .border-radius(3px);
+}
+
+@media (min-width: 767px) {
+  .non-gutter-grid {
+    @fluidGridColumnWidth: percentage((@gridRowWidth / @gridColumns)/@gridRowWidth);
+  
+    .spanX (@index) when (@index > 0) {
+      (~".span@{index}") { .span(@index); }
+      .spanX(@index - 1);
+    }
+    .spanX (0) {}
+  
+    .offsetX (@index) when (@index > 0) {
+      (~'.offset@{index}') { .offset(@index); }
+      (~'.offset@{index}:first-child') { .offsetFirstChild(@index); }
+      .offsetX(@index - 1);
+    }
+    .offsetX (0) {}
+  
+    .offset (@columns) {
+      margin-left: 0 !important;
+      *margin-left: 0 !important;
+    }
+  
+    .offsetFirstChild (@columns) {
+      margin-left: 0 !important;
+      *margin-left: 0 !important;
+    }
+  
+    .span (@columns) {
+      margin-left: 0 !important;
+      width: (@fluidGridColumnWidth * @columns) !important;
+      *width: (@fluidGridColumnWidth * @columns) - (.5 / @gridRowWidth * 100 * 1%) !important;
+    }
+  
+    .spanX (@gridColumns);
+    .offsetX (@gridColumns);
+  }
+}

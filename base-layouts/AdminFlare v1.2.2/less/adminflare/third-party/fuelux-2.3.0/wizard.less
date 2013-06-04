@@ -1,0 +1,50 @@
+.wizard {
+	border: 1px solid #ddd;
+	height: 40px;
+	.box-shadow(none);
+
+	ul {
+		li {
+			padding: 0 20px;
+			height: 40px;
+			line-height: 40px;
+			background: none;
+			font-size: 14px;
+			.border-radius(@baseBorderRadius);
+
+			&.complete {
+				color: darken(#9bb921, 10%);
+
+				&:hover {
+					background: #eee;
+				}
+
+				.badge {
+					background-color: #9bb921;
+				}
+			}
+
+			&.active {
+				background: @activeHighlightColor;
+				color: #fff;
+
+				height: 42px;
+				line-height: 42px;
+				margin:-1px;
+				z-index: 11 !important;
+
+				text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;
+
+				.badge {
+					color: @activeHighlightColor;
+					text-shadow: none;
+					background-color: #fff;
+				}
+			}
+		}
+	}
+
+	.actions {
+		line-height: 38px;
+	}
+}

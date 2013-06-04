@@ -1,0 +1,61 @@
+//
+// Widgets / Status Panel
+// --------------------------------------------------
+
+.widget-status-panel {
+  .clearfix();
+
+  .status {
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    text-align: center;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    & > a {
+      color: #444;
+      display: block;
+      line-height: 12px;
+      height: 12px;
+      margin: 10px 0 -22px 0;
+      position: relative;
+      width: 30px;
+      .box-sizing(border-box);
+      .opacity(15);
+        .transition(all 0.2s);
+        
+        &:hover {
+        text-decoration: none;
+        .opacity(60);
+      }
+    }
+
+    & .value, & .caption {
+      width: 100%;
+    }
+
+    & .value {
+      color: #888;
+      font-size: 31px;
+      height: 100px;
+      line-height: 100px;
+    }
+
+    .caption {
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+      color: #666;
+      font-size: 12px;
+      height: 30px;
+      line-height: 30px;
+      text-transform: uppercase;
+      .box-shadow(rgba(255, 255, 255, 0.75) 0 1px 0 inset);
+    }
+  }
+
+  &.light {
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    .box-shadow(~"rgba(255, 255, 255, 0.75) 0 1px 0, rgba(255, 255, 255, 0.75) 0 1px 0 inset");
+  }
+}

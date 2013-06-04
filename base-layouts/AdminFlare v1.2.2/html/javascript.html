@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>
+		AdminFlare - Javascript
+	</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+
+	<script src="assets/javascripts/1.2.2/adminflare-demo-init.min.js" type="text/javascript"></script>
+
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+		// Include Bootstrap stylesheet 
+		document.write('<link href="assets/css/' + DEMO_ADMINFLARE_VERSION + '/' + DEMO_CURRENT_THEME + '/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" id="bootstrap-css">');
+		// Include AdminFlare stylesheet 
+		document.write('<link href="assets/css/' + DEMO_ADMINFLARE_VERSION + '/' + DEMO_CURRENT_THEME + '/adminflare.min.css" media="all" rel="stylesheet" type="text/css" id="adminflare-css">');
+	</script>
+	
+	<script src="assets/javascripts/1.2.2/modernizr-jquery.min.js" type="text/javascript"></script>
+	<script src="assets/javascripts/1.2.2/adminflare-demo.min.js" type="text/javascript"></script>
+	<script src="assets/javascripts/1.2.2/bootstrap.min.js" type="text/javascript"></script>
+	<script src="assets/javascripts/1.2.2/adminflare.min.js" type="text/javascript"></script>
+
+	<script src="assets/javascripts/1.2.2/fuelux-datagrid-example.min.js" type="text/javascript"></script>
+
+	<style type="text/css">
+		.box { padding-bottom: 0; }
+
+		.box > p { margin-bottom: 20px; }
+
+		#popovers li, #tooltips li {
+			display: block;
+			float: left;
+			list-style: none;
+			margin-right: 20px;
+		}
+		
+		.adminflare > div { margin-bottom: 20px; }
+	</style>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			prettyPrint();
+
+			/* Tooltips
+				================================================== */
+			$('a[rel=tooltip]').tooltip();
+
+
+			/* Popovers
+				================================================== */
+			$('a[rel=popover]').popover().click(function () {
+				return false
+			});
+
+
+			/* Butons
+				================================================== */
+			$("#loading-state-btn").click(function () {
+				$(this).button('loading');
+			});
+
+
+			/* Bootstrap-colorpicker
+				================================================== */
+			$("#colorpicker").colorpicker();
+			$("#colorpicker-rgb").colorpicker();
+			$("#colorpicker-component").colorpicker();
+
+
+			/* Bootstrap-datepicker
+				================================================== */
+			$("#datepicker").datepicker();
+			$("#datepicker-component").datepicker();
+			$("#datepicker-limited").datepicker();
+
+
+			/* Bootstrap-timepicker
+				================================================== */
+			$('.timepicker-default').timepicker({
+				defaultTime: 'value'
+			});
+
+			$('.timepicker-1').timepicker({
+				minuteStep: 1,
+				template: 'modal',
+				showSeconds: true,
+				showMeridian: false,
+				defaultTime: 'value'
+			});
+
+
+			/* Notifications
+				================================================== */
+			$('#notify').click(function () {
+				$('.top-right').notify({
+					message: {
+						text: 'Aw yeah, It works!'
+					},
+					type: 'adminflare'
+				}).show()
+			});
+
+
+			/* WYSIWYG-Editor
+				================================================== */
+			$('#wysihtml5').wysihtml5({
+				"stylesheets": []
+			});
+
+
+			/* Form validations
+				================================================== */
+			$("input,select,textarea", '#validate-form').not("[type=submit]").jqBootstrapValidation();
+
+
+			/* Styled form elements
+				================================================== */
+			// Initializing checkboxes
+			$('#checkbox-toggle').on('click', function () {
+				$('#myCheckbox').checkbox('toggle');
+			});
+
+			$('#checkbox-disable').on('click', function () {
+				$('#myCheckbox').checkbox('disable');
+			});
+
+			$('#checkbox-enable').on('click', function () {
+				$('#myCheckbox').checkbox('enable');
+			});
+
+			// Initializing comboboxes
+			$('#myCombobox').on('changed', function (evt, data) {
+				console.log(data);
+			});
+	
+			$('#combobox-logItem').on('click', function () {
+				console.log($('#myCombobox').combobox('selectedItem'));
+			});
+	
+			$('#combobox-setByIndex').on('click', function () {
+				$('#myCombobox').combobox('selectByIndex', '1');
+			});
+	
+			$('#combobox-setByText').on('click', function () {
+				$('#myCombobox').combobox('selectByText', 'Item Three');
+			});
+	
+			$('#combobox-setBySelector').on('click', function () {
+				$('#myCombobox').combobox('selectBySelector', 'li[data-fizz=buzz]');
+			});
+	
+			$('#combobox-setByValue').on('click', function () {
+				$('#myCombobox').combobox('selectByValue', '1');
+			});
+	
+			$('#combobox-enable').on('click', function () {
+				$('#myCombobox').combobox('enable');
+			});
+	
+			$('#combobox-disable').on('click', function () {
+				$('#myCombobox').combobox('disable');
+			});
+
+
+			// Initializing search input
+			$('#MySearch').on('searched', function (e, text) {
+				alert('Searched: ' + text);
+			});
+
+			$('#search-enable').click(function () {
+				$('#MySearch').search('enable');
+			});
+
+			$('#search-disable').click(function () {
+				$('#MySearch').search('disable');
+			});
+
+			// Initializing spinner
+			$('#MySpinner').spinner();
+			$('#spinner-enable').click(function () {
+				$('#MySpinner').spinner('enable');
+			});
+
+			$('#spinner-disable').click(function () {
+				$('#MySpinner').spinner('disable');
+			});
+
+			$('#spinner-log').click(function () {
+				console.log("Spinner value: ", $('#MySpinner').spinner('value'));
+			});
+
+			// Initializing radio
+			$('#radio-disable').on('click', function () {
+				$('#myRadio').radio('disable');
+			});
+
+			$('#radio-enable').on('click', function () {
+				$('#myRadio').radio('enable');
+			});
+
+			// Initializing select
+			$('#mySelect').on('changed', function (evt, data) {
+				console.log(data);
+			});
+
+			$('#select-logItem').on('click', function () {
+				console.log($('#mySelect').select('selectedItem'));
+			});
+
+			$('#select-setByIndex').on('click', function () {
+				$('#mySelect').select('selectByIndex', '1');
+			});
+
+			$('#select-setByText').on('click', function () {
+				$('#mySelect').select('selectByText', 'Item Three');
+			});
+
+			$('#select-setBySelector').on('click', function () {
+				$('#mySelect').select('selectBySelector', 'li[data-fizz=buzz]');
+			});
+
+			$('#select-setByValue').on('click', function () {
+				$('#mySelect').select('selectByValue', '1');
+			});
+
+			$('#select-enable').on('click', function () {
+				$('#mySelect').select('enable');
+			});
+
+			$('#select-disable').on('click', function () {
+				$('#mySelect').select('disable');
+			});
+
+
+			/* Datagrid
+				================================================== */
+			var dataSource = new StaticDataSource({
+				columns: [
+					{
+						property: 'toponymName',
+						label: 'Name',
+						sortable: true
+					},
+					{
+						property: 'countrycode',
+						label: 'Country',
+						sortable: true
+					},
+					{
+						property: 'population',
+						label: 'Population',
+						sortable: true
+					},
+					{
+						property: 'fcodeName',
+						label: 'Type',
+						sortable: true
+					}
+				],
+				data: sampleData.geonames,
+				delay: 250
+			});
+	
+			$('#MyGrid').datagrid({
+				dataSource: dataSource,
+				stretchHeight: true
+			});
+	
+			$('#datagrid-reload').on('click', function () {
+				$('#MyGrid').datagrid('reload');
+			});
+
+
+			/* Wizard
+				================================================== */
+			$('#myWizard').on('change', function (e, data) {
+				console.log('change');
+				if (data.step === 3 && data.direction === 'next') {
+					// return e.preventDefault();
+				}
+			});
+
+			$('#myWizard').on('changed', function (e, data) {
+				console.log('changed');
+			});
+
+			$('#myWizard').on('finished', function (e, data) {
+				console.log('finished');
+			});
+
+			$('#wizard-prev').on('click', function () {
+				$('#myWizard').wizard('previous');
+			});
+
+			$('#wizard-next').on('click', function () {
+				$('#myWizard').wizard('next', 'foo');
+			});
+
+			$('#wizard-logItem').on('click', function () {
+				var item = $('#myWizard').wizard('selectedItem');
+				console.log(item.step);
+			});
+			
+
+			/* Toggle buttons
+				================================================== */
+			$('#normal-toggle-button').toggles({width: 100});
+			$('#text-toggle-button').toggles({ontext:'HI', offtext:'BYE', on: false});
+			
+
+			/* Auto-resizing textarea
+				================================================== */
+			$("#autoresize").autosize();
+
+
+			/* Inline editable
+				================================================== */
+			
+			//enable / disable
+			$('#enable').click(function () {
+				$('#user .editable').editable('toggleDisabled');
+			});
+
+			//editables 
+			$('#username').editable({
+				type: 'text',
+				pk: 1,
+				name: 'username',
+				title: 'Enter username'
+			});
+
+			$('#firstname').editable({
+				validate: function (value) {
+					if ($.trim(value) == '') return 'This field is required';
+				}
+			});
+
+			$('#lastname').editable();
+
+			$('#sex').editable({
+				prepend: "not selected",
+				source: [{
+					value: 1,
+					text: 'Male'
+				}, {
+					value: 2,
+					text: 'Female'
+				}],
+				display: function (value, sourceData) {
+					var colors = {
+						"": "gray",
+						1: "green",
+						2: "blue"
+					},
+					elem = $.grep(sourceData, function (o) {
+						return o.value == value;
+					});
+					if (elem.length) {
+						$(this).text(elem[0].text).css("color", colors[value]);
+					}
+					else {
+						$(this).empty();
+					}
+				}
+			});
+
+			$('#status').editable();
+			$('#dob').editable();
+
+			$('#comments').editable({
+				showbuttons: true
+			});
+
+			$('#note').editable();
+
+			$('#pencil').click(function (e) {
+				e.stopPropagation();
+				e.preventDefault();
+				$('#note').editable('toggle');
+			});
+
+			$('#fruits').editable({
+				pk: 1,
+				limit: 3,
+				source: [{
+					value: 1,
+					text: 'banana'
+				}, {
+					value: 2,
+					text: 'peach'
+				}, {
+					value: 3,
+					text: 'apple'
+				}, {
+					value: 4,
+					text: 'watermelon'
+				}, {
+					value: 5,
+					text: 'orange'
+				}]
+			});
+
+			$('#address').editable({
+				value: {
+					city: "Moscow",
+					street: "Lenina",
+					building: "12"
+				},
+				validate: function (value) {
+					if (value.city == '') return 'city is required!';
+				},
+				display: function (value) {
+					if (!value) {
+						$(this).empty();
+						return;
+					}
+					var html = '<b>' + $('<div>').text(value.city).html() + '</b>, ' + $('<div>').text(value.street).html		() + ' st., bld. ' + $('<div>').text(value.building).html();
+					$(this).html(html);
+				}
+			});
+
+
+			/* Dialog boxes
+				================================================== */
+			$('#bootbox-alert').click(function () {
+				bootbox.alert("Hello world!", function () {
+					alert('Hello world callback');
+				});
+			});
+
+			$('#bootbox-confirm').click(function () {
+				bootbox.confirm("Are you sure?", function (result) {
+					alert("Confirm result: " + result);
+				});
+			});
+
+			$('#bootbox-prompt').click(function () {
+				bootbox.prompt("What is your name?", function (result) {
+					if (result === null) {
+						alert("Prompt dismissed");
+					}
+					else {
+						alert("Hi, " + result + "!");
+					}
+				});
+			});
+
+			$('#bootbox-custom').click(function () {
+				bootbox.dialog("I am a custom dialog", [{
+					"label": "Success!",
+					"class": "btn-green",
+					"callback": function () {
+						alert("great success");
+					}
+				}, {
+					"label": "Danger!",
+					"class": "btn-orange",
+					"callback": function () {
+						alert("uh oh, look out!");
+					}
+				}, {
+					"label": "Click ME!",
+					"class": "btn-primary",
+					"callback": function () {
+						alert("Primary button");
+					}
+				}, {
+					"label": "Just a button..."
+				}]);
+			});
+
+
+			/* Clickovers
+				================================================== */
+			$('[rel="clickover"]').clickover();
+
+			$('#auto-close-co').clickover({
+				auto_close: 15 * 1000
+			});
+
+			$('#no-global-co').clickover({
+				global_close: false
+			});
+
+			$('#shown-co').clickover({
+				onShown: function () {
+					alert("Hello from clickover");
+				}
+			});
+
+			$('#no-esc').clickover({
+				placement: 'top',
+				esc_close: 0
+			});
+		});
+	</script>
+</head>
+<body>
+<script type="text/javascript">demoSetBodyLayout();</script>
+	<!-- Main navigation bar
+		================================================== -->
+	<header class="navbar navbar-fixed-top" id="main-navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="logo" href="#"><img alt="Af_logo" src="assets/images/af-logo.png"></a>
+
+				<a class="btn nav-button collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-reorder"></span>
+				</a>
+
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <i class=" icon-caret-down"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li class="nav-header">Nav header</li>
+								<li><a href="#">Separated link</a></li>
+								<li><a href="#">One more separated link</a></li>
+							</ul>
+						</li>
+						<li class="divider-vertical"></li>
+					</ul>
+					<form class="navbar-search pull-left" action="" _lpchecked="1">
+						<input type="text" class="search-query" placeholder="Search" style="width: 120px">
+					</form>
+					<ul class="nav pull-right">
+						<li>
+							<ul class="messages">
+								<li>
+									<a href="#"><i class="icon-warning-sign"></i> 2<span class="		responsive-text"> alerts</span></a>
+								</li>
+								<li>
+									<a href="#"><i class="icon-envelope"></i> 25<span class="		responsive-text"> new messages</span></a>
+								</li>
+							</ul>
+						</li>
+						<li class="separator"></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle usermenu" data-toggle="dropdown">
+								<img alt="Avatar" src="assets/images/avatar.png">
+								<span>&nbsp;&nbsp;Admin</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Profile</a>
+								</li>
+								<li>
+									<a href="#">Settings</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="index.html">Sign In</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- / Main navigation bar -->
+	
+	<!-- Left navigation panel
+		================================================== -->
+	<nav id="left-panel">
+		<div id="left-panel-content">
+			<ul>
+				<li>
+					<a href="dashboard.html"><span class="icon-dashboard"></span>Dashboard</a>
+				</li>
+				<li>
+					<a href="layout.html"><span class="icon-th-large"></span>Layout</a>
+				</li>
+				<li>
+					<a href="typography.html"><span class="icon-font"></span>Typography</a>
+				</li>
+				<li>
+					<a href="forms.html"><span class="icon-edit"></span>Forms</a>
+				</li>
+				<li>
+					<a href="tables.html"><span class="icon-table"></span>Tables</a>
+				</li>
+				
+				<li>
+					<a href="components.html"><span class="icon-inbox"></span>Components</a>
+				</li>
+				<li class="active">
+					<a href="javascript.html"><span class="icon-cog"></span>JavaScript</a>
+				</li>
+				<li class="lp-dropdown">
+					<a href="#" class="lp-dropdown-toggle" id="extras-dropdown"><span class="icon-reorder"></span>Extras</a>
+					<ul class="lp-dropdown-menu" data-dropdown-owner="extras-dropdown">
+						<li>
+							<a tabindex="-1" href="extras-icons.html"><span class="icon-coffee"></span>Icons</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="extras-charts.html"><span class="icon-bar-chart"></span>Charts</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="extras-widgets.html"><span class="icon-star"></span>Widgets</a>
+						</li>
+					</ul>
+				</li>
+				<li class="lp-dropdown">
+					<a href="#" class="lp-dropdown-toggle" id="pages-dropdown"><span class="icon-file-alt"></span>Pages</a>
+					<ul class="lp-dropdown-menu simple" data-dropdown-owner="pages-dropdown">
+						<li>
+							<a tabindex="-1" href="index.html"><i class="icon-signin"></i>&nbsp;&nbsp;Sign In</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-signup.html"><i class="icon-check"></i>&nbsp;&nbsp;Sign Up</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-messages.html"><i class="icon-envelope-alt"></i>&nbsp;&nbsp;Messages</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-stream.html"><i class="icon-leaf"></i>&nbsp;&nbsp;Stream</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-pricing.html"><i class="icon-money"></i>&nbsp;&nbsp;Pricing</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-invoice.html"><i class="icon-pencil"></i>&nbsp;&nbsp;Invoice</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="icon-caret-down"></div>
+		<div class="icon-caret-up"></div>
+	</nav>
+	<!-- / Left navigation panel -->
+	
+	<!-- Page content
+		================================================== -->
+	<section class="container">
+
+		<!-- Modals
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Modals
+			</h3>
+			<div class="box">
+				<p>
+					Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults. For more info visit <a href="http://twitter.github.com/bootstrap/javascript.html#modals" target="_blank">http://twitter.github.com/bootstrap/javascript.html#modals</a>.
+				</p>
+				<div class="row-fluid">
+					<div class="span4">
+						<!-- Button to trigger modal -->
+						<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">Launch demo modal</a>
+						<!-- Modal -->
+						<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="	myModalLabel" aria-hidden="true">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h3 id="myModalLabel">Modal header</h3>
+							</div>
+							<div class="modal-body">
+								<h4>Text in a modal</h4>
+								<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
+								<h4>Popover in a modal</h4>
+								<p>This <a href="#" role="button" class="btn popover-test" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a> should trigger a popover on click.</p>
+								<h4>Tooltips in a modal</h4>
+								<p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> should have tooltips on hover.</p>
+								<hr>
+								<h4>Overflowing text to show optional scrollbar</h4>
+								<p>We set a fixed <code>max-height</code> on the <code>.modal-body</code>. Watch it overflow with all this extra lorem ipsum text we've included.</p>
+								<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+								<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+								<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+								<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+								<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus 	sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+								<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+							</div>
+							<div class="modal-footer">
+								<button class="btn" data-dismiss="modal">Close</button>
+								<button class="btn btn-primary">Save changes</button>
+							</div>
+						</div>
+					</div>
+					<div class="span8">
+						<div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 	auto 20px; z-index: 1; max-width: 100%;">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h3>Modal header</h3>
+							</div>
+							<div class="modal-body">
+								<p>One fine body&hellip;</p>
+							</div>
+							<div class="modal-footer">
+								<button class="btn">Close</button>
+								<button class="btn btn-primary">Save changes</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / Modals -->
+
+		<!-- Togglable tabs
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Togglable tabs
+			</h3>
+			<div class="box">
+				<p>
+					Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus. For more info visit <a href="http://twitter.github.com/bootstrap/javascript.html#tabs" target="_blank">http://twitter.github.com/bootstrap/javascript.html#tabs</a>.
+				</p>
+				<div class="well">
+					<ul id="myTab" class="nav nav-tabs">
+						<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+						<li><a href="#profile" data-toggle="tab">Profile</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#dropdown1" data-toggle="tab">@fat</a></li>
+								<li><a href="#dropdown2" data-toggle="tab">@mdo</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div id="myTabContent" class="tab-content" style="margin-bottom: 10px">
+
+						<div class="tab-pane fade in active" id="home">
+							<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+						</div>
+
+						<div class="tab-pane fade" id="profile">
+							<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+						</div>
+
+						<div class="tab-pane fade" id="dropdown1">
+							<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+						</div>
+
+						<div class="tab-pane fade" id="dropdown2">
+							<p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / Togglable tabs -->
+
+		<!-- Tooltips
+			================================================== -->
+		<section class="row-fluid" id="tooltips">
+			<h3 class="box-header">
+				Tooltips
+			</h3>
+			<div class="box">
+				<p>
+					Inspired by the excellent jQuery.tipsy plugin written by Jason Frame; Tooltips are an updated version, which don't rely on images, use CSS3 for animations, and data-attributes for local title storage. For more info visit <a href="http://twitter.github.com/bootstrap/javascript.html#tooltips" target="_blank">http://twitter.github.com/bootstrap/javascript.html#tooltips</a>. <br> Hover over the links below to see tooltips:
+				</p>
+				<div class="well">
+					<p class="muted">Tight pants next level keffiyeh <a href="#" rel="tooltip" title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" rel="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" rel="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" rel="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.</p>
+					<ul class="left-floated-list clearfix">
+						<li><a href="#" rel="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</a></li>
+						<li><a href="#" rel="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</a></li>
+						<li><a href="#" rel="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</a></li>
+						<li><a href="#" rel="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!--/  Tooltips -->
+
+		<!-- Popovers
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Popovers
+			</h3>
+			<div class="box">
+				<p>
+					Add small overlays of content, like those on the iPad, to any element for housing secondary information. Hover over the button to trigger the popover. <strong>Requires <a href="http://twitter.github.com/bootstrap/javascript.html#tooltips" title="Tooltip" target="_blank">Tooltip</a> to be included.</strong> For more info visit <a href="http://twitter.github.com/bootstrap/javascript.html#popovers" target="_blank">http://twitter.github.com/bootstrap/javascript.html#popovers</a>.
+				</p>
+				<div class="well clearfix">
+					<ul style="margin: 0" id="popovers">
+						<li>
+							<a href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a>
+						</li>
+						<li>
+							<a href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a>
+						</li>
+						<li>
+							<a href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a>
+						</li>
+						<li>
+							<a href="#" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Popover on left</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- / Popovers -->
+
+		<!-- Alert messages
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Alert messages
+			</h3>
+			<div class="box">
+				<p>
+					Add dismiss functionality to all alert messages. For more info visit <a href="http://twitter.github.com/bootstrap/javascript.html#alerts" target="_blank">http://twitter.github.com/bootstrap/javascript.html#alerts</a>.
+				</p>
+				<div class="well clearfix">
+
+					<div class="alert fade in">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						<strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+					</div>
+
+					<div class="alert alert-block alert-error fade in">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						<h4 class="alert-heading">Oh snap! You got an error!</h4>
+						<p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+						<p>
+							<a class="btn btn-danger" href="#">Take this action</a> <a class="btn" href="#">Or do this</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / Alert messages -->
+
+		<!-- Buttons
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Buttons
+			</h3>
+			<div class="box">
+				<p>
+					Do more with buttons. Control button states or create groups of buttons for more components like toolbars. For more info visit <a href="http://twitter.github.com/bootstrap/javascript.html#buttons" target="_blank">http://twitter.github.com/bootstrap/javascript.html#buttons</a>.
+				</p>
+				<div class="well clearfix">
+					<button type="button" class="btn btn-primary" data-loading-text="Loading..." id="loading-state-btn">Loading state</button>
+					<button type="button" class="btn btn-primary" data-toggle="button">Single Toggle</button>
+					<div class="btn-group" data-toggle="buttons-checkbox">
+						<button type="button" class="btn btn-primary">Left</button>
+						<button type="button" class="btn btn-primary">Middle</button>
+						<button type="button" class="btn btn-primary">Right</button>
+					</div>
+					<div class="btn-group" data-toggle="buttons-radio">
+						<button type="button" class="btn btn-primary">Left</button>
+						<button type="button" class="btn btn-primary">Middle</button>
+						<button type="button" class="btn btn-primary">Right</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / Buttons -->
+
+		<!-- Collapse
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Collapse
+			</h3>
+			<div class="box">
+				<p>
+					Get base styles and flexible support for collapsible components like accordions and navigation. For more info visit <a href="http://twitter.github.com/bootstrap/javascript.html#collapse" target="_blank">http://twitter.github.com/bootstrap/javascript.html#collapse</a>.
+				</p>
+				<div class="well clearfix">
+					<div class="accordion" id="accordion2">
+
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+									Collapsible Group Item #1
+								</a>
+							</div>
+							<div id="collapseOne" class="accordion-body collapse in">
+								<div class="accordion-inner">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+									Collapsible Group Item #2
+								</a>
+							</div>
+							<div id="collapseTwo" class="accordion-body collapse">
+								<div class="accordion-inner">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+									Collapsible Group Item #3
+								</a>
+							</div>
+							<div id="collapseThree" class="accordion-body collapse">
+								<div class="accordion-inner">
+									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / Collapse -->
+
+		<!-- ================================================== -->
+		<section class="row-fluid">
+
+			<!-- Bootstrap-colorpicker
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">Bootstrap-colorpicker</h3>
+				<div class="box">
+					<p style="margin: 0">
+						Add color picker to field or to any other element.
+					</p>
+					<ul>
+						<li>can be used as a component</li>
+						<li>alpha picker</li>
+						<li>multiple formats: hex, rgb, rgba, hsl, hsla</li>
+					</ul>
+					<p>For more info visit <a href="http://www.eyecon.ro/bootstrap-colorpicker/" target="_blank">http://www.eyecon.ro/bootstrap-colorpicker/</a>.</p>
+					<div class="well">
+						<input type="text" class="input-medium" id="colorpicker" value="#e7912a"><br>
+						<input type="text" class="input-medium" value="rgba(0,194,255,0.78)" id="colorpicker-rgb" data-color-format="rgba"><br>
+						<div class="input-append color" data-color="rgb(255,146,180)" data-color-format="rgb" id="colorpicker-component">
+							<input type="text" class="input-medium" value="rgb(255,146,180)" readonly="">
+							<span class="add-on"><i style="background-color: rgb(255,146,180);"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- / Bootstrap-colorpicker -->
+
+			<!-- Bootstrap-datepicker
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">Bootstrap-datepicker</h3>
+				<div class="box">
+					<p style="margin: 0">Add datepicker picker to field or to any other element.</p>
+					<ul>
+						<li>can be used as a component</li>
+						<li>formats: dd, d, mm, m, yyyy, yy</li>
+						<li>separators: -, /, .</li>
+					</ul>
+					<p>
+						For more info visit <a href="http://www.eyecon.ro/bootstrap-datepicker/" target="_blank">http://www.eyecon.ro/bootstrap-datepicker/</a>.
+					</p>
+					<div class="well">
+						<input type="text" class="input-small" value="02-16-2012" id="datepicker" data-date-format="mm-dd-yyyy"><br>
+						<div class="input-append date" id="datepicker-component" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+							<input class="input-small" size="16" type="text" value="12-02-2012" readonly="">
+							<span class="add-on"><i class="icon-calendar"></i></span>
+						</div>
+						<br>
+						<div class="input-append date" id="datepicker-limited" data-date="02/2012" data-date-format="mm/yyyy" data-date-viewmode="years" data-date-minviewmode="months">
+							<input class="input-small" size="16" type="text" value="02/2012" readonly="">
+							<span class="add-on"><i class="icon-calendar"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- / Bootstrap-datepicker -->
+		</section>
+
+		<!-- ================================================== -->
+		<section class="row-fluid">
+
+			<!-- Bootstrap-timepicker
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">Bootstrap-timepicker</h3>
+				<div class="box clearfix">
+					<p>
+						A widget to easily select a time for a text input using mouse or arrow keys. For more info visit <a href="http://jdewit.github.com/bootstrap-timepicker/" target="_blank">http://jdewit.github.com/bootstrap-timepicker/</a>.
+					</p>
+					<div class="well">
+						<div class="input-append bootstrap-timepicker-component">
+							<input class="input-small timepicker-default" type="text" value="03:21 AM">
+							<span class="add-on"><i class="icon-time"></i></span>
+						</div>
+						<br>
+						<div class="input-append bootstrap-timepicker-component">
+							<input class="timepicker-1 input-small" type="text" value="10:25:49">
+							<span class="add-on"><i class="icon-time"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- / Bootstrap-timepicker -->
+
+			<!-- Notifications
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">Notifications</h3>
+				<div class="box clearfix" style="padding-bottom: 20px">
+					<p>
+						User-friendly notifications that leverages the default alert script for Twitter Bootstrap. For more info visit <a href="https://github.com/Nijikokun/bootstrap-notify/" target="_blank">https://github.com/Nijikokun/bootstrap-notify/</a>.
+					</p>
+					<button id="notify" class="btn btn-primary btn-large">Show notification</button>
+				</div>
+			</div>
+			<!-- / Notifications -->
+		</section>
+
+		<!-- WYSIWYG-Editor
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">WYSIWYG-Editor</h3>
+			<div class="box" style="padding-bottom: 20px">
+				<p>
+					Bootstrap-wysihtml5 is a javascript plugin that makes it easy to create simple, beautiful wysiwyg editors with the help of <a href="https://github.com/xing/wysihtml5" target="_blank">wysihtml5</a> and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>. For more info visit <a href="http://jhollingworth.github.com/bootstrap-wysihtml5/" target="_blank">http://jhollingworth.github.com/bootstrap-wysihtml5/</a>.
+				</p>
+				<textarea id="wysihtml5" class="span12" rows="10" style="margin: 0"></textarea>
+			</div>
+		</section>
+		<!-- / WYSIWYG-Editor -->
+
+		<!-- Form validation
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">Form validation</h3>
+			<div class="box">
+				<p>
+					A JQuery validation framework for bootstrap forms. Displays validation errors in <code>help-block</code> elements as users type. For more info visit <a href="http://reactiveraven.github.com/jqBootstrapValidation/" target="_blank">http://reactiveraven.github.com/jqBootstrapValidation/</a>.
+				</p>
+				<div class="well">
+					<form class="form-horizontal" id="validate-form" novalidate>
+
+						<div class="control-group">
+							<label class="control-label" for="email">Email address</label>
+							<div class="controls">
+								<input type="email" name="email" id="email" required>
+								<p class="help-block">Email address we can contact you on</p>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<label class="control-label" for="emailAgain">Email again</label>
+							<div class="controls">
+								<input type="email" data-validation-matches-match="email" data-validation-matches-message="Must match email address entered above" id="emailAgain" name="emailAgain">
+								<p class="help-block">And again, to check for speeling miskates</p>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<label class="control-label" for="terms-and-conditions">Legal</label>
+							<div class="controls">
+								<label class="checkbox">
+								<input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required data-validation-required-message="You must agree to the terms and conditions">
+								I agree to the <a href="#">terms and conditions</a>
+								</label>
+								<p class="help-block"></p>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<label class="control-label">Quality Control</label>
+							<div class="controls">
+								<label class="checkbox">
+								<input type="checkbox" name="qualityControl[]" value="fast" data-validation-minchecked-minchecked="2" data-validation-minchecked-message="Choose two" data-validation-maxchecked-maxchecked="2" data-validation-maxchecked-message="You can't have it all ways">
+								Fast
+								</label>
+								<label class="checkbox">
+								<input type="checkbox" name="qualityControl[]" value="cheap">
+								Cheap
+								</label>
+								<label class="checkbox">
+								<input type="checkbox" name="qualityControl[]" value="good">
+								Good
+								</label>
+								<p class="help-block"></p>
+							</div>
+						</div>
+
+						<div class="form-actions" style="margin-bottom: -20px">
+							<button type="submit" class="btn btn-primary">Test Validation <i class="icon-ok icon-white"></i></button><br>
+							(go ahead, nothing is sent anywhere)
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<!-- / Form validation -->
+
+		<!-- Styled form elements
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">Styled form elements</h3>
+			<div class="box">
+				<p>
+					For more info visit <a href="http://exacttarget.github.com/fuelux/" target="_blank">http://exacttarget.github.com/fuelux/</a>.
+				</p>
+
+				<h4>Checkboxes</h4>
+				<div class="well">
+					<label class="checkbox checkbox-custom"><input type="checkbox" checked="checked" id="myCheckbox"><i class="checkbox checked"></i>Checked Enabled</label>
+					<label class="checkbox checkbox-custom"><input type="checkbox"><i class="checkbox"></i>Unchecked Enabled</label>
+					<label class="checkbox checkbox-custom"><input type="checkbox" checked="checked" disabled="disabled"><i class="checkbox checked disabled"></i>Checked Disabled</label>
+					<label class="checkbox checkbox-custom"><input type="checkbox" disabled="disabled"><i class="checkbox disabled"></i>Unchecked Disabled</label>
+					<div style="margin-bottom: 15px"></div>
+					<input type="button" class="btn" id="checkbox-toggle" value="toggle">
+					<input type="button" class="btn" id="checkbox-enable" value="enable">
+					<input type="button" class="btn" id="checkbox-disable" value="disable">
+				</div>
+
+				<h4>Combobox</h4>
+				<div class="well">
+					<div id="myCombobox" class="input-append dropdown combobox">
+						<input type="text" style="width: 120px">
+						<button class="btn" data-toggle="dropdown"><i class="caret"></i></button>
+						<ul class="dropdown-menu">
+							<li data-value="1"><a href="javascript:void(0)">Item One</a></li>
+							<li data-value="2"><a href="javascript:void(0)">Item Two</a></li>
+							<li data-value="3" data-fizz="buzz"><a href="javascript:void(0)">Item Three</a></li>
+							<li class="divider"></li>
+							<li data-value="4"><a href="javascript:void(0)">Item Four</a></li>
+						</ul>
+					</div>
+					<br>
+					<input type="button" class="btn" id="combobox-enable" value="enable">
+					<input type="button" class="btn" id="combobox-disable" value="disable">
+					<input type="button" class="btn" id="combobox-setByIndex" value="set by index">
+					<input type="button" class="btn" id="combobox-setByText" value="set by text">
+					<input type="button" class="btn" id="combobox-setByValue" value="set by value">
+					<input type="button" class="btn" id="combobox-setBySelector" value="set by selector">
+					<input type="button" class="btn" id="combobox-logItem" value="log item to console">
+				</div>
+
+				<h4>Radio</h4>
+				<div class="well">
+					<label class="radio radio-custom"><input type="radio" name="radioA" checked="checked" id="myRadio"><i class="radio checked"></i>Checked Enabled</label>
+					<label class="radio radio-custom"><input type="radio" name="radioA"><i class="radio"></i>Unchecked
+					Enabled</label>
+					<label class="radio radio-custom"><input type="radio" name="radioB" checked="checked" disabled="disabled"><i class="radio checked disabled"></i>Checked
+					Disabled</label>
+					<label class="radio radio-custom"><input type="radio" name="radioB" disabled="disabled"><i class="radio disabled"></i>Unchecked Disabled</label>
+					<div style="margin-bottom: 15px"></div>
+					<input type="button" class="btn" id="radio-enable" value="enable">
+					<input type="button" class="btn" id="radio-disable" value="disable">
+				</div>
+
+				<h4>Select</h4>
+				<div class="well">
+					<div id="mySelect" class="select btn-group" data-resize="auto" style="margin-bottom: 15px">
+						<button data-toggle="dropdown" class="btn dropdown-toggle"><span class="dropdown-label" style="width: 68px;">Item One</span><span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li data-value="1"><a href="javascript:void(0)">Item One</a></li>
+							<li data-value="2"><a href="javascript:void(0)">Item Two</a></li>
+							<li data-value="3" data-fizz="buzz"><a href="javascript:void(0)">Item Three</a></li>
+							<li class="divider"></li>
+							<li data-value="4"><a href="javascript:void(0)">Item Four</a></li>
+						</ul>
+					</div>
+					<div>
+						<input type="button" class="btn" id="select-enable" value="enable">
+						<input type="button" class="btn" id="select-disable" value="disable">
+						<input type="button" class="btn" id="select-setByIndex" value="set by index">
+						<input type="button" class="btn" id="select-setByText" value="set by text">
+						<input type="button" class="btn" id="select-setByValue" value="set by value">
+						<input type="button" class="btn" id="select-setBySelector" value="set by selector">
+						<input type="button" class="btn" id="select-logItem" value="log item to console">
+					</div>
+				</div>
+
+				<h4>Spinner</h4>
+				<div class="well">
+					<div id="MySpinner" class="spinner">
+						<input type="text" class="input-mini spinner-input" maxlength="3">
+						<div class="spinner-buttons  btn-group btn-group-vertical">
+							<button class="btn spinner-up">
+							<i class="icon-chevron-up"></i>
+							</button>
+							<button class="btn spinner-down">
+							<i class="icon-chevron-down"></i>
+							</button>
+						</div>
+					</div>
+					<div>
+						<input type="button" class="btn" id="spinner-enable" value="enable">
+						<input type="button" class="btn" id="spinner-disable" value="disable">
+						<input type="button" class="btn" id="spinner-log" value="log value to console">
+					</div>
+				</div>
+
+				<h4>Search</h4>
+				<div class="well">
+					<div id="MySearch" class="input-append search" style="margin-bottom: 15px">
+						<input type="text" class="input-medium" placeholder="Search">
+						<button class="btn"><i class="icon-search"></i></button>
+					</div>
+					<div>
+						<input type="button" class="btn" id="search-enable" value="enable">
+						<input type="button" class="btn" id="search-disable" value="disable">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / Styled form elements -->
+
+		<!-- Datagrid
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">Datagrid</h3>
+			<div class="box">
+				<p>
+					For more info visit <a href="http://exacttarget.github.com/fuelux/#datagrid" target="_blank">http://exacttarget.github.com/fuelux/#datagrid</a>.
+				</p>
+				<div class="datagrid-example">
+					<div style="height:400px;width:100%;margin-bottom:20px;">
+						<table id="MyGrid" class="table table-bordered datagrid">
+							<thead>
+							<tr>
+								<th>
+									<span class="datagrid-header-title">Geographic Data Sample</span>
+	
+									<div class="datagrid-header-left">
+										<div class="input-append search datagrid-search">
+											<input type="text" class="input-medium" placeholder="Search">
+											<button class="btn"><i class="icon-search"></i></button>
+										</div>
+									</div>
+									<div class="datagrid-header-right">
+										<div class="select filter" data-resize="auto">
+											<button data-toggle="dropdown" class="btn dropdown-toggle">
+												<span class="dropdown-label"></span>
+												<span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu">
+												<li data-value="all" data-selected="true"><a href="#">All</a></li>
+												<li data-value="lt5m"><a href="#">Population &lt; 5M</a></li>
+												<li data-value="gte5m"><a href="#">Population &gt;= 5M</a></li>
+											</ul>
+										</div>
+									</div>
+								</th>
+							</tr>
+							</thead>
+	
+							<tfoot>
+							<tr>
+								<th>
+									<div class="datagrid-footer-left" style="display:none;">
+										<div class="grid-controls">
+											<span>
+												<span class="grid-start"></span> -
+												<span class="grid-end"></span> of
+												<span class="grid-count"></span>
+											</span>
+											<div class="select grid-pagesize" data-resize="auto">
+												<button data-toggle="dropdown" class="btn dropdown-toggle">
+													<span class="dropdown-label"></span>
+													<span class="caret"></span>
+												</button>
+												<ul class="dropdown-menu">
+													<li data-value="5"><a href="#">5</a></li>
+													<li data-value="10" data-selected="true"><a href="#">10</a></li>
+													<li data-value="20"><a href="#">20</a></li>
+													<li data-value="50"><a href="#">50</a></li>
+													<li data-value="100"><a href="#">100</a></li>
+												</ul>
+											</div>
+											<span>Per Page</span>
+										</div>
+									</div>
+									<div class="datagrid-footer-right" style="display:none;">
+										<div class="grid-pager">
+											<button type="button" class="btn grid-prevpage"><i class="icon-chevron-left"></i></button>
+											<span>Page</span>
+	
+											<div class="input-append dropdown combobox">
+												<input type="text">
+												<button class="btn" data-toggle="dropdown"><i class="caret"></i></button>
+												<ul class="dropdown-menu"></ul>
+											</div>
+											<span>of <span class="grid-pages"></span></span>
+											<button type="button" class="btn grid-nextpage"><i class="icon-chevron-right"></i></button>
+										</div>
+									</div>
+								</th>
+							</tr>
+							</tfoot>
+	
+						</table>
+					</div>
+				</div>
+
+				<input type="button" class="btn" id="datagrid-reload" value="reload" style="margin-bottom: 20px">
+			</div>
+		</section>
+		<!-- / Datagrid -->
+
+		<!-- Wizard
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">Wizard</h3>
+			<div class="box">
+				<p>
+					For more info visit <a href="http://exacttarget.github.com/fuelux/#wizard" target="_blank">http://exacttarget.github.com/fuelux/#wizard</a>.
+				</p>
+				<div class="well">
+					<div id="myWizard" class="wizard">
+						<ul class="steps">
+							<li data-target="#step1" class="active"><span class="badge badge-info">1</span>Step 1</span></li>
+							<li data-target="#step2"><span class="badge">2</span>Step 2</li>
+							<li data-target="#step3"><span class="badge">3</span>Step 3</li>
+							<li data-target="#step4"><span class="badge">4</span>Step 4</li>
+							<li data-target="#step5"><span class="badge">5</span>Step 5</li>
+						</ul>
+						<div class="actions">
+							<button class="btn btn-mini btn-prev"><i class="icon-arrow-left"></i>Prev
+							</button>
+							<button class="btn btn-mini btn-next" data-last="Finish">Next<i class="icon-arrow-right"></i></button>
+						</div>
+					</div>
+					<div class="step-content">
+						<div class="step-pane active" id="step1">This is step 1</div>
+						<div class="step-pane" id="step2">This is step 2</div>
+						<div class="step-pane" id="step3">This is step 3</div>
+						<div class="step-pane" id="step4">This is step 4</div>
+						<div class="step-pane" id="step5">This is step 5</div>
+					</div>
+					<input type="button" class="btn btn-mini" id="wizard-prev" value="prev">
+					<input type="button" class="btn btn-mini" id="wizard-next" value="next">
+					<input type="button" class="btn btn-mini" id="wizard-logItem" value="current step">
+				</div>
+			</div>
+		</section>
+		<!-- / Wizard -->
+
+		<!-- ================================================== -->
+		<section class="row-fluid">
+
+			<!-- Toggle buttons
+			================================================== -->
+			<div class="span6">
+				<h3 class="box-header">Toggle buttons</h3>
+				<div class="box">
+					<p>
+						For more info visit <a href="http://simontabor.com/toggles/" target="_blank">http://simontabor.com/toggles/</a>.
+					</p>
+					<div class="well">
+					  <div class="adminflare">
+						<div id="normal-toggle-button" class="toggle"></div>
+							<div id="text-toggle-button" class="toggle"></div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<!-- / Toggle buttons -->
+
+			<!-- Autosizing textarea
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">Autosizing textarea</h3>
+				<div class="box">
+					<p>
+						jQuery Autosize is a plugin to enable automatic height for textarea elements. For more info visit <a href="http://www.jacklmoore.com/autosize" target="_blank">http://www.jacklmoore.com/autosize</a>.
+					</p>
+					<div class="well">
+						<textarea class="span9" row-fluids="2" id="autoresize" rows="2"></textarea>
+					</div>
+				</div>
+			</div>
+			<!-- / Auto-resizing textarea -->
+		</section>
+
+		<!-- Inline editable
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">In-place editable</h3>
+			<div class="box">
+				<p>
+					X-editable allows you to create editable elements on your page. It includes both popup and inline modes. For more info visit <a href="http://vitalets.github.com/x-editable/" target="_blank">http://vitalets.github.com/x-editable/</a>.
+				</p>
+				<div style="float: right; margin-bottom: 10px">
+					<button id="enable" class="btn">enable / disable</button>
+				</div>
+				<p>Click to edit</p>
+				<table id="user" class="table table-bordered table-striped" style="clear: both">
+					<tbody>
+
+						<tr>
+							<td class="span3">Username</td>
+							<td class="span4"><a href="#" id="username" data-type="text" data-pk="1" data-name="username" data-original-title="Enter username" class="editable editable-click">superuser</a></td>
+							<td><span class="muted">Simple text field</span></td>
+						</tr>
+
+						<tr>
+							<td>First name</td>
+							<td><a href="#" id="firstname" data-type="text" data-pk="1" data-name="firstname" data-placement="right" data-placeholder="Required" data-original-title="Enter your firstname" class="editable editable-click">John</a></td>
+							<td><span class="muted">Required text field, try to submit empty string</span></td>
+						</tr>
+
+						<tr>
+							<td>Last name</td>
+							<td><a href="#" id="lastname" data-type="text" data-pk="1" data-name="lastname" data-original-title="Enter your lastname" class="editable editable-click editable-empty"></a></td>
+							<td><span class="muted">Originally empty text field</span></td>
+						</tr>
+
+						<tr>
+							<td>Sex</td>
+							<td><a href="#" id="sex" data-type="select" data-name="sex" data-pk="1" data-value="" data-original-title="Select sex" class="editable editable-click" style="color: gray;">not selected</a></td>
+							<td><span class="muted">Select, loaded from js array. Custom display</span></td>
+						</tr>
+
+						<tr>
+							<td>Status</td>
+							<td><a href="#" id="status" data-type="select" data-name="status" data-pk="1" data-value="0" data-source="/status" data-original-title="Select status" class="editable editable-click">Active</a></td>
+							<td><span class="muted">Select, loaded from server (error)</span></td>
+						</tr>
+
+						<tr>
+							<td>Date of birth</td>
+							<td><a href="#" id="dob" data-type="date" data-viewformat="dd.mm.yyyy" data-pk="1" data-name="dob" data-original-title="Select Date of birth" class="editable editable-click">15.05.1984</a></td>
+							<td><span class="muted">Date field, format dd.mm.yyyy</span></td>
+						</tr>
+
+						<tr>
+							<td>Comments</td>
+							<td><a href="#" id="comments" data-type="textarea" data-pk="1" data-name="comments" data-placeholder="Your comments here..." data-original-title="Enter comments" class="editable editable-click">awesome<br>user!</a></td>
+							<td><span class="muted">Textarea. Submit by ctrl+enter</span></td>
+						</tr>
+
+						<tr>
+							<td>Fresh fruits <sup></sup></td>
+							<td><a href="#" id="fruits" data-type="checklist" data-value="2,3" data-original-title="Select fruits" class="editable editable-click">peach<br>apple</a></td>
+							<td><span class="muted">Checklist</span></td>
+						</tr>
+
+						<tr>
+							<td>Address <sup></sup></td>
+							<td><a href="#" id="address" data-type="address" data-pk="1" data-original-title="Please, fill address" class="editable editable-click"><b>Moscow</b>, Lenina st., bld. 12</a></td>
+							<td><span class="muted">Your custom input, several fields</span></td>
+						</tr>
+
+						<tr>
+							<td>Note</td>
+							<td><span id="note" data-pk="1" data-toggle="manual" data-original-title="Enter note" class="editable" tabindex="-1">pretty note..</span></td>
+							<td><a href="#" id="pencil"><i class="icon-pencil"></i> [edit]</a> <span class="muted">Toggle by another element</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<!-- / Inline editable -->
+
+		<!-- Dialog boxes
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">Dialog boxes</h3>
+			<div class="box" style="padding-bottom: 20px">
+				<p><strong>Bootbox.js</strong> is a small JavaScript library which allows you to create programmatic dialog boxes using <a href="http://twitter.github.com/bootstrap/javascript.html#modals" target="_blank">Twitter’s Bootstrap modals</a>, without having to worry about creating, managing or removing any of the required DOM elements or JS event handlers. For more info visit <a href="http://bootboxjs.com/" target="_blank">http://bootboxjs.com/</a>.</p>
+				<button id="bootbox-alert" class="btn">Alert modal box</button>
+				<button id="bootbox-confirm" class="btn">Confirm modal box</button>
+				<button id="bootbox-prompt" class="btn">Prompt modal box</button>
+				<button id="bootbox-custom" class="btn">Custom gialog</button>
+			</div>
+		</section>
+		<!-- / Dialog boxes -->
+
+		<!-- Clickover
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">Clickover</h3>
+			<div class="box" style="padding-bottom: 20px">
+				<p>
+					BootstrapX-Clickover provides enhancements to <a href="http://twitter.github.com/bootstrap#popover" target="_blank">Twitter Bootstrap Popovers</a> to allow popovers to be opened/closed with click events and some other niceities. For more info visit <a href="https://github.com/lecar-red/bootstrapx-clickover" target="_blank">https://github.com/lecar-red/bootstrapx-clickover</a>.
+				</p>
+				<a href="#" class="btn btn-red" rel="clickover" title="Out of the Box" data-content="I will stay here until you click away from me">Click for clickover</a>
+				<a href="#" id="auto-close-co" class="btn btn-blue" title="Auto Close" data-content="I will close in 15 seconds. Wait for it....">Auto Close Clickover</a>
+				<a href="#" id="no-global-co" class="btn " title="No Global Close" data-content="You must click close button &lt;button class='btn' data-dismiss='clickover'&gt;Close&lt;/button&gt;" data-html="true">No Global Clickover</a>
+				<a href="#" id="shown-co" class="btn" title="onShown Event" data-content="You'll see alert on event. &lt;button class='btn' data-dismiss='clickover' &gt;Close&lt;/button&gt;" data-html="true">onShownClickover</a>
+				<a href="#" id="no-esc" class="btn btn-orange" title="no escape" data-content="No escape for this clickover! &lt;button class='btn' data-dismiss='clickover' &gt;Close&lt;/button&gt;" data-html="true">Esc disabled</a>
+			</div>
+		</section>
+		<!-- / Clickover -->
+		
+		<!-- Page footer
+			================================================== -->
+		<footer id="main-footer">
+			Copyright © 2013 <a href="#">Your Company</a>, all rights reserved.
+			<a href="#" class="pull-right" id="on-top-link">
+				On Top &nbsp;<i class=" icon-chevron-up"></i>
+			</a>
+		</footer>
+		<!-- / Page footer -->
+	</section>
+	<div class="notifications top-right"></div>
+</body>
+</html>

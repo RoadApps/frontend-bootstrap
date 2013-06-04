@@ -1,0 +1,29 @@
+//
+// Pills
+// --------------------------------------------------
+
+.nav-pills {
+  margin-bottom: 12px;
+  
+  & > li > a {
+    background: none;
+    color: #999999;
+    font-size: 14px;
+    padding: 8px 18px;
+    .border-radius(3px);
+  }
+
+  & > li > a:hover {
+    color: #444;
+    .box-shadow(rgba(255, 255, 255, 0.75) 0 1px 0);
+  }
+  
+  & > .active > a,
+  & > .active > a:active,
+  & > .active > a:focus,
+  & > .active > a:hover {
+    background: @activeHighlightColor;
+    color: #fff;
+    cursor: default;
+  }
+}

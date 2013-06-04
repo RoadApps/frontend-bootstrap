@@ -1,0 +1,42 @@
+.checkbox-custom {
+	i {
+		background-image: url("@{imagesPath}/form.png");
+		background-position: 0 3px;
+
+		&.checked {
+			/* checked */
+			background-position: -48px 3px;
+		}
+
+		&.disabled {
+			/* disabled */
+			background-position: -64px 3px;
+
+			&.checked {
+				/* disabled and checked */
+				background-position: -80px 3px;
+			}
+		}
+	}
+}
+
+.checkbox-custom:hover {
+	i {
+		background-position: -16px 3px;
+
+		&.checked {
+			/* checked */
+			background-position: -32px 3px;
+		}
+
+		&.disabled {
+			/* disabled */
+			background-position: -64px 3px;
+
+			&.checked {
+				/* disabled and checked */
+				background-position: -80px 3px;
+			}
+		}
+	}
+}

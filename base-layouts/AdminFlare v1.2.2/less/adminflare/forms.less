@@ -1,0 +1,177 @@
+//
+// Forms
+// --------------------------------------------------
+
+
+// Form controls
+// -------------------------
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  border: 1px solid #c4c4c4;
+  border-top-color: #aaaaaa;
+  .box-shadow(rgba(255, 255, 255, 0.9) 0px 1px 0px);
+}
+
+// Focus state
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: @inputHighlightColor;
+  .box-shadow(fadeout(@inputHighlightColor, 50%) 0 0 5px);
+}
+
+// Disabled state
+input[disabled],
+select[disabled],
+textarea[disabled] {
+  border-color: #cccccc;
+  color: #888888;
+}
+
+
+// Horisontal forms
+// -----------------
+
+.form-inline,
+.form-search {
+  button,
+  input[type="radio"],
+  input[type="submit"],
+  .btn {
+    margin: 0;
+  }
+}
+
+
+// Help text
+// ---------
+
+.help-inline,
+.help-block {
+  font-size: 13px;
+}
+
+.help-block {
+  margin-top: -6px
+}
+
+.form-horizontal input+.help-block,
+.form-horizontal select+.help-block,
+.form-horizontal textarea+.help-block,
+.form-horizontal .uneditable-input+.help-block,
+.form-horizontal .input-prepend+.help-block,
+.form-horizontal .input-append+.help-block {
+  margin-top: 3px;
+}
+
+.error ul[role="alert"],
+.warning ul[role="alert"],
+.success ul[role="alert"],
+.info ul[role="alert"] {
+  margin: 0 0 0 20px;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Input groups
+// ------------
+.meaning-input(@fontColor, @borderColor) {
+  .control-label,
+  .help-block,
+  .help-inline {
+    color: @fontColor;
+  }
+
+  .checkbox,
+  .radio,
+  input,
+  select,
+  textarea {
+    color: @fontColor;
+  }
+
+  input,
+  select,
+  textarea {
+    border-color: @borderColor;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: @borderColor;
+  }
+
+  .input-prepend .add-on,
+  .input-append .add-on {
+    color: @fontColor;
+    border-color: @borderColor;
+  }
+}
+
+.control-group {
+  &.warning {
+    .meaning-input(#aa7d29, #aa8134);
+  }
+  
+  &.error {
+    .meaning-input(#b85355, #b35d5e);
+  }
+  
+  &.success {
+    .meaning-input(#5c8846, #779867);
+  }
+  
+  &.info {
+    .meaning-input(#4e7b86, #577981);
+  }
+}
+
+.input-prepend,
+.input-append {
+  .add-on {
+    border-color: #c4c4c4;
+  }
+}
+
+.input-append .search-query + .btn {
+  border-left: none;
+}
+
+.add-on > i {
+  font-size: 14px;
+  line-height: 20px;
+}

@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>
+		AdminFlare - Components
+	</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+
+	<script src="assets/javascripts/1.2.2/adminflare-demo-init.min.js" type="text/javascript"></script>
+
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+		// Include Bootstrap stylesheet 
+		document.write('<link href="assets/css/' + DEMO_ADMINFLARE_VERSION + '/' + DEMO_CURRENT_THEME + '/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" id="bootstrap-css">');
+		// Include AdminFlare stylesheet 
+		document.write('<link href="assets/css/' + DEMO_ADMINFLARE_VERSION + '/' + DEMO_CURRENT_THEME + '/adminflare.min.css" media="all" rel="stylesheet" type="text/css" id="adminflare-css">');
+	</script>
+	
+	<script src="assets/javascripts/1.2.2/modernizr-jquery.min.js" type="text/javascript"></script>
+	<script src="assets/javascripts/1.2.2/adminflare-demo.min.js" type="text/javascript"></script>
+	<script src="assets/javascripts/1.2.2/bootstrap.min.js" type="text/javascript"></script>
+	<script src="assets/javascripts/1.2.2/adminflare.min.js" type="text/javascript"></script>
+
+	<style type="text/css">
+		.well, .box { padding-bottom: 0; }
+
+		#btns-disabled .btn, #button-dropdown-menus .btn-group { margin-right: 5px; }
+
+		#images img { margin-right: 15px; }
+
+		#counters .span4 > div { margin-bottom: 15px; }
+	</style>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			prettyPrint();
+		});
+	</script>
+</head>
+<body>
+<script type="text/javascript">demoSetBodyLayout();</script>
+	<!-- Main navigation bar
+		================================================== -->
+
+	<header class="navbar navbar-fixed-top" id="main-navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="logo" href="#"><img alt="Af_logo" src="assets/images/af-logo.png"></a>
+
+				<a class="btn nav-button collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-reorder"></span>
+				</a>
+
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <i class=" icon-caret-down"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li class="nav-header">Nav header</li>
+								<li><a href="#">Separated link</a></li>
+								<li><a href="#">One more separated link</a></li>
+							</ul>
+						</li>
+						<li class="divider-vertical"></li>
+					</ul>
+					<form class="navbar-search pull-left" action="" _lpchecked="1">
+						<input type="text" class="search-query" placeholder="Search" style="width: 120px">
+					</form>
+					<ul class="nav pull-right">
+						<li>
+							<ul class="messages">
+								<li>
+									<a href="#"><i class="icon-warning-sign"></i> 2<span class="		responsive-text"> alerts</span></a>
+								</li>
+								<li>
+									<a href="#"><i class="icon-envelope"></i> 25<span class="		responsive-text"> new messages</span></a>
+								</li>
+							</ul>
+						</li>
+						<li class="separator"></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle usermenu" data-toggle="dropdown">
+								<img alt="Avatar" src="assets/images/avatar.png">
+								<span>&nbsp;&nbsp;Admin</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Profile</a>
+								</li>
+								<li>
+									<a href="#">Settings</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="index.html">Sign In</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- / Main navigation bar -->
+	
+	<!-- Left navigation panel
+		================================================== -->
+	<nav id="left-panel">
+		<div id="left-panel-content">
+			<ul>
+				<li>
+					<a href="dashboard.html"><span class="icon-dashboard"></span>Dashboard</a>
+				</li>
+				<li>
+					<a href="layout.html"><span class="icon-th-large"></span>Layout</a>
+				</li>
+				<li>
+					<a href="typography.html"><span class="icon-font"></span>Typography</a>
+				</li>
+				<li>
+					<a href="forms.html"><span class="icon-edit"></span>Forms</a>
+				</li>
+				<li>
+					<a href="tables.html"><span class="icon-table"></span>Tables</a>
+				</li>
+				
+				<li class="active">
+					<a href="components.html"><span class="icon-inbox"></span>Components</a>
+				</li>
+				<li>
+					<a href="javascript.html"><span class="icon-cog"></span>JavaScript</a>
+				</li>
+				<li class="lp-dropdown">
+					<a href="#" class="lp-dropdown-toggle" id="extras-dropdown"><span class="icon-reorder"></span>Extras</a>
+					<ul class="lp-dropdown-menu" data-dropdown-owner="extras-dropdown">
+						<li>
+							<a tabindex="-1" href="extras-icons.html"><span class="icon-coffee"></span>Icons</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="extras-charts.html"><span class="icon-bar-chart"></span>Charts</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="extras-widgets.html"><span class="icon-star"></span>Widgets</a>
+						</li>
+					</ul>
+				</li>
+				<li class="lp-dropdown">
+					<a href="#" class="lp-dropdown-toggle" id="pages-dropdown"><span class="icon-file-alt"></span>Pages</a>
+					<ul class="lp-dropdown-menu simple" data-dropdown-owner="pages-dropdown">
+						<li>
+							<a tabindex="-1" href="index.html"><i class="icon-signin"></i>&nbsp;&nbsp;Sign In</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-signup.html"><i class="icon-check"></i>&nbsp;&nbsp;Sign Up</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-messages.html"><i class="icon-envelope-alt"></i>&nbsp;&nbsp;Messages</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-stream.html"><i class="icon-leaf"></i>&nbsp;&nbsp;Stream</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-pricing.html"><i class="icon-money"></i>&nbsp;&nbsp;Pricing</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="pages-invoice.html"><i class="icon-pencil"></i>&nbsp;&nbsp;Invoice</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="icon-caret-down"></div>
+		<div class="icon-caret-up"></div>
+	</nav>
+	<!-- / Left navigation panel -->
+	
+	<!-- Page content
+		================================================== -->
+	<section class="container">
+	
+		<!-- Buttons
+		================================================== -->
+		<section class="row-fluid" id="styleswitcher-buttons">
+			<h3 class="box-header">
+				Buttons
+			</h3>
+			<div class="box">
+				<p>
+					Button styles can be applied to anything with the .btn class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.
+				</p>
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th>Button</th>
+							<th>class=""</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td><button type="button" class="btn">Default</button></td>
+							<td><code>btn</code></td>
+							<td>Standard gray button with gradient</td>
+						</tr>
+						
+						<tr>
+							<td><button type="button" class="btn btn-blue">Blue</button></td>
+							<td>
+								<code>btn btn-blue</code>
+							</td>
+							<td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+						</tr>
+						
+						<tr>
+							<td><button type="button" class="btn btn-cyan">Cyan</button></td>
+							<td>
+								<code>btn btn-cyan</code><br>
+								<code>btn btn-info</code>
+							</td>
+							<td>Used as an alternative to the default styles</td>
+						</tr>
+						
+						<tr>
+							<td><button type="button" class="btn btn-green">Green</button></td>
+							<td>
+								<code>btn btn-green</code><br>
+								<code>btn btn-success</code>
+							</td>
+							<td>Indicates a successful or positive action</td>
+						</tr>
+						
+						<tr>
+							<td><button type="button" class="btn btn-orange">Orange</button></td>
+							<td>
+								<code>btn btn-orange</code><br>
+								<code>btn btn-warning</code>
+							</td>
+							<td>Indicates caution should be taken with this action</td>
+						</tr>
+						
+						<tr>
+							<td><button type="button" class="btn btn-red">Red</button></td>
+							<td>
+								<code>btn btn-red</code><br>
+								<code>btn btn-danger</code>
+								
+							</td>
+							<td>Indicates a dangerous or potentially negative action</td>
+						</tr>
+						
+						<tr>
+							<td><button type="button" class="btn btn-black">Black</button></td>
+							<td>
+								<code>btn btn-black</code><br>
+								<code>btn btn-inverse</code>
+							</td>
+							<td>Alternate dark gray button, not tied to a semantic action or use</td>
+						</tr>
+						
+						<tr>
+							<td><button type="button" class="btn btn-pink">Pink</button></td>
+							<td><code>btn btn-pink</code></td>
+							<td>Pink button</td>
+						</tr>
+						
+						<tr>
+							<td><button type="button" class="btn btn-link">Link</button></td>
+							<td><code>btn btn-link</code></td>
+							<td>Deemphasize a button by making it look like a link while maintaining button behavior</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<!-- / Buttons -->
+		
+		<!-- Button sizes
+		================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Button sizes
+			</h3>
+			<div class="box">
+				<div class="span4">
+					<p>
+						<button class="btn btn-large" type="button">Large button</button>
+					</p>
+					<p>
+						<button class="btn" type="button">Default button</button>
+					</p>
+					<p>
+						<button class="btn btn-small" type="button">Small button</button>
+					</p>
+					<p>
+						<button class="btn btn-mini" type="button">Mini button</button>
+					</p>
+				</div>
+				<div class="span8">
+					<pre class="prettyprint linenums">
+&lt;p&gt;
+  &lt;button class="btn btn-large" type="button"&gt;Large button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn" type="button"&gt;Default button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-small" type="button"&gt;Small button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-mini" type="button"&gt;Mini button&lt;/button&gt;
+&lt;/p&gt;
+</pre>
+				</div>
+			</div>
+		</section>
+		<!-- / Button sizes -->
+		
+		<!-- Block level buttons
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Block level buttons
+			</h3>
+			<div class="box">
+				<div class="span4">
+					<button class="btn btn-large btn-block btn-primary" type="button">Block level button</button>
+					<button class="btn btn-large btn-block" type="button">Block level button</button>
+				</div>
+				<div class="span8">
+					<pre class="prettyprint linenums">
+&lt;button class="btn btn-large btn-block btn-primary" type="button"&gt;
+  Block level button
+&lt;/button&gt;
+&lt;button class="btn btn-large btn-block" type="button"&gt;
+  Block level button
+&lt;/button&gt;
+</pre>
+				</div>
+			</div>
+		</section>
+		<!-- / Block level buttons -->
+		
+		<!-- Buttons disabled state
+			================================================== -->
+		<section class="row-fluid" id="btns-disabled">
+			<h3 class="box-header">
+				Buttons disabled state
+			</h3>
+			<div class="box" style="padding-bottom: 20px">
+				<button class="btn disabled">Silver</button>
+				<button class="btn btn-blue disabled">Blue</button>
+				<button class="btn btn-orange disabled">Orange</button>
+				<button class="btn btn-green disabled">Green</button>
+				<button class="btn btn-cyan disabled">Cyan</button>
+				<button class="btn btn-red disabled">Red</button>
+				<button class="btn btn-black disabled">Black</button>
+				<button class="btn btn-pink disabled">Pink</button>
+			</div>
+		</section>
+		<!-- / Buttons disabled state -->
+		
+		<!-- Button groups
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Button groups
+			</h3>
+			<div class="box">
+				<!-- Single button group
+					================================================== -->
+				<div class="row-fluid">
+				
+					<div class="span4">
+						<div class="btn-group">
+							<button class="btn">Left</button>
+							<button class="btn">Middle</button>
+							<button class="btn">Right</button>
+						</div>
+					</div>
+					
+					<div class="span8">
+						<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn"&gt;1&lt;/button&gt;
+  &lt;button class="btn"&gt;2&lt;/button&gt;
+  &lt;button class="btn"&gt;3&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+					</div>
+				</div>
+				<!-- / Single button group -->
+				
+				<!-- Multiple button groups
+					================================================== -->
+				<div class="row-fluid">
+					<div class="span4">
+						<div class="btn-toolbar">
+							<div class="btn-group">
+								<button class="btn">1</button>
+								<button class="btn">2</button>
+							</div>
+							<div class="btn-group">
+								<button class="btn">3</button>
+								<button class="btn">4</button>
+								<button class="btn">5</button>
+							</div>
+							<div class="btn-group">
+								<button class="btn">6</button>
+							</div>
+						</div>
+					</div>
+					<div class="span8">
+						<pre class="prettyprint linenums">
+&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt;
+	...
+  &lt;/div&gt;
+  ...
+&lt;/div&gt;
+</pre>
+					</div>
+				</div>
+				<!-- / Multiple button groups -->
+				
+				<!-- Vertical button groups
+					================================================== -->
+				<div class="row-fluid" style="margin-bottom: 20px">
+					<div class="span4">
+						<div class="btn-group btn-group-vertical">
+							<button type="button" class="btn"><i class="icon-align-left"></i></button>
+							<button type="button" class="btn"><i class="icon-align-center"></i></button>
+							<button type="button" class="btn"><i class="icon-align-right"></i></button>
+							<button type="button" class="btn"><i class="icon-align-justify"></i></button>
+						</div>
+					</div>
+					<div class="span8">
+						<pre class="prettyprint linenums">
+&lt;div class="btn-group btn-group-vertical"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+					</div>
+				</div>
+				<!-- / Vertical button groups -->
+			</div>
+		</section>
+		<!-- / Button groups -->
+		
+		<!-- Button dropdown menus
+			================================================== -->
+		<section class="row-fluid" id="button-dropdown-menus">
+			<h3 class="box-header">
+				Button dropdown menus
+			</h3>
+			<div class="box" style="padding-bottom: 20px">
+				<p>
+					Use any button to trigger a dropdown menu by placing it within a <code>.btn-group</code> and providing the proper menu markup.
+				</p>
+				<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+	Action
+	&lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+	&lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+				<div class="btn-toolbar" style="margin: 0">
+				
+					<div class="btn-group">
+						<button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+					
+					<div class="btn-group">
+						<button class="btn btn-blue dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+					
+					<div class="btn-group">
+						<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+					
+					<div class="btn-group">
+						<button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Warning <span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+					
+					<div class="btn-group">
+						<button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Success <span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+					
+					<div class="btn-group">
+						<button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Info <span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+					
+					<div class="btn-group">
+						<button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Inverse <span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+					
+					<div class="btn-group">
+						<button class="btn btn-pink dropdown-toggle" data-toggle="dropdown">Pink <span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+				</div>
+				<!-- / .btn-toolbar -->
+			</div>
+		</section>
+		
+		<!-- Split button dropdowns
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Split button dropdowns
+			</h3>
+			<div class="box" style="padding-bottom: 20px">
+				<p>
+					Building on the button group styles and markup, we can easily create a split button. Split buttons feature a standard action on the left and a dropdown toggle on the right with contextual links.
+				</p>
+				<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn"&gt;Action&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+	&lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+	&lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+				<div class="btn-toolbar" style="margin: 0;">
+				
+					<div class="btn-group">
+						<button class="btn">Action</button>
+						<button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+					
+					<div class="btn-group">
+						<button class="btn btn-blue">Action</button>
+						<button class="btn btn-blue dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+					
+					<div class="btn-group">
+						<button class="btn btn-danger">Danger</button>
+						<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+					
+					<div class="btn-group">
+						<button class="btn btn-warning">Warning</button>
+						<button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+					
+					<div class="btn-group">
+						<button class="btn btn-success">Success</button>
+						<button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+					
+					<div class="btn-group">
+						<button class="btn btn-info">Info</button>
+						<button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+					
+					<div class="btn-group">
+						<button class="btn btn-inverse">Inverse</button>
+						<button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+					
+					<div class="btn-group">
+						<button class="btn btn-pink">Pink</button>
+						<button class="btn btn-pink dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<!-- / .btn-group -->
+				</div>
+				<!-- / .btn-toolbar -->
+			</div>
+		</section>
+		<!-- / Split button dropdowns -->
+		
+		<!-- Images
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Images
+			</h3>
+			<div class="box" id="images" style="padding-bottom: 20px">
+				<div class="span4">
+					Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.
+				</div>
+				<div class="span8">
+					<pre class="prettyprint linenums">
+&lt;img src="..." class="img-rounded"&gt;
+&lt;img src="..." class="img-circle"&gt;
+&lt;img src="..." class="img-polaroid"&gt;
+</pre>
+					<div>
+						<img src="assets/images/png.png" class="img-rounded" alt="">
+						<img src="assets/images/png.png" class="img-circle" alt="">
+						<img src="assets/images/png.png" class="img-polaroid" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / Images -->
+		
+		<!-- Dropdowns
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Dropdowns
+			</h3>
+			<div class="box">
+				<div class="span4">
+					<div class="dropdown clearfix">
+						<ul class="dropdown-menu" role="menu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+							<li role="menuitem"><a tabindex="-1" href="#">Action</a></li>
+							<li role="menuitem"><a tabindex="-1" href="#">Another action</a></li>
+							<li role="menuitem"><a tabindex="-1" href="#">Something else here</a></li>
+							<li role="menuitem" class="divider"></li>
+							<li role="menuitem" class="dropdown-submenu">
+								<a tabindex="-1" href="#">More options</a>
+								<ul class="dropdown-menu">
+									<li><a tabindex="-1" href="#">Second level link</a></li>
+									<li><a tabindex="-1" href="#">Second level link</a></li>
+									<li><a tabindex="-1" href="#">Second level link</a></li>
+									<li><a tabindex="-1" href="#">Second level link</a></li>
+									<li><a tabindex="-1" href="#">Second level link</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<!-- / .dropdown -->
+				</div>
+				<div class="span8">
+					<pre class="prettyprint linenums">
+&lt;ul class="dropdown-menu" role="menu"&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="divider"&gt;&lt;/li&gt;
+  &lt;li class="dropdown-submenu"&gt;
+	&lt;a tabindex="-1" href="#"&gt;More options&lt;a&gt;
+	&lt;ul class="dropdown-menu"&gt;
+	  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Second level link&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Second level link&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Second level link&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Second level link&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Second level link&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+				</div>
+			</div>
+		</section>
+		<!-- / Dropdowns -->
+		
+		<!-- ================================================== -->
+		<section class="row-fluid">
+		
+			<!-- Basic tabs
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">
+					Basic tabs
+				</h3>
+				<div class="box" style="padding-bottom: 10px">
+					<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="active"&gt;
+	&lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Profile</a></li>
+						<li><a href="#">Messages</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- / Basic tabs -->
+			
+			<!-- Basic pills
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">
+					Basic pills
+				</h3>
+				<div class="box" style="padding-bottom: 10px">
+					<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills"&gt;
+  &lt;li class="active"&gt;
+	&lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+					<ul class="nav nav-pills">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Profile</a></li>
+						<li><a href="#">Messages</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- / Basic pills -->
+		</section>
+		
+		<!-- ================================================== -->
+		<section class="row-fluid">
+		
+			<!-- Stacked tabs
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">
+					Stacked tabs
+				</h3>
+				<div class="box" style="padding-bottom: 10px">
+					<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs nav-stacked"&gt;
+  &lt;li class="active"&gt;
+	&lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+					<ul class="nav nav-tabs nav-stacked">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Profile</a></li>
+						<li><a href="#">Messages</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- / Stacked tabs -->
+			
+			<!-- Stacked pills
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">
+					Stacked pills
+				</h3>
+				<div class="box" style="padding-bottom: 10px">
+					<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills nav-stacked"&gt;
+  &lt;li class="active"&gt;
+	&lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+					<ul class="nav nav-pills nav-stacked">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Profile</a></li>
+						<li><a href="#">Messages</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- / Stacked pills -->
+		</section>
+		
+		<!-- ================================================== -->
+		<section class="row-fluid">
+		
+			<!-- Tabs with dropdowns
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">
+					Tabs with dropdowns
+				</h3>
+				<div class="box" style="padding-bottom: 10px">
+					<pre class="prettyprint linenums">
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="dropdown"&gt;
+	&lt;a class="dropdown-toggle"
+	   data-toggle="dropdown"
+	   href="#"&gt;
+		Dropdown
+		&lt;b class="caret"&gt;&lt;/b&gt;
+	  &lt;/a&gt;
+	&lt;ul class="dropdown-menu"&gt;
+	  &lt;!-- links --&gt;
+	&lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Help</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- / Tabs with dropdowns -->
+			
+			<!-- Pills with dropdowns
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">
+					Pills with dropdowns
+				</h3>
+				<div class="box" style="padding-bottom: 10px">
+					<pre class="prettyprint linenums">
+&lt;ul class="nav nav-pills"&gt;
+  &lt;li class="dropdown"&gt;
+	&lt;a class="dropdown-toggle"
+	   data-toggle="dropdown"
+	   href="#"&gt;
+		Dropdown
+		&lt;b class="caret"&gt;&lt;/b&gt;
+	  &lt;/a&gt;
+	&lt;ul class="dropdown-menu"&gt;
+	  &lt;!-- links --&gt;
+	&lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+					<ul class="nav nav-pills">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Help</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- / Pills with dropdowns -->
+		</section>
+		
+		<!-- Nav lists
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Nav lists
+			</h3>
+			<div class="box">
+				<div class="span4">
+					<div class="well" style="max-width: 340px; padding: 8px 0;">
+						<ul class="nav nav-list">
+							<li class="nav-header">List header</li>
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#">Library</a></li>
+							<li><a href="#">Applications</a></li>
+							<li class="nav-header">Another list header</li>
+							<li><a href="#">Profile</a></li>
+							<li><a href="#">Settings</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Help</a></li>
+						</ul>
+					</div>
+					<!-- /well -->
+				</div>
+				<div class="span8">
+					<pre class="prettyprint linenums">
+&lt;ul class="nav nav-list"&gt;
+  &lt;li class="nav-header"&gt;List header&lt;/li&gt;
+  &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+</pre>
+				</div>
+			</div>
+		</section>
+		<!-- / Nav lists -->
+		
+		<!-- Breadcrumbs
+			================================================== -->
+		<section class="row-fluid" id="breadcrumbs">
+			<h3 class="box-header">
+				Breadcrumbs
+			</h3>
+			<div class="box" style="padding-bottom: 15px">
+				<div class="span4">
+					<ul class="breadcrumb">
+						<li class="active">Home</li>
+					</ul>
+					<ul class="breadcrumb">
+						<li><a href="#">Home</a> <span class="divider">/</span></li>
+						<li class="active">Library</li>
+					</ul>
+					<ul class="breadcrumb" style="margin-bottom: 5px;">
+						<li><a href="#">Home</a> <span class="divider">/</span></li>
+						<li><a href="#">Library</a> <span class="divider">/</span></li>
+						<li class="active">Data</li>
+					</ul>
+				</div>
+				<div class="span8">
+					<pre class="prettyprint linenums">
+&lt;ul class="breadcrumb"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;Data&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+				</div>
+			</div>
+		</section>
+		<!-- / Breadcrumbs -->
+		
+		<!-- Pagination
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Pagination
+			</h3>
+			<div class="box">
+				<div class="span5">
+					<div class="pagination">
+						<ul>
+							<li class="disabled"><a href="#">Prev</a></li>
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">Next</a></li>
+						</ul>
+					</div>
+					<!-- / .pagination -->
+					
+					<div class="pagination pagination-large">
+						<ul>
+							<li class="disabled"><a href="#">Prev</a></li>
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">Next</a></li>
+						</ul>
+					</div>
+					<!-- / .pagination-large -->
+
+					<div class="pagination pagination-small">
+						<ul>
+							<li class="disabled"><a href="#">Prev</a></li>
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">Next</a></li>
+						</ul>
+					</div>
+					<!-- / .pagination-small -->
+					
+					<div class="pagination pagination-mini">
+						<ul>
+							<li class="disabled"><a href="#">Prev</a></li>
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">Next</a></li>
+						</ul>
+					</div>
+					<!-- / .pagination-mini -->
+				</div>
+				<div class="span7">
+					<pre class="prettyprint linenums">
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+	&lt;li class="disabled"&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li&gt;
+	&lt;li class="active"&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="pagination pagination-large"&gt;
+  ...
+&lt;/div&gt;
+
+&lt;div class="pagination pagination-small"&gt;
+  ...
+&lt;/div&gt;
+
+&lt;div class="pagination pagination-mini"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+				</div>
+			</div>
+		</section>
+		<!-- / Pagination -->
+		
+		<!-- Pager
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Pager
+			</h3>
+			<div class="box">
+				<div class="span4">
+					<div>
+						<ul class="pager">
+							<li class="disabled"><a href="#">Previous</a></li>
+							<li><a href="#">Next</a></li>
+						</ul>
+					</div>
+					<div>
+						<ul class="pager">
+							<li class="previous disabled">
+								<a href="#">&larr; Older</a>
+							</li>
+							<li class="next">
+								<a href="#">Newer &rarr;</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="span8">
+					<pre class="prettyprint linenums">
+&lt;ul class="pager"&gt;
+  &lt;li class="disabled"&gt;&lt;a href="#"&gt;Previous&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="pager"&gt;
+  &lt;li class="previous disabled"&gt;
+	&lt;a href="#"&gt;&larr; Older&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="next"&gt;
+	&lt;a href="#"&gt;Newer &rarr;&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+				</div>
+			</div>
+		</section>
+		<!-- / Pager -->
+		
+		<!-- Counters
+			================================================== -->
+		<section class="row-fluid" id="counters">
+			<h3 class="box-header">
+				Counters
+			</h3>
+			<div class="box">
+				<div class="span4">
+					<div class="clearfix">
+						<div class="counter"><span>765</span></div>
+					</div>
+					<!-- / .counter -->
+					
+					<div class="clearfix">
+						<div class="counter small"><span>765</span></div>
+					</div>
+					<!-- / .counter .small -->
+					
+					<div class="clearfix">
+						<div class="counter-separated">
+							<span>0</span>
+							<span>0</span>
+							<span>7</span>
+							<span>6</span>
+							<span>5</span>
+						</div>
+					</div>
+					<!-- / .counter-separated -->
+
+					<div class="clearfix">
+						<div class="counter-separated small">
+							<span>0</span>
+							<span>0</span>
+							<span>7</span>
+							<span>6</span>
+							<span>5</span>
+						</div>
+					</div>
+					<!-- / .counter-separated .small -->
+				</div>
+				<div class="span8">
+					<pre class="prettyprint linenums">
+&lt;div class="counter"&gt;&lt;span>765&lt;/span>&lt;/div&gt;
+
+&lt;div class="counter small"&gt;...&lt;/div&gt;
+
+&lt;div class="counter-separated"&gt;
+  &lt;span&gt;0&lt;/span&gt;
+  &lt;span&gt;0&lt;/span&gt;
+  &lt;span&gt;7&lt;/span&gt;
+  &lt;span&gt;6&lt;/span&gt;
+  &lt;span&gt;5&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="counter-separated small"&gt;...&lt;/div&gt;
+</pre>
+				</div>
+			</div>
+		</section>
+		<!-- / Counters -->
+		
+		<!-- Labels
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Labels
+			</h3>
+			<div class="box">
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th>Labels</th>
+							<th>Markup</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="label">Default</span>
+							</td>
+							<td>
+								<code>&lt;span class="label"&gt;Default&lt;/span&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label label-success">Success</span>
+							</td>
+							<td>
+								<code>&lt;span class="label label-success"&gt;Success&lt;/span&gt;</code><br>
+								<code>&lt;span class="label label-green"&gt;Success&lt;/span&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label label-warning">Warning</span>
+							</td>
+							<td>
+								<code>&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;</code><br>
+								<code>&lt;span class="label label-orange"&gt;Warning&lt;/span&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label label-important">Important</span>
+							</td>
+							<td>
+								<code>&lt;span class="label label-important"&gt;Important&lt;/span&gt;</code><br>
+								<code>&lt;span class="label label-red"&gt;Important&lt;/span&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label label-info">Info</span>
+							</td>
+							<td>
+								<code>&lt;span class="label label-info"&gt;Info&lt;/span&gt;</code><br>
+								<code>&lt;span class="label label-cyan"&gt;Info&lt;/span&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label label-inverse">Inverse</span>
+							</td>
+							<td>
+								<code>&lt;span class="label label-inverse"&gt;Inverse&lt;/span&gt;</code><br>
+								<code>&lt;span class="label label-black"&gt;Inverse&lt;/span&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label label-blue">Blue</span>
+							</td>
+							<td>
+								<code>&lt;span class="label label-blue"&gt;Blue&lt;/span&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label label-pink">Pink</span>
+							</td>
+							<td>
+								<code>&lt;span class="label label-pink"&gt;Pink&lt;/span&gt;</code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<!-- / Labels -->
+		
+		<!-- Badges
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Badges
+			</h3>
+			<div class="box">
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Example</th>
+							<th>Markup</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								Default
+							</td>
+							<td>
+								<span class="badge">1</span>
+							</td>
+							<td>
+								<code>&lt;span class="badge"&gt;1&lt;/span&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Success
+							</td>
+							<td>
+								<span class="badge badge-success">2</span>
+							</td>
+							<td>
+								<code>&lt;span class="badge badge-success"&gt;2&lt;/span&gt;</code><br>
+								<code>&lt;span class="badge badge-green"&gt;2&lt;/span&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Warning
+							</td>
+							<td>
+								<span class="badge badge-warning">4</span>
+							</td>
+							<td>
+								<code>&lt;span class="badge badge-warning"&gt;4&lt;/span&gt;</code><br>
+								<code>&lt;span class="badge badge-orange"&gt;2&lt;/span&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Important
+							</td>
+							<td>
+								<span class="badge badge-important">6</span>
+							</td>
+							<td>
+								<code>&lt;span class="badge badge-important"&gt;6&lt;/span&gt;</code><br>
+								<code>&lt;span class="badge badge-red"&gt;2&lt;/span&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Info
+							</td>
+							<td>
+								<span class="badge badge-info">8</span>
+							</td>
+							<td>
+								<code>&lt;span class="badge badge-info"&gt;8&lt;/span&gt;</code><br>
+								<code>&lt;span class="badge badge-cyan"&gt;2&lt;/span&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Inverse
+							</td>
+							<td>
+								<span class="badge badge-inverse">10</span>
+							</td>
+							<td>
+								<code>&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;</code><br>
+								<code>&lt;span class="badge badge-black"&gt;2&lt;/span&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Blue
+							</td>
+							<td>
+								<span class="badge badge-blue">12</span>
+							</td>
+							<td>
+								<code>&lt;span class="badge badge-blue"&gt;12&lt;/span&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Pink
+							</td>
+							<td>
+								<span class="badge badge-pink">15</span>
+							</td>
+							<td>
+								<code>&lt;span class="badge badge-pink"&gt;15&lt;/span&gt;</code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<!-- / Badges -->
+		
+		<!-- Alerts
+			================================================== -->
+		<section class="row-fluid">
+			<h3 class="box-header">
+				Alerts
+			</h3>
+			<div class="box">
+				<pre class="prettyprint linenums">
+&lt;div class="alert"&gt;
+  &lt;a href="#" class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt; ...
+&lt;/div&gt;
+
+&lt;div class="alert alert-error"&gt;
+  &lt;a href="#" class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt; ...
+&lt;/div&gt;
+
+&lt;div class="alert alert-success"&gt;
+  &lt;a href="#" class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt; ...
+&lt;/div&gt;
+
+&lt;div class="alert alert-info"&gt;
+  &lt;a href="#" class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt; ...
+&lt;/div&gt;
+</pre>
+				<div class="alert">
+					<a href="#" class="close" data-dismiss="alert">&times;</a>
+					<strong>Warning!</strong> Best check yo self, you're not looking too good.
+				</div>
+				<!-- / .alert -->
+				
+				<div class="alert alert-error">
+					<a href="#" class="close" data-dismiss="alert">&times;</a>
+					<strong>Oh snap!</strong> Change a few things up and try submitting again.
+				</div>
+				<!-- / .alert-error -->
+				
+				<div class="alert alert-success">
+					<a href="#" class="close" data-dismiss="alert">&times;</a>
+					<strong>Well done!</strong> You successfully read this important alert message.
+				</div>
+				<!-- / .alert-success -->
+				
+				<div class="alert alert-info">
+					<a href="#" class="close" data-dismiss="alert">&times;</a>
+					<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+				</div>
+				<!-- / .alert-info -->
+			</div>
+		</section>
+		<!-- / Alerts -->
+		
+		<!-- Progress bars
+			================================================== -->
+		<section class="row-fluid" id="styleswitcher-progress-bars">
+			<h3 class="box-header">
+				Progress bars
+			</h3>
+			<div class="box">
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<th class="span5">Example</th>
+							<th>Markup</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<div class="progress progress-blue">
+									<div class="bar" style="width: 60%;"></div>
+								</div>
+							</td>
+							<td>
+								<code>&lt;div class="progress progress-blue"&gt;&lt;div class="bar" style="width: 60%;"&gt;&lt;/div&gt;&lt;/div&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="progress progress-cyan">
+									<div class="bar" style="width: 60%;"></div>
+								</div>
+							</td>
+							<td>
+								<code>&lt;div class="progress progress-cyan"&gt;...&lt;/div&gt;</code>
+								<code>&lt;div class="progress progress-info"&gt;...&lt;/div&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="progress progress-green">
+									<div class="bar" style="width: 60%;"></div>
+								</div>
+							</td>
+							<td>
+								<code>&lt;div class="progress progress-green"&gt;...&lt;/div&gt;</code>
+								<code>&lt;div class="progress progress-success"&gt;...&lt;/div&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="progress progress-orange">
+									<div class="bar" style="width: 60%;"></div>
+								</div>
+							</td>
+							<td>
+								<code>&lt;div class="progress progress-orange"&gt;...&lt;/div&gt;</code>
+								<code>&lt;div class="progress progress-warning"&gt;...&lt;/div&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="progress progress-red">
+									<div class="bar" style="width: 60%;"></div>
+								</div>
+							</td>
+							<td>
+								<code>&lt;div class="progress progress-red"&gt;...&lt;/div&gt;</code>
+								<code>&lt;div class="progress progress-danger"&gt;...&lt;/div&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="progress progress-black">
+									<div class="bar" style="width: 60%;"></div>
+								</div>
+							</td>
+							<td>
+								<code>&lt;div class="progress progress-black"&gt;...&lt;/div&gt;</code>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="progress progress-pink">
+									<div class="bar" style="width: 60%;"></div>
+								</div>
+							</td>
+							<td>
+								<code>&lt;div class="progress progress-pink"&gt;...&lt;/div&gt;</code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<!-- / Progress bars -->
+		
+		<section class="row-fluid">
+		
+			<!-- Striped progress bars
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">
+					Striped progress bars
+				</h3>
+				<div class="box">
+					<p>
+						Similar to the solid colors, we have varied striped progress bars. Example: <code>&lt;div class="progress progress-striped"&gt;...&lt;/div&gt;</code>
+					</p>
+					<div class="progress progress-blue progress-striped">
+						<div class="bar" style="width: 60%;"></div>
+					</div>
+					<div class="progress progress-cyan progress-striped">
+						<div class="bar" style="width: 60%;"></div>
+					</div>
+					<div class="progress progress-green progress-striped">
+						<div class="bar" style="width: 60%;"></div>
+					</div>
+					<div class="progress progress-orange progress-striped">
+						<div class="bar" style="width: 60%;"></div>
+					</div>
+					<div class="progress progress-red progress-striped">
+						<div class="bar" style="width: 60%;"></div>
+					</div>
+					<div class="progress progress-black progress-striped">
+						<div class="bar" style="width: 60%;"></div>
+					</div>
+					<div class="progress progress-pink progress-striped">
+						<div class="bar" style="width: 60%;"></div>
+					</div>
+				</div>
+			</div>
+			<!-- / Striped progress bars -->
+			
+			<!-- Animated progress bars
+				================================================== -->
+			<div class="span6">
+				<h3 class="box-header">
+					Animated progress bars
+				</h3>
+				<div class="box">
+					<p>
+						Add <code>.active</code> to <code>.progress-striped</code> to animate the stripes right to left. Not available in all versions of IE.
+					</p>
+					<div class="progress progress-blue progress-striped active">
+						<div class="bar" style="width: 60%;"></div>
+					</div>
+					<div class="progress progress-cyan progress-striped active">
+						<div class="bar" style="width: 60%;"></div>
+					</div>
+					<div class="progress progress-green progress-striped active">
+						<div class="bar" style="width: 60%;"></div>
+					</div>
+					<div class="progress progress-orange progress-striped active">
+						<div class="bar" style="width: 60%;"></div>
+					</div>
+					<div class="progress progress-red progress-striped active">
+						<div class="bar" style="width: 60%;"></div>
+					</div>
+					<div class="progress progress-black progress-striped active">
+						<div class="bar" style="width: 60%;"></div>
+					</div>
+					<div class="progress progress-pink progress-striped active">
+						<div class="bar" style="width: 60%;"></div>
+					</div>
+				</div>
+			</div>
+			<!-- / Animated progress bars -->
+		</section>
+		
+		<!-- Page footer
+			================================================== -->
+		<footer id="main-footer">
+			Copyright © 2013 <a href="#">Your Company</a>, all rights reserved.
+			<a href="#" class="pull-right" id="on-top-link">
+				On Top &nbsp;<i class=" icon-chevron-up"></i>
+			</a>
+		</footer>
+		<!-- / Page footer -->
+	</section>
+</body>
+</html>

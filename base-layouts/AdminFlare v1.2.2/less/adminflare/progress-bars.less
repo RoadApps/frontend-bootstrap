@@ -1,0 +1,139 @@
+//
+// Progress bars
+// --------------------------------------------------
+
+.progress {
+  background: #fff;
+  border: 1px solid #d6d6d6;
+  height: 9px;
+  overflow: visible;
+  .border-radius(10px);
+  .box-shadow(~"rgba(0, 0, 0, 0.09) 0 1px 2px inset, rgba(255, 255, 255, 0.8) 0px 1px 0");
+  
+  .bar {
+    background-color: #428ee4;
+    border: 1px solid;
+    font-size: 9px;
+    font-weight: 800;
+    height: 9px;
+    line-height: 8px;
+    margin: -1px;
+    
+    .border-radius(10px);
+    .box-shadow(rgba(255, 255, 255, 0.3) 0 1px 0 inset);
+    .box-sizing(content-box);
+  }
+}
+
+
+// COLORS
+// ------
+
+.progress.progress-blue {
+  .bar {
+    border-color: #3c74a9;
+    #gradient > .vertical(#52adee, #408ce4);
+    .ieBackground(darken(#52adee, 5%));
+  }
+}
+
+.progress.progress-orange,
+.progress.progress-warning {
+  .bar {
+    border-color: #da9637;
+    #gradient > .vertical(#f7c642, #f8b222);
+    .ieBackground(darken(#f7c642, 5%));
+  }
+}
+  
+.progress.progress-green,
+.progress.progress-success {
+  .bar {
+    border-color: #8cb920;
+    #gradient > .vertical(#c0e45d, #9ed831);
+    .ieBackground(darken(#c0e45d, 5%));
+  }
+}
+  
+.progress.progress-cyan,
+.progress.progress-info {
+  .bar {
+    border-color: #4aa7b0;
+    #gradient > .vertical(#7fd8db, #5dbbc4);
+    .ieBackground(darken(#7fd8db, 5%));
+  }
+}
+  
+.progress.progress-red,
+.progress.progress-danger {
+  .bar {
+    border-color: #c45132;
+    #gradient > .vertical(#f8805d, #f55b41);
+    .ieBackground(darken(#f8805d, 5%));
+  }
+}
+  
+.progress.progress-black {
+  .bar {
+    border-color: #444444;
+    #gradient > .vertical(#666666, #555555);
+    .ieBackground(darken(#666666, 5%));
+  }
+}
+  
+.progress.progress-pink {
+  .bar {
+    border-color: #aa2e62;
+    #gradient > .vertical(#f466a1, #e34d8c);
+    .ieBackground(darken(#f466a1, 5%));
+  }
+}
+
+
+// STRIPED BARS
+// ------------
+.progress.progress-blue.progress-striped {
+  .bar {
+    #gradient > .striped(#489ae8);
+  }
+}
+
+.progress.progress-orange.progress-striped,
+.progress.progress-warning.progress-striped {
+  .bar {
+    #gradient > .striped(#f8b528);
+  }
+}
+
+.progress.progress-green.progress-striped,
+.progress.progress-success.progress-striped {
+  .bar {
+    #gradient > .striped(#acdd44);
+  }
+}
+
+.progress.progress-cyan.progress-striped,
+.progress.progress-info.progress-striped {
+  .bar {
+    #gradient > .striped(#63c0c8);
+  }
+}
+
+.progress.progress-red.progress-striped,
+.progress.progress-danger.progress-striped {
+  .bar {
+    #gradient > .striped(#f65e43);
+  }
+}
+
+.progress.progress-black.progress-striped {
+  .bar {
+    #gradient > .striped(#5a5a5a);
+  }
+}
+
+.progress.progress-pink.progress-striped {
+  .bar {
+    #gradient > .striped(#e85492);
+  }
+}

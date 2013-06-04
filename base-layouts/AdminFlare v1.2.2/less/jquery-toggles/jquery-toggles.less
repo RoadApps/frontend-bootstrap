@@ -1,0 +1,72 @@
+.toggle {
+  height:28px;
+  width:80px;
+}
+
+.slide {
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  
+  // disable text selection highlighting
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  .on, .off, .blob {
+    float: left;
+  }
+  
+  .blob {
+    position: relative;
+    z-index: 99;
+    cursor: hand;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+  }
+}
+
+.adminflare {
+  .slide {
+    .box-shadow(#fff 0 1px 0);
+    .border-radius(9999px);
+    overflow: hidden !important;
+
+    .on, .off, .blob {
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 14px;
+      font-weight: 700;
+    }
+    
+    .on {
+      background: @activeHighlightColor;
+      color: #fff;
+      .border-top-left-radius(999px);
+      .border-bottom-left-radius(999px);
+      #gradient > .vertical(darken(@activeHighlightColor, 20%), @activeHighlightColor);
+
+      .ieBackground(darken(@activeHighlightColor, 5%));
+    }
+    
+    .off {
+      background: darken(@white, 20%);
+      .border-top-right-radius(999px);
+      .border-bottom-right-radius(999px);
+      #gradient > .vertical(darken(@white, 30%), darken(@white, 10%));
+
+      .ieBackground(darken(@white, 35%));
+    }
+    
+    .blob {
+      background: #fff;
+      .border-radius(9999px);
+      #gradient > .vertical(@white, darken(@white, 20%));
+
+      .ieBackground(darken(@white, 20%));
+    }
+  }
+}
