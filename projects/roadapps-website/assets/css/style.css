@@ -339,6 +339,15 @@ p.legend {
 	text-align: center;
 	margin-bottom: 5px;
 }
+.fontawesome-icon.cubo-center {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius:5px;
+	background-color: #50555b;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 5px;
+}
 .fontawesome-icon.circle-white {
 	-moz-border-radius: 75px;
 	-webkit-border-radius: 75px;
@@ -349,7 +358,7 @@ p.legend {
 	margin-bottom: 5px;
 }
 
-.fontawesome-icon.medium.circle-center, .fontawesome-icon.medium.circle-white {
+.fontawesome-icon.medium.circle-center, .fontawesome-icon.medium.circle-white, .fontawesome-icon.medium.cubo-center {
 	width: 80px;
 	height: 80px;
 	line-height: 80px;
@@ -506,6 +515,24 @@ p.legend {
 	font-size: 16px;
 	color: #4a4a4a;
 	margin-top: 15px;
+}
+.fontawesome-icon.cubo-social {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #2f2f2f;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 5px;
+	
+	-webkit-transition: background-color .2s linear, color .2s linear;
+	-moz-transition: background-color .2s linear, color .2s linear;
+	-o-transition: background-color .2s linear, color .2s linear;
+	-ms-transition: background-color .2s linear, color .2s linear;
+	transition: background-color .2s linear, color .2s linear;
+	padding: 8px;
+	min-width: 17px;
+	display: inline-block;
 }
 .fontawesome-icon.circle-social {
 	-moz-border-radius: 75px;
