@@ -1517,7 +1517,6 @@ ul.footer-list li:first-child {
 	} */	
 }
 
-
 #signup-form {
   width: 320px;
   background: #fafafa;
@@ -1553,4 +1552,17 @@ margin-bottom: 1em;
 }
 ul.thumbnails li.span3{
 	text-align: center;
+}
+
+/*sign-up*/
+.pagesignup, .pagesignup a{
+	color: #fff;
+	font-size: 14px!important;
+}
+.pagesignup label{
+	font-size: 14px!important;
+}
+
+.pagesignup li{
+	text-align:justify;
 }
