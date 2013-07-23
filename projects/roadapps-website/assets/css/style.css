@@ -144,10 +144,30 @@ p.legend {
 	border: 2px solid #FFF;
 }
 
+#header2 .callout-btn {
+	background: #fff;
+	color: #1192d3;
+	border: 2px solid #1192d3;
+
+	padding: 10px 15px;
+	display: inline-block;
+	margin-top: 30px;
+	font-weight: bold;	
+}
+#header2 .callout-btn:hover {
+	background: #1192d3;
+	color: #fff;
+	border: 2px solid #1192d3;
+}
 
 /* Header */
 #header {
 	background: #1192d3;
+	overflow: hidden;
+	
+}
+#header2 {
+	background: #fff;
 	overflow: hidden;
 	
 }
@@ -161,6 +181,12 @@ p.legend {
 }
 .navbar .nav {
 	margin-top: 34px;
+}
+#header2 .navbar .nav > li > a {
+	color: #1192d3;
+}
+#header2 .navbar .nav > li > a:hover {
+	color: #b3e1f8;
 }
 .navbar .nav > li > a {
 	color: #b3e1f8;
@@ -237,6 +263,9 @@ p.legend {
 .heading-text p {
 	font-size: 20px;
 }
+#header2 .heading-text h1 {
+	color: #1192d3;
+}
 .heading-text h1 {
 	margin-top: 60px;
 	margin-bottom: 20px;
@@ -247,6 +276,9 @@ p.legend {
 }
 .heading-text h1 span {
 	font-weight: bold;
+}
+#header2 .heading-text p {
+	color: #000;
 }
 .heading-text p {
 	color: #b3e1f8;
@@ -1556,10 +1588,11 @@ ul.thumbnails li.span3{
 
 /*sign-up*/
 .pagesignup, .pagesignup a{
-	color: #fff;
+	color: #000;
 	font-size: 14px!important;
 }
 .pagesignup label{
+	color: #000;
 	font-size: 14px!important;
 }
 
