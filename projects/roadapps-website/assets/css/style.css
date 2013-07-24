@@ -1595,7 +1595,17 @@ ul.thumbnails li.span3{
 	color: #000;
 	font-size: 14px!important;
 }
-
+.pagesignup input, .pagesignup button{
+	float:left;
+}
 .pagesignup li{
 	text-align:justify;
+	margin-bottom: 10px;
+}
+a.japossui {
+	color: #1192d3;
+	margin-top: 20px;
+}
+ a:hover.japossui{
+	color:#b3e1f8;
 }
