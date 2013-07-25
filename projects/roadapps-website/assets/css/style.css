@@ -263,7 +263,7 @@ p.legend {
 .heading-text p {
 	font-size: 20px;
 }
-#header2 .heading-text h1 {
+#header2 .heading-text h1, #interna .heading-text h1  {
 	color: #1192d3;
 }
 .heading-text h1 {
@@ -277,8 +277,8 @@ p.legend {
 .heading-text h1 span {
 	font-weight: bold;
 }
-#header2 .heading-text p {
-	color: #000;
+#header2 .heading-text p, #interna .heading-text p  {
+	color: #999;
 }
 .heading-text p {
 	color: #b3e1f8;
@@ -308,6 +308,13 @@ p.legend {
 	color: #828689;
 	font-weight: 400;
 	text-transform: uppercase;
+}
+.three  h6{
+	color: #fff;
+	text-align: center;
+}
+.three .span1{
+	margin-left: 55px;
 }
 .three p {
 	color: #5f6265;
@@ -396,6 +403,12 @@ p.legend {
 	line-height: 80px;
 	display: inline-block;
 }
+.fontawesome-icon.small.circle-center, .fontawesome-icon.small.circle-white, .fontawesome-icon.small.cubo-center {
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	display: inline-block;
+}
 .fontawesome-icon.medium.circle-yes {
 	width: 100px;
 	height: 100px;
@@ -403,6 +416,9 @@ p.legend {
 }
 .fontawesome-icon.medium {
 	font-size: 48px;
+}
+.fontawesome-icon.small {
+	font-size: 32px;
 }
 .test-quote-icon {
 	position: relative;
