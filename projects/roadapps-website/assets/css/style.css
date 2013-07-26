@@ -295,6 +295,11 @@ p.legend {
 }
 
 /* Three */
+#interna .three{
+	border-bottom: 5px solid #1192d3;
+	background: #31353a;
+	height: auto;
+}
 .three {
 	/*border-bottom: 5px solid #1192d3;*/
 	background: #31353a url("../img/graph_large.png") no-repeat scroll 50% 100%;
