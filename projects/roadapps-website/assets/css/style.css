@@ -263,7 +263,7 @@ p.legend {
 .heading-text p {
 	font-size: 20px;
 }
-#header2 .heading-text h1, #interna .heading-text h1  {
+#header2 .heading-text h1, #interna .heading-text h1, #interna .heading-text h2  {
 	color: #1192d3;
 }
 .heading-text h1 {
@@ -279,6 +279,11 @@ p.legend {
 }
 #header2 .heading-text p, #interna .heading-text p  {
 	color: #999;
+}
+#interna .heading-text .span6 p, #interna .heading-text .span6 li{
+	text-align: justify;
+	font-size: 16px;
+	color: #000;
 }
 .heading-text p {
 	color: #b3e1f8;
