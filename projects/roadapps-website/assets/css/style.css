@@ -133,7 +133,7 @@ p.legend {
 	color: #FFF;
 	border: 2px solid #FFF;
 
-	padding: 10px 15px;
+	padding: 5px 10px;
 	display: inline-block;
 	margin-top: 30px;
 	font-weight: bold;	
@@ -261,7 +261,7 @@ p.legend {
 	text-align: center;
 }
 .heading-text p {
-	font-size: 20px;
+	font-size: 18px;
 }
 #header2 .heading-text h1, #interna .heading-text h1, #interna .heading-text h2  {
 	color: #1192d3;
@@ -269,7 +269,7 @@ p.legend {
 .heading-text h1 {
 	margin-top: 60px;
 	margin-bottom: 20px;
-	font-size: 48px;
+	font-size: 45px;
 	color: #FFF;
 	font-weight: 300;
 	text-transform: uppercase;
@@ -504,8 +504,8 @@ p.legend {
 /* Testimonials */
 .testimonials {
 	background: #f6f6f6;
-	padding: 10px 0 60px 0;
-	margin-top: 60px;
+	padding: 10px 0 30px 0;
+	margin-top: 30px;
 }
 .testimonials h2 {
 	margin-top: 60px;
@@ -545,7 +545,7 @@ p.legend {
 .footer-meta {
 	background: #222;
 	color: #666;
-	font-size: 14px;
+	font-size: 13px;
 }
 .footer-meta h6 {
 	color: #FFF;
@@ -554,7 +554,7 @@ p.legend {
 }
 .footer-meta p {
 	color: #666;
-	font-size: 14px;
+	font-size: 13px;
 }
 .footer-meta .span3 {
 	margin-top: 30px;
@@ -571,7 +571,7 @@ p.legend {
 	padding: 30px 0 20px 0;
 }
 .copyright {
-	font-size: 16px;
+	font-size: 13px;
 	color: #4a4a4a;
 	margin-top: 15px;
 }
@@ -1112,7 +1112,7 @@ blockquote {
 }
 blockquote p {
 	margin-bottom: 0;
-	font-size: 20px !important;
+	font-size: 16px !important;
 	font-weight: 400 !important;
 	line-height: 26px !important;
 	color: #333 !important;
