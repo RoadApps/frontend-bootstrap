@@ -323,7 +323,7 @@ p.legend {
 }
 .three {
 	/*border-bottom: 5px solid #1192d3;*/
-	background: #31353a url("../img/graph_large.png") no-repeat scroll 50% 100%;
+	background: #1192d3 url("../img/graph_large.png") no-repeat scroll 50% 100%;
 	height: 350px;
 	text-align: center;
 	padding-top: 30px;
@@ -332,7 +332,7 @@ p.legend {
 	margin-bottom: 30px;
 }
 .three h1, .three h2, .three  h3, .three  h4 {
-	color: #828689;
+	color: #fff;
 	font-weight: 400;
 	text-transform: uppercase;
 }
