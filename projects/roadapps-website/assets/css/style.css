@@ -1284,7 +1284,7 @@ hr {
 }
 
 .navbar-inners.fixed-header-active .nav-container-inner {
-	width: 940px;
+	width: 980px;
 	margin: 0 auto;	
 }
 
@@ -1300,7 +1300,7 @@ hr {
 
 .navbar-inners.fixed-header-active .nav {
 	margin-top: 34px;
-	margin-left: 206px;	
+	margin-right: 30px;	
 }
 
 .navbar-inners.fixed-header-active .searchtophead {
