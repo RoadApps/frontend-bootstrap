@@ -197,6 +197,7 @@ p.legend {
 }
 .navbar .nav {
 	margin-top: 34px;
+	margin-left: 20%;
 }
 #header2 .navbar .nav > li > a {
 	color: #1192d3;
@@ -1257,7 +1258,7 @@ hr {
 }
 
 .fixed-header-container .navbar {
-	height: 105px;	
+	height: 55px;	
 }
 
 .navbar-inners.fixed-header-active .nav-container-outer {
@@ -1294,7 +1295,7 @@ hr {
 
 .navbar-inners.fixed-header-active .brand img {
 	max-height: 64px;
-	width: 100%;
+	/*width: 100%;*/
 }
 
 .navbar-inners.fixed-header-active .nav {
