@@ -129,9 +129,9 @@ p.legend {
 	color: #1192d3 !important;
 }
 .callout-btn {
-	background: #1192d3;
-	color: #FFF;
-	border: 2px solid #FFF;
+	background: #fff;
+	color: #1192d3;
+	border: 2px solid #1192d3;
 
 	padding: 5px 10px;
 	display: inline-block;
@@ -139,9 +139,9 @@ p.legend {
 	font-weight: bold;	
 }
 .callout-btn:hover {
-	background: #FFF;
-	color: #1192d3;
-	border: 2px solid #FFF;
+	background: #1192d3;
+	color: #fff;
+	border: 2px solid #1192d3;
 }
 
 #header2 .callout-btn {
@@ -189,7 +189,7 @@ p.legend {
 	color: #b3e1f8;
 }
 .navbar .nav > li > a {
-	color: #b3e1f8;
+	color: #1192d3;
 	text-shadow: none;
 	font-family: 'Raleway', sans-serif;
 	font-weight: bold;
@@ -203,10 +203,10 @@ p.legend {
 	transition: background-color .2s linear, color .2s linear;
 }
 .navbar .nav > li > a:hover {
-	color: #FFF;
+	color: #b3e1f8;
 }
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
-	color: #FFF;
+	color: #b3e1f8;
 	background: none;
 	
 	-webkit-box-shadow: none;
