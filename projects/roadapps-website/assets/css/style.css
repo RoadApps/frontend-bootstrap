@@ -144,6 +144,22 @@ p.legend {
 	border: 2px solid #1192d3;
 }
 
+#experimente .callout-btn {
+	background: #1192d3;
+	color: #fff;
+	border: 2px solid #fff;
+
+	padding: 5px 10px;
+	display: inline-block;
+	margin-top: 30px;
+	font-weight: bold;	
+}
+#experimente .callout-btn:hover {
+	background: #fff;
+	color: #1192d3;
+	border: 2px solid #fff;
+}
+
 #header2 .callout-btn {
 	background: #fff;
 	color: #1192d3;
@@ -344,7 +360,7 @@ p.legend {
 	margin-bottom: 5px;
 }
 .middle-headings {
-	margin-top: 40px;
+	margin-top: 100px;
 	border-bottom: 1px solid #eee;
 	margin-bottom: 20px;
 }
@@ -488,13 +504,13 @@ p.legend {
 	font-size: 13px;
 	line-height: 20px;
 	/*border: 1px solid #ddd;
-	border-top: none;*/
+	border-top: none;
 	-webkit-border-radius: 0 0 4px 4px;
 	-moz-border-radius: 0 0 4px 4px;
 	border-radius: 0 0 4px 4px;
 	-webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.055);
 	-moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.055);
-	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.055);
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.055);*/
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
@@ -1575,7 +1591,24 @@ ul.footer-list li:first-child {
 		padding: 15px;	
 	} */	
 }
-
+#contato {
+  width: 320px;
+  /*background: #fafafa;
+  padding-top: 1.5em;
+  padding-bottom: 2.5em;
+  /*-webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 6px #dddddd;
+  -moz-box-shadow: 0 6px #dddddd;
+  box-shadow: 0 6px #dddddd;*/
+}
+#contato h2 {
+  font-size: 1.8em;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+  
+}
 #signup-form {
   width: 320px;
   background: #fafafa;
@@ -1594,7 +1627,7 @@ ul.footer-list li:first-child {
   margin-bottom: 0.5em;
   text-align: center;
 }
-#signup-form p {
+#signup-form p, #contato p {
 color: #999;
 font-size: 15px;
 line-height: 18px;
