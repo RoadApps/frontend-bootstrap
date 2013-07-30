@@ -197,7 +197,7 @@ p.legend {
 }
 .navbar .nav {
 	margin-top: 34px;
-	margin-left: 20%;
+	margin-left:130px;
 }
 #header2 .navbar .nav > li > a {
 	color: #1192d3;
@@ -1284,7 +1284,7 @@ hr {
 }
 
 .navbar-inners.fixed-header-active .nav-container-inner {
-	width: 1170px;
+	width: 940px;
 	margin: 0 auto;	
 }
 
@@ -1294,12 +1294,13 @@ hr {
 }
 
 .navbar-inners.fixed-header-active .brand img {
-	max-height: 64px;
+	max-height: 69px;
 	/*width: 100%;*/
 }
 
 .navbar-inners.fixed-header-active .nav {
-	margin-top: 12px;	
+	margin-top: 34px;
+	margin-left: 206px;	
 }
 
 .navbar-inners.fixed-header-active .searchtophead {
