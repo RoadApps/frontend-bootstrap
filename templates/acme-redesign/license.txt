@@ -1,0 +1,26 @@
+ACME Dashboard Copyright 2013 Łukasz Holeczek. @: lukasz@holeczek.pl
+
+In this template I've used some Plugins and Frameworks. All plugins and frameworks are free and Open-Source.
+
+Bootstrap - http://twitter.github.com/bootstrap/
+jQuery - http://jquery.com/
+jQuery UI - http://jqueryui.com/
+jQuery Choosen - http://harvesthq.github.com/chosen/
+jQuery CLEditor - http://premiumsoftware.net/cleditor/
+jQuery DataTables - http://www.datatables.net
+jQuery elFinder - http://elfinder.org
+jQuery Flot - http://www.flotcharts.org/
+jQuery Griter - http://boedesign.com/blog/2009/07/11/growl-for-jquery-gritter/
+jQuery ImagesLoaded - http://github.com/desandro/imagesloaded
+jQuery Masonry - http://masonry.desandro.com
+jQuery Notification - https://github.com/needim/noty/graphs/contributors
+jQuery Raty - http://wbotelhos.com/raty
+jQuery Uniform - http://uniformjs.com/
+jQuery Uploadify - http://www.uploadify.com/
+ExplorerCanvas - http://excanvas.sourceforge.net/
+FullCalendar - http://arshaw.com/fullcalendar/
+jQuery Cookie Plugin - https://github.com/carhartl/jquery-cookie
+jQuery Knob - http://anthonyterrien.com/knob/
+Font Awesome - http://fortawesome.github.com/Font-Awesome/
+JustGage - http://justgage.com/
+

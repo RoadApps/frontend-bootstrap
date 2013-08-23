@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* Road Apps Custom Style */
+body{
+	background: #fff;
+}
+/* Main Horizontal menu*/
+.navbar-inner {
+	background: #327bbc;
+}
+.header-nav .nav {
+	border-right: 0px solid #2c2c31;
+	border-left: 0px solid #47474e;
+}
+.header-nav .btn {
+	border: none;
+}
+.dropdown-menu {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+/*Main Vertical menu*/
+.nav-tabs.nav-stacked>li:first-child>a {
+	-webkit-border-top-right-radius: 0px;
+	border-top-right-radius: 0px;
+	-webkit-border-top-left-radius: 0px;
+	border-top-left-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-topleft: 0px;
+}
+
+.nav-tabs.nav-stacked > li:first-child > a {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+.nav-tabs.nav-stacked > li.active > a {
+	margin: 0px;
+	border: 2px solid #eeeeee;
+	border-right: none;
+	color: #3b3b41;
+	background: #fff;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	position: relative;
+	z-index: 20;
+}
+
+.navbar .nav.pull-right,a#widgets-area-button  {
+	padding: 10px 20px 10px; 
+}
+/* main contant*/
+#content {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+/* ELEMENTS UI ------------------------------------------------------------------------------------------------------------*/
+
+/* Stats */
+.stats .stat .left .title .color {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+/* Vertical Chart*/
+.verticalChart .singleBar .bar .value {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+.verticalChart .singleBar .bar {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+/* temStats*/
+.tempStatBox .tempStat:before {
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+.tempStatBox .tempStat:after {
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+/* circleStat*/
+.circleStatsItem {
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+/*slider*/
+
+.sliderOverlay, .progressBarOverlay {
+	
+	padding: 0px !important;
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+
+.slider, .progress, .progressSlim  {
+	
+	background: #eeeeee;
+	border: 1px solid #eeeeee;
+	height: 14px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+
+.slider .ui-slider-range,
+.progress .ui-progressbar-value,
+.progressSlim .ui-progressbar-value,
+.tasks .progressSlim .ui-progressbar-value{
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+
+/* logo styles*/
+.road-logo-hor-white{
+	display: block;
+	min-height: 40px;
+	width: 140px;
+	background: url(../img/road-apps-logo-white.png) no-repeat;
+	background-size: auto 100%;
+}
