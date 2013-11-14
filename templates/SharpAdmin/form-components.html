@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Sharp Admin</title>
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="description" content="A very good admin theme">
+        <meta name="author" content="AHthemes">
+        <!-- Styles -->
+        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="assets/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="assets/jquery-ui-bootstrap/css/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+        <link href="assets/jasny-bootstrap/css/jasny-bootstrap.min.css" rel="stylesheet" />
+        <link href="assets/jasny-bootstrap/css/jasny-bootstrap-responsive.min.css" rel="stylesheet" />
+        <link href="assets/bootstrap-form-helpers/css/bootstrap-formhelpers-countries.flags.css" rel="stylesheet" />
+        <link href="assets/bootstrap-form-helpers/css/bootstrap-formhelpers-currencies.flags.css" rel="stylesheet" />
+        <link href="assets/bootstrap-form-helpers/css/bootstrap-formhelpers.css" rel="stylesheet" />
+        <link href="assets/bootstrap-colorpicker/css/colorpicker.css" rel="stylesheet" />
+        <link href="assets/chosen/css/chosen.css" rel="stylesheet" />
+        <link href="assets/csstoggles/css/toggle-switch.css" rel="stylesheet" />
+        <link href="assets/css/styles.css" rel="stylesheet" />
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.js"></script>
+        <![endif]-->
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+    </head>
+    <body>
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <a class="brand" href="index.html">Sharp Admin</a>
+                <ul class="nav">
+                    <li id="menu-icon"><a class="menu-icon" href="#"><i class="icon-reorder"></i></a></li>
+                    <li class="dropdown">
+                        <a  class="dropdown-toggle menu-icon" data-toggle="dropdown" href="#"><i class="icon-user"></i></a>
+                        <ul class="user dropdown-menu">
+                            <li>
+                                <div class="container-fluid">
+                                    <div class="row-fluid">
+                                        <div class="span4">
+                                            <img class="profile" src="assets/img/bruce.jpg" alt="">
+                                        </div>
+                                        <div class="span8 details">
+                                            <small>Welcome <a href="#">Roger</a>, busy?</small>
+                                            <ul class="unstyled">
+                                                <li><a href="#"><small><i class="icon-comments icon"></i> 12 new comments</small></a></li>
+                                                <li><a href="#"><small><i class="icon-calendar icon"></i> 6 new events</small></a></li>
+                                                <li><a href="#"><small><i class="icon-bar-chart icon"></i> 2 sales reports</small></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- End Row -->
+                                    <div class="row-fluid sales">
+                                        <div class="span12 well">
+                                            <div class="row-fluid">
+                                                <div class="border-right span6">
+                                                    <p class="text-center">Sales: $800</p>
+                                                </div>
+                                                <div class="span6">
+                                                    <p class="text-center">Users: 1267</p>
+                                                </div>
+                                            </div>
+                                            <!-- End Row -->
+                                        </div>
+                                    </div>
+                                    <!-- End Row -->
+                                </div>
+                                <!-- End Container -->
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">notifications <span class="top-alert vibrate"><span class="arrow"></span>4</span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">
+                                    <p class="padding"><img class="pull-left picture" src="assets/img/flat_icons/message.png" width="30" alt="" /><small>Hey, I wondered if you could help me as I can't log on to my account. Thanks</small></p>
+                                    <p><small class="muted"><i class="icon-user"></i> Stan Smith<span class="pull-right"><i class="icon-time"></i> 2 hours ago</span></small></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="padding"><img class="pull-left picture" src="assets/img/flat_icons/calendar.png" width="30" alt="" /><small>New calendar event: 'Greg's Birthday Party' in <span class="text-warning">2 days</span> time at 6pm</small></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="padding"><img class="pull-left picture" src="assets/img/flat_icons/charts.png" width="30" alt="" /><small>Sales of 'Product X' from 2013 Q3 are up <span class="text-success">15%</span> while others are up <span class="text-warning">2%</span></small></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="padding"><img class="pull-left picture" src="assets/img/flat_icons/cone.png" width="30" alt="" /><small><span class="text-error">An error has occurred.</span> The cron needs your attention</small></p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav pull-right search">
+                    <form class="nav-search" action="">
+                        <input type="text">
+                    </form>
+                </ul>
+            </div>
+            <!-- /.navbar-inner -->
+        </div>
+        <!-- /.navbar -->
+        <ul class="menu">
+            <li>
+                <a href="index.html"><span><img class="img-icon" src="assets/img/flat_icons/dashboard.png" alt="" />Dashboard</span></a>
+            </li>
+            <li>
+                <span><img class="img-icon" src="assets/img/flat_icons/layered.png" alt="" />Ui Features<i class="icon-angle-down"></i></span>
+                <ul>
+                    <li><a href="elements.html">Elements</a></li>
+                    <li><a href="components.html">Components</a></li>
+                    <li><a href="typography.html">Typography</a></li>
+                    <li><a href="grid.html">Grid</a></li>
+                    <li><a href="icons.html">Icons</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <span><img class="img-icon" src="assets/img/flat_icons/edit.png" alt="" />Form Elements<i class="icon-angle-down"></i></span>
+                <ul>
+                    <li><a href="form-components.html">Form Components</a></li>
+                    <li><a href="form-wizard.html">Form Wizard</a></li>
+                    <li><a href="form-editors.html">Form Editors</a></li>
+                </ul>
+            </li>
+            <li><a href="tables.html"><span><img class="img-icon" src="assets/img/flat_icons/ruler.png" alt="" />Data Tables</span></a></li>
+            <li>
+                <span><img class="img-icon" src="assets/img/flat_icons/map.png" alt="" />Maps<i class="icon-angle-down"></i></span>
+                <ul>
+                    <li><a href="google-maps.html">Google Maps</a></li>
+                    <li><a href="vector-maps.html">Vector Maps</a></li>
+                </ul>
+            </li>
+            <li><a href="charts.html"><span><img class="img-icon" src="assets/img/flat_icons/charts.png" alt="" />Charts</span></a></li>
+            <li><a href="calendar.html"><span><img class="img-icon" src="assets/img/flat_icons/calendar.png" alt="" />Calendar</span></a></li>
+            <li><a href="gallery.html"><span><img class="img-icon" src="assets/img/flat_icons/gallery.png" alt="" />Gallery</span></a></li>
+            <li>
+                <span><img class="img-icon" src="assets/img/flat_icons/projects.png" alt="" />Misc<i class="icon-angle-down"></i></span>
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="search.html">Search Results</a></li>
+                    <li><a href="invoice.html">Invoice</a></li>
+                    <li><a href="blank.html">Blank Page</a></li>
+                    <li><a href="pricing.html">Pricing Tables</a></li>
+                    <li><a href="404.html">404 Page</a></li>
+                    <li><a href="500.html">500 Page</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="page-wrap">
+            <div class="breadcrumb">
+                <a class="btn orange" href="form-components.html"><i class="icon-refresh"></i></a> <a class="btn" href="form-components.html">Form Components</a>
+                <div class="pull-right">
+                    <a class="btn btn-info" href="#"><i class="icon-calendar"></i></a> <a class="btn" href="#">13/08/13</a>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">Address Form</div>
+                                <div class="well-content">
+                                    <form class="form-horizontal">
+                                        <fieldset>
+                                            <div class="control-group">
+                                                <label class="control-label">
+                                                Full Name
+                                                </label>
+                                                <div class="controls">
+                                                    <input id="full-name" name="full-name" type="text" placeholder="full name" class="input span12">
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">
+                                                Address Line 1
+                                                </label>
+                                                <div class="controls">
+                                                    <input id="address-line1" name="address-line1" type="text" placeholder="address line 1" class="input span12">
+                                                    <p class="help-block">
+                                                        Street address, P.O. box, company name, c/o
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">
+                                                Address Line 2
+                                                </label>
+                                                <div class="controls">
+                                                    <input id="address-line2" name="address-line2" type="text" placeholder="address line 2" class="input span12">
+                                                    <p class="help-block">
+                                                        Apartment, suite , unit, building, floor, etc.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">
+                                                City / Town
+                                                </label>
+                                                <div class="controls">
+                                                    <input id="city" name="city" type="text" placeholder="city" class="input span12">
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">
+                                                State / Province / Region
+                                                </label>
+                                                <div class="controls">
+                                                    <input id="region" name="region" type="text" placeholder="state / province / region" class="input span12">
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">
+                                                Zip / Postal Code
+                                                </label>
+                                                <div class="controls">
+                                                    <input id="postal-code" name="postal-code" type="text" placeholder="zip or postal code" class="input span12">
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">
+                                                Country
+                                                </label>
+                                                <div class="controls">
+                                                    <select id="country" name="country" class="input span12">
+                                                        <option value="" selected="selected">(please select a country)</option>
+                                                        <option value="AF">Afghanistan</option>
+                                                        <option value="AL">Albania</option>
+                                                        <option value="DZ">Algeria</option>
+                                                        <option value="AS">American Samoa</option>
+                                                        <option value="AD">Andorra</option>
+                                                        <option value="AO">Angola</option>
+                                                        <option value="AI">Anguilla</option>
+                                                        <option value="AQ">Antarctica</option>
+                                                        <option value="AG">Antigua and Barbuda</option>
+                                                        <option value="AR">Argentina</option>
+                                                        <option value="AM">Armenia</option>
+                                                        <option value="AW">Aruba</option>
+                                                        <option value="AU">Australia</option>
+                                                        <option value="AT">Austria</option>
+                                                        <option value="AZ">Azerbaijan</option>
+                                                        <option value="BS">Bahamas</option>
+                                                        <option value="BH">Bahrain</option>
+                                                        <option value="BD">Bangladesh</option>
+                                                        <option value="BB">Barbados</option>
+                                                        <option value="BY">Belarus</option>
+                                                        <option value="BE">Belgium</option>
+                                                        <option value="BZ">Belize</option>
+                                                        <option value="BJ">Benin</option>
+                                                        <option value="BM">Bermuda</option>
+                                                        <option value="BT">Bhutan</option>
+                                                        <option value="BO">Bolivia</option>
+                                                        <option value="BA">Bosnia and Herzegowina</option>
+                                                        <option value="BW">Botswana</option>
+                                                        <option value="BV">Bouvet Island</option>
+                                                        <option value="BR">Brazil</option>
+                                                        <option value="IO">British Indian Ocean Territory</option>
+                                                        <option value="BN">Brunei Darussalam</option>
+                                                        <option value="BG">Bulgaria</option>
+                                                        <option value="BF">Burkina Faso</option>
+                                                        <option value="BI">Burundi</option>
+                                                        <option value="KH">Cambodia</option>
+                                                        <option value="CM">Cameroon</option>
+                                                        <option value="CA">Canada</option>
+                                                        <option value="CV">Cape Verde</option>
+                                                        <option value="KY">Cayman Islands</option>
+                                                        <option value="CF">Central African Republic</option>
+                                                        <option value="TD">Chad</option>
+                                                        <option value="CL">Chile</option>
+                                                        <option value="CN">China</option>
+                                                        <option value="CX">Christmas Island</option>
+                                                        <option value="CC">Cocos (Keeling) Islands</option>
+                                                        <option value="CO">Colombia</option>
+                                                        <option value="KM">Comoros</option>
+                                                        <option value="CG">Congo</option>
+                                                        <option value="CD">Congo, the Democratic Republic of the</option>
+                                                        <option value="CK">Cook Islands</option>
+                                                        <option value="CR">Costa Rica</option>
+                                                        <option value="CI">Cote d'Ivoire</option>
+                                                        <option value="HR">Croatia (Hrvatska)</option>
+                                                        <option value="CU">Cuba</option>
+                                                        <option value="CY">Cyprus</option>
+                                                        <option value="CZ">Czech Republic</option>
+                                                        <option value="DK">Denmark</option>
+                                                        <option value="DJ">Djibouti</option>
+                                                        <option value="DM">Dominica</option>
+                                                        <option value="DO">Dominican Republic</option>
+                                                        <option value="TP">East Timor</option>
+                                                        <option value="EC">Ecuador</option>
+                                                        <option value="EG">Egypt</option>
+                                                        <option value="SV">El Salvador</option>
+                                                        <option value="GQ">Equatorial Guinea</option>
+                                                        <option value="ER">Eritrea</option>
+                                                        <option value="EE">Estonia</option>
+                                                        <option value="ET">Ethiopia</option>
+                                                        <option value="FK">Falkland Islands (Malvinas)</option>
+                                                        <option value="FO">Faroe Islands</option>
+                                                        <option value="FJ">Fiji</option>
+                                                        <option value="FI">Finland</option>
+                                                        <option value="FR">France</option>
+                                                        <option value="FX">France, Metropolitan</option>
+                                                        <option value="GF">French Guiana</option>
+                                                        <option value="PF">French Polynesia</option>
+                                                        <option value="TF">French Southern Territories</option>
+                                                        <option value="GA">Gabon</option>
+                                                        <option value="GM">Gambia</option>
+                                                        <option value="GE">Georgia</option>
+                                                        <option value="DE">Germany</option>
+                                                        <option value="GH">Ghana</option>
+                                                        <option value="GI">Gibraltar</option>
+                                                        <option value="GR">Greece</option>
+                                                        <option value="GL">Greenland</option>
+                                                        <option value="GD">Grenada</option>
+                                                        <option value="GP">Guadeloupe</option>
+                                                        <option value="GU">Guam</option>
+                                                        <option value="GT">Guatemala</option>
+                                                        <option value="GN">Guinea</option>
+                                                        <option value="GW">Guinea-Bissau</option>
+                                                        <option value="GY">Guyana</option>
+                                                        <option value="HT">Haiti</option>
+                                                        <option value="HM">Heard and Mc Donald Islands</option>
+                                                        <option value="VA">Holy See (Vatican City State)</option>
+                                                        <option value="HN">Honduras</option>
+                                                        <option value="HK">Hong Kong</option>
+                                                        <option value="HU">Hungary</option>
+                                                        <option value="IS">Iceland</option>
+                                                        <option value="IN">India</option>
+                                                        <option value="ID">Indonesia</option>
+                                                        <option value="IR">Iran (Islamic Republic of)</option>
+                                                        <option value="IQ">Iraq</option>
+                                                        <option value="IE">Ireland</option>
+                                                        <option value="IL">Israel</option>
+                                                        <option value="IT">Italy</option>
+                                                        <option value="JM">Jamaica</option>
+                                                        <option value="JP">Japan</option>
+                                                        <option value="JO">Jordan</option>
+                                                        <option value="KZ">Kazakhstan</option>
+                                                        <option value="KE">Kenya</option>
+                                                        <option value="KI">Kiribati</option>
+                                                        <option value="KP">Korea, Democratic People's Republic of</option>
+                                                        <option value="KR">Korea, Republic of</option>
+                                                        <option value="KW">Kuwait</option>
+                                                        <option value="KG">Kyrgyzstan</option>
+                                                        <option value="LA">Lao People's Democratic Republic</option>
+                                                        <option value="LV">Latvia</option>
+                                                        <option value="LB">Lebanon</option>
+                                                        <option value="LS">Lesotho</option>
+                                                        <option value="LR">Liberia</option>
+                                                        <option value="LY">Libyan Arab Jamahiriya</option>
+                                                        <option value="LI">Liechtenstein</option>
+                                                        <option value="LT">Lithuania</option>
+                                                        <option value="LU">Luxembourg</option>
+                                                        <option value="MO">Macau</option>
+                                                        <option value="MK">Macedonia, The Former Yugoslav Republic of</option>
+                                                        <option value="MG">Madagascar</option>
+                                                        <option value="MW">Malawi</option>
+                                                        <option value="MY">Malaysia</option>
+                                                        <option value="MV">Maldives</option>
+                                                        <option value="ML">Mali</option>
+                                                        <option value="MT">Malta</option>
+                                                        <option value="MH">Marshall Islands</option>
+                                                        <option value="MQ">Martinique</option>
+                                                        <option value="MR">Mauritania</option>
+                                                        <option value="MU">Mauritius</option>
+                                                        <option value="YT">Mayotte</option>
+                                                        <option value="MX">Mexico</option>
+                                                        <option value="FM">Micronesia, Federated States of</option>
+                                                        <option value="MD">Moldova, Republic of</option>
+                                                        <option value="MC">Monaco</option>
+                                                        <option value="MN">Mongolia</option>
+                                                        <option value="MS">Montserrat</option>
+                                                        <option value="MA">Morocco</option>
+                                                        <option value="MZ">Mozambique</option>
+                                                        <option value="MM">Myanmar</option>
+                                                        <option value="NA">Namibia</option>
+                                                        <option value="NR">Nauru</option>
+                                                        <option value="NP">Nepal</option>
+                                                        <option value="NL">Netherlands</option>
+                                                        <option value="AN">Netherlands Antilles</option>
+                                                        <option value="NC">New Caledonia</option>
+                                                        <option value="NZ">New Zealand</option>
+                                                        <option value="NI">Nicaragua</option>
+                                                        <option value="NE">Niger</option>
+                                                        <option value="NG">Nigeria</option>
+                                                        <option value="NU">Niue</option>
+                                                        <option value="NF">Norfolk Island</option>
+                                                        <option value="MP">Northern Mariana Islands</option>
+                                                        <option value="NO">Norway</option>
+                                                        <option value="OM">Oman</option>
+                                                        <option value="PK">Pakistan</option>
+                                                        <option value="PW">Palau</option>
+                                                        <option value="PA">Panama</option>
+                                                        <option value="PG">Papua New Guinea</option>
+                                                        <option value="PY">Paraguay</option>
+                                                        <option value="PE">Peru</option>
+                                                        <option value="PH">Philippines</option>
+                                                        <option value="PN">Pitcairn</option>
+                                                        <option value="PL">Poland</option>
+                                                        <option value="PT">Portugal</option>
+                                                        <option value="PR">Puerto Rico</option>
+                                                        <option value="QA">Qatar</option>
+                                                        <option value="RE">Reunion</option>
+                                                        <option value="RO">Romania</option>
+                                                        <option value="RU">Russian Federation</option>
+                                                        <option value="RW">Rwanda</option>
+                                                        <option value="KN">Saint Kitts and Nevis</option>
+                                                        <option value="LC">Saint LUCIA</option>
+                                                        <option value="VC">Saint Vincent and the Grenadines</option>
+                                                        <option value="WS">Samoa</option>
+                                                        <option value="SM">San Marino</option>
+                                                        <option value="ST">Sao Tome and Principe</option>
+                                                        <option value="SA">Saudi Arabia</option>
+                                                        <option value="SN">Senegal</option>
+                                                        <option value="SC">Seychelles</option>
+                                                        <option value="SL">Sierra Leone</option>
+                                                        <option value="SG">Singapore</option>
+                                                        <option value="SK">Slovakia (Slovak Republic)</option>
+                                                        <option value="SI">Slovenia</option>
+                                                        <option value="SB">Solomon Islands</option>
+                                                        <option value="SO">Somalia</option>
+                                                        <option value="ZA">South Africa</option>
+                                                        <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                                        <option value="ES">Spain</option>
+                                                        <option value="LK">Sri Lanka</option>
+                                                        <option value="SH">St. Helena</option>
+                                                        <option value="PM">St. Pierre and Miquelon</option>
+                                                        <option value="SD">Sudan</option>
+                                                        <option value="SR">Suriname</option>
+                                                        <option value="SJ">Svalbard and Jan Mayen Islands</option>
+                                                        <option value="SZ">Swaziland</option>
+                                                        <option value="SE">Sweden</option>
+                                                        <option value="CH">Switzerland</option>
+                                                        <option value="SY">Syrian Arab Republic</option>
+                                                        <option value="TW">Taiwan, Province of China</option>
+                                                        <option value="TJ">Tajikistan</option>
+                                                        <option value="TZ">Tanzania, United Republic of</option>
+                                                        <option value="TH">Thailand</option>
+                                                        <option value="TG">Togo</option>
+                                                        <option value="TK">Tokelau</option>
+                                                        <option value="TO">Tonga</option>
+                                                        <option value="TT">Trinidad and Tobago</option>
+                                                        <option value="TN">Tunisia</option>
+                                                        <option value="TR">Turkey</option>
+                                                        <option value="TM">Turkmenistan</option>
+                                                        <option value="TC">Turks and Caicos Islands</option>
+                                                        <option value="TV">Tuvalu</option>
+                                                        <option value="UG">Uganda</option>
+                                                        <option value="UA">Ukraine</option>
+                                                        <option value="AE">United Arab Emirates</option>
+                                                        <option value="GB">United Kingdom</option>
+                                                        <option value="US">United States</option>
+                                                        <option value="UM">United States Minor Outlying Islands</option>
+                                                        <option value="UY">Uruguay</option>
+                                                        <option value="UZ">Uzbekistan</option>
+                                                        <option value="VU">Vanuatu</option>
+                                                        <option value="VE">Venezuela</option>
+                                                        <option value="VN">Viet Nam</option>
+                                                        <option value="VG">Virgin Islands (British)</option>
+                                                        <option value="VI">Virgin Islands (U.S.)</option>
+                                                        <option value="WF">Wallis and Futuna Islands</option>
+                                                        <option value="EH">Western Sahara</option>
+                                                        <option value="YE">Yemen</option>
+                                                        <option value="YU">Yugoslavia</option>
+                                                        <option value="ZM">Zambia</option>
+                                                        <option value="ZW">Zimbabwe</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">Advance Components</div>
+                                <div class="well-content">
+                                    <form class="form-horizontal">
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Upload Button
+                                            </label>
+                                            <div class="controls">
+                                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                                                    <span class="btn blue btn-file">
+                                                    <span class="fileupload-new">
+                                                    Select file
+                                                    </span>
+                                                    <span class="fileupload-exists">
+                                                    Change
+                                                    </span>
+                                                    <input type="file" />
+                                                    </span>
+                                                    <span class="fileupload-preview">			
+                                                    </span>
+                                                    <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">
+                                                    ?
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Upload image
+                                            </label>
+                                            <div class="controls">
+                                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                                                    <div class="fileupload-new thumbnail" style="width: 150px; height: 150px;">
+                                                        <img src="http://www.placehold.it/150x150/EFEFEF/AAAAAA&text=no+image" />
+                                                    </div>
+                                                    <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 150px; max-height: 150px; line-height: 20px;">
+                                                    </div>
+                                                    <div>
+                                                        <span class="btn blue btn-file">
+                                                        <span class="fileupload-new">
+                                                        Select image
+                                                        </span>
+                                                        <span class="fileupload-exists">
+                                                        Change
+                                                        </span>
+                                                        <input type="file" />
+                                                        </span>
+                                                        <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">
+                                                        Remove
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Color Picker
+                                            </label>
+                                            <div class="controls">
+                                                <div class="input-append color" id="colorpicker" data-color="rgb(255, 146, 180)" data-color-format="rgb">
+                                                    <input type="text" class="span8" placeholder="rgb(255, 146, 180)" value="" >
+                                                    <span class="add-on">
+                                                    <i style="background-color: rgb(255, 146, 180)"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">Switches</label>
+                                            <div class="controls switch blue span4">
+                                                <input id="week" class="blue" name="view" type="radio" checked>
+                                                <label for="week" onclick="">On</label>
+                                                <input id="month" class="blue" name="view" type="radio">	
+                                                <label for="month" onclick="">Off</label>
+                                                <span class="slide-button lightblue"></span>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Date Picker
+                                            </label>
+                                            <div class="controls">
+                                                <div class="bfh-datepicker">
+                                                    <div class="input-prepend bfh-datepicker-toggle" data-toggle="bfh-datepicker">
+                                                        <span class="add-on"><i class="icon-calendar"></i></span>
+                                                        <input type="text" class="input span8" readonly>
+                                                    </div>
+                                                    <div class="bfh-datepicker-calendar">
+                                                        <table class="calendar table table-bordered">
+                                                            <thead>
+                                                                <tr class="months-header">
+                                                                    <th class="month" colspan="4">
+                                                                        <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
+                                                                        <span></span>
+                                                                        <a class="next" href="#"><i class="icon-chevron-right"></i></a>
+                                                                    </th>
+                                                                    <th class="year" colspan="3">
+                                                                        <a class="previous" href="#"><i class="icon-chevron-left"></i></a>
+                                                                        <span></span>
+                                                                        <a class="next" href="#"><i class="icon-chevron-right"></i></a>
+                                                                    </th>
+                                                                </tr>
+                                                                <tr class="days-header">
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Time Picker
+                                            </label>
+                                            <div class="controls">
+                                                <div class="bfh-timepicker">
+                                                    <div class="input-prepend bfh-timepicker-toggle" data-toggle="bfh-timepicker">
+                                                        <span class="add-on"><i class="icon-time"></i></span>
+                                                        <input type="text" class="input span8" readonly>
+                                                    </div>
+                                                    <div class="bfh-timepicker-popover">
+                                                        <table class="table">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="hour">
+                                                                        <a class="next" href="#"><i class="icon-chevron-up"></i></a><br>
+                                                                        <input type="text" class="input-mini" readonly><br>
+                                                                        <a class="previous" href="#"><i class="icon-chevron-down"></i></a>
+                                                                    </td>
+                                                                    <td class="separator">:</td>
+                                                                    <td class="minute">
+                                                                        <a class="next" href="#"><i class="icon-chevron-up"></i></a><br>
+                                                                        <input type="text" class="input-mini" readonly><br>
+                                                                        <a class="previous" href="#"><i class="icon-chevron-down"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Phone Number
+                                            </label>
+                                            <div class="controls">
+                                                <input type="text" class="input span8 bfh-phone" data-format="+1 (ddd) ddd-dddd">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Google Fonts
+                                            </label>
+                                            <div class="controls">
+                                                <div class="bfh-selectbox bfh-googlefonts" data-family="Lato">
+                                                    <input type="hidden" value="">
+                                                    <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox" href="#">
+                                                    <span class="bfh-selectbox-option input-medium" data-option=""></span>
+                                                    <b class="caret"></b>
+                                                    </a>
+                                                    <div class="bfh-selectbox-options">
+                                                        <input type="text" class="bfh-selectbox-filter">
+                                                        <div role="listbox">
+                                                            <ul role="option">
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Fonts
+                                            </label>
+                                            <div class="controls">
+                                                <div class="bfh-selectbox bfh-fonts" data-family="Helvetica">
+                                                    <input type="hidden" value="">
+                                                    <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox" href="#">
+                                                    <span class="bfh-selectbox-option input-medium" data-option=""></span>
+                                                    <b class="caret"></b>
+                                                    </a>
+                                                    <div class="bfh-selectbox-options">
+                                                        <input type="text" class="bfh-selectbox-filter">
+                                                        <div role="listbox">
+                                                            <ul role="option">
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Countries
+                                            </label>
+                                            <div class="controls">
+                                                <div class="bfh-selectbox bfh-countries" data-country="US" data-flags="true">
+                                                    <input type="hidden" value="">
+                                                    <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox" href="#">
+                                                    <span class="bfh-selectbox-option input-medium" data-option=""></span>
+                                                    <b class="caret"></b>
+                                                    </a>
+                                                    <div class="bfh-selectbox-options">
+                                                        <input type="text" class="bfh-selectbox-filter">
+                                                        <div role="listbox">
+                                                            <ul role="option">
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">Form Components</div>
+                                <div class="well-content">
+                                    <form class="form-horizontal">
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Focused input
+                                            </label>
+                                            <div class="controls">
+                                                <input id="focusedInput" type="text" value="This is focused..." class="input span12">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Disabled input
+                                            </label>
+                                            <div class="controls">
+                                                <input class="input span12 disabled" type="text" disabled="" placeholder="Computer says no">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Disabled checkbox
+                                            </label>
+                                            <div class="controls">
+                                                <label class="checkbox">
+                                                    <div class="checker disabled">
+                                                        <span>
+                                                        <input type="checkbox" id="optionsCheckbox2" value="option1" disabled="">
+                                                        </span>
+                                                    </div>
+                                                    This is a disabled checkbox
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="control-group warning">
+                                            <label class="control-label" for="inputWarning">
+                                            Input with warning
+                                            </label>
+                                            <div class="controls">
+                                                <input type="text" class="input span12" id="inputWarning">
+                                                <span class="help-inline">
+                                                Something may have gone wrong
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="control-group error">
+                                            <label class="control-label" for="inputError">
+                                            Input with error
+                                            </label>
+                                            <div class="controls">
+                                                <input type="text" class="input span12" id="inputError">
+                                                <span class="help-inline">
+                                                Please correct the error
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="control-group info">
+                                            <label class="control-label" for="inputInfo">
+                                            Input with info
+                                            </label>
+                                            <div class="controls">
+                                                <input type="text" class="input span12" id="inputInfo">
+                                                <span class="help-inline">
+                                                Username is already taken
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="control-group success">
+                                            <label class="control-label" for="inputSuccess">
+                                            Input with success
+                                            </label>
+                                            <div class="controls">
+                                                <input type="text" class="input span12" id="inputSuccess">
+                                                <span class="help-inline">
+                                                Woohoo!
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">More Components</div>
+                                <div class="well-content">
+                                    <form class="form-horizontal">
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Auto Complete
+                                            </label>
+                                            <div class="controls autocomplete">
+                                                <input type="text" class="span12" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source="[&quot;Alabama&quot;,&quot;Alaska&quot;,&quot;Arizona&quot;,&quot;Arkansas&quot;,&quot;California&quot;,&quot;Colorado&quot;,&quot;Connecticut&quot;,&quot;Delaware&quot;,&quot;Florida&quot;,&quot;Georgia&quot;,&quot;Hawaii&quot;,&quot;Idaho&quot;,&quot;Illinois&quot;,&quot;Indiana&quot;,&quot;Iowa&quot;,&quot;Kansas&quot;,&quot;Kentucky&quot;,&quot;Louisiana&quot;,&quot;Maine&quot;,&quot;Maryland&quot;,&quot;Massachusetts&quot;,&quot;Michigan&quot;,&quot;Minnesota&quot;,&quot;Mississippi&quot;,&quot;Missouri&quot;,&quot;Montana&quot;,&quot;Nebraska&quot;,&quot;Nevada&quot;,&quot;New Hampshire&quot;,&quot;New Jersey&quot;,&quot;New Mexico&quot;,&quot;New York&quot;,&quot;North Dakota&quot;,&quot;North Carolina&quot;,&quot;Ohio&quot;,&quot;Oklahoma&quot;,&quot;Oregon&quot;,&quot;Pennsylvania&quot;,&quot;Rhode Island&quot;,&quot;South Carolina&quot;,&quot;South Dakota&quot;,&quot;Tennessee&quot;,&quot;Texas&quot;,&quot;Utah&quot;,&quot;Vermont&quot;,&quot;Virginia&quot;,&quot;Washington&quot;,&quot;West Virginia&quot;,&quot;Wisconsin&quot;,&quot;Wyoming&quot;]" />
+                                                <p class="help-block">
+                                                    Start typing to auto complete!. E.g: California
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Input with Tooltip
+                                            </label>
+                                            <div class="controls">
+                                                <input type="text" class="span12" data-trigger="hover" id="tooltip" data-original-title="HEY FRIEND" />                       
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Email Address Input
+                                            </label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">
+                                                    @
+                                                    </span>
+                                                    <input class="span8" type="text" placeholder="Email Address" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Currency Input
+                                            </label>
+                                            <div class="controls">
+                                                <div class="input-prepend input-append">
+                                                    <span class="add-on">
+                                                    $
+                                                    </span>
+                                                    <input class="span6" type="text" />
+                                                    <span class="add-on">
+                                                    .00
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Default Dropdown(Multiple)
+                                            </label>
+                                            <div class="controls">
+                                                <select class="chzn-select" multiple class="chzn-select" data-placeholder="Choose a Category">
+                                                    <option value="Category 1" />Category 1
+                                                    <option value="Category 2" />Category 2
+                                                    <option value="Category 3" />Category 5
+                                                    <option value="Category 4" />Category 4
+                                                    <option value="Category 3" />Category 6
+                                                    <option value="Category 4" />Category 7
+                                                    <option value="Category 3" />Category 8
+                                                    <option value="Category 4" />Category 9
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Grouped Custom Dropdown
+                                            </label>
+                                            <div class="controls">
+                                                <select data-placeholder="Your Favorite Football Team" class="chzn-select">
+                                                    <option value="" />
+                                                    <optgroup label="NFC EAST">
+                                                        <option />Dallas Cowboys
+                                                        <option />New York Giants
+                                                        <option />Philadelphia Eagles
+                                                        <option />Washington Redskins
+                                                    </optgroup>
+                                                    <optgroup label="NFC NORTH">
+                                                        <option />Chicago Bears
+                                                        <option />Detroit Lions
+                                                        <option />Green Bay Packers
+                                                        <option />Minnesota Vikings
+                                                    </optgroup>
+                                                    <optgroup label="NFC SOUTH">
+                                                        <option />Atlanta Falcons
+                                                        <option />Carolina Panthers
+                                                        <option />New Orleans Saints
+                                                        <option />Tampa Bay Buccaneers
+                                                    </optgroup>
+                                                    <optgroup label="NFC WEST">
+                                                        <option />Arizona Cardinals
+                                                        <option />St. Louis Rams
+                                                        <option />San Francisco 49ers
+                                                        <option />Seattle Seahawks
+                                                    </optgroup>
+                                                    <optgroup label="AFC EAST">
+                                                        <option />Buffalo Bills
+                                                        <option />Miami Dolphins
+                                                        <option />New England Patriots
+                                                        <option />New York Jets
+                                                    </optgroup>
+                                                    <optgroup label="AFC NORTH">
+                                                        <option />Baltimore Ravens
+                                                        <option />Cincinnati Bengals
+                                                        <option />Cleveland Browns
+                                                        <option />Pittsburgh Steelers
+                                                    </optgroup>
+                                                    <optgroup label="AFC SOUTH">
+                                                        <option />Houston Texans
+                                                        <option />Indianapolis Colts
+                                                        <option />Jacksonville Jaguars
+                                                        <option />Tennessee Titans
+                                                    </optgroup>
+                                                    <optgroup label="AFC WEST">
+                                                        <option />Denver Broncos
+                                                        <option />Kansas City Chiefs
+                                                        <option />Oakland Raiders
+                                                        <option />San Diego Chargers
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Custom Dropdown Multiple Select
+                                            </label>
+                                            <div class="controls">
+                                                <select data-placeholder="Your Favorite Football Teams" class="chzn-select" multiple="multiple">
+                                                    <option value="" />
+                                                    <optgroup label="NFC EAST">
+                                                        <option />Dallas Cowboys
+                                                        <option />New York Giants
+                                                        <option />Philadelphia Eagles
+                                                        <option />Washington Redskins
+                                                    </optgroup>
+                                                    <optgroup label="NFC NORTH">
+                                                        <option selected="" />Chicago Bears
+                                                        <option />Detroit Lions
+                                                        <option />Green Bay Packers
+                                                        <option />Minnesota Vikings
+                                                    </optgroup>
+                                                    <optgroup label="NFC SOUTH">
+                                                        <option />Atlanta Falcons
+                                                        <option selected="" />Carolina Panthers
+                                                        <option />New Orleans Saints
+                                                        <option />Tampa Bay Buccaneers
+                                                    </optgroup>
+                                                    <optgroup label="NFC WEST">
+                                                        <option />Arizona Cardinals
+                                                        <option />St. Louis Rams
+                                                        <option />San Francisco 49ers
+                                                        <option />Seattle Seahawks
+                                                    </optgroup>
+                                                    <optgroup label="AFC EAST">
+                                                        <option />Buffalo Bills
+                                                        <option />Miami Dolphins
+                                                        <option />New England Patriots
+                                                        <option />New York Jets
+                                                    </optgroup>
+                                                    <optgroup label="AFC NORTH">
+                                                        <option />Baltimore Ravens
+                                                        <option />Cincinnati Bengals
+                                                        <option />Cleveland Browns
+                                                        <option />Pittsburgh Steelers
+                                                    </optgroup>
+                                                    <optgroup label="AFC SOUTH">
+                                                        <option />Houston Texans
+                                                        <option />Indianapolis Colts
+                                                        <option />Jacksonville Jaguars
+                                                        <option />Tennessee Titans
+                                                    </optgroup>
+                                                    <optgroup label="AFC WEST">
+                                                        <option />Denver Broncos
+                                                        <option />Kansas City Chiefs
+                                                        <option />Oakland Raiders
+                                                        <option />San Diego Chargers
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Custom Dropdown Diselect
+                                            </label>
+                                            <div class="controls">
+                                                <select data-placeholder="Your Favorite Type of Bear" multiple class="chzn-select">
+                                                    <option value="" />
+                                                    <option />American Black Bear
+                                                    <option />Asiatic Black Bear
+                                                    <option />Brown Bear
+                                                    <option />Giant Panda
+                                                    <option selected="" />Sloth Bear
+                                                    <option />Sun Bear
+                                                    <option />Polar Bear
+                                                    <option />Spectacled Bear
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Currencies Dropdown
+                                            </label>
+                                            <div class="controls">
+                                                <div class="bfh-selectbox bfh-currencies" data-currency="EUR" data-flags="true">
+                                                    <input type="hidden" value="">
+                                                    <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox" href="#">
+                                                    <span class="bfh-selectbox-option input-medium" data-option=""></span>
+                                                    <b class="caret"></b>
+                                                    </a>
+                                                    <div class="bfh-selectbox-options">
+                                                        <input type="text" class="bfh-selectbox-filter">
+                                                        <div role="listbox">
+                                                            <ul role="option">
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">
+                                            Countries and States
+                                            </label>
+                                            <div class="controls">
+                                                <div id="countries_states2" class="bfh-selectbox bfh-countries" data-country="US">
+                                                    <input type="hidden" value="">
+                                                    <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox" href="#">
+                                                    <span class="bfh-selectbox-option input-medium" data-option=""></span>
+                                                    <b class="caret"></b>
+                                                    </a>
+                                                    <div class="bfh-selectbox-options">
+                                                        <div role="listbox">
+                                                            <ul role="option">
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bfh-selectbox bfh-states" data-country="countries_states2">
+                                                    <input type="hidden" value="">
+                                                    <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox" href="#">
+                                                    <span class="bfh-selectbox-option input-medium" data-option=""></span>
+                                                    <b class="caret"></b>
+                                                    </a>
+                                                    <div class="bfh-selectbox-options">
+                                                        <div role="listbox">
+                                                            <ul role="option">
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid footer">
+		        <div class="row-fluid">
+		            <div class="span12">
+		                <p class="pull-right">© 2013 Company Name. All rights reserved</p>
+		            </div>
+		        </div>
+	        </div>
+        </div>
+        <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="assets/js/excanvas.min.js"></script><![endif]-->
+        <script src="http://code.jquery.com/jquery.js" type="text/javascript"></script>	
+        <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/jquery-ui-bootstrap/js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+        <script src="assets/jasny-bootstrap/js/bootstrap-fileupload.js" type="text/javascript"></script>
+        <script src="assets/chosen/js/chosen.jquery.min.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js" type="text/javascript"></script>
+        <script src="assets/js/script.js" type="text/javascript"></script>
+        <script src="assets/js/menu.js" type="text/javascript"></script>
+        <!-- Bootstrap Form Helpers -->
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-selectbox.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-currencies.en_US.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-currencies.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-timepicker.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-countries.en_US.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-countries.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-states.en_US.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-states.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-datepicker.en_US.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-datepicker.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-fonts.codes.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-fonts.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-phone.format.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-phone.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-googlefonts.codes.js" type="text/javascript"></script>
+        <script src="assets/bootstrap-form-helpers/js/bootstrap-formhelpers-googlefonts.js" type="text/javascript"></script>
+        <script>form_components();</script>
+    </body>
+</html>

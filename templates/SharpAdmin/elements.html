@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Sharp Admin</title>
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="description" content="A very good admin theme">
+        <meta name="author" content="AHthemes">
+        <!-- Styles -->
+        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="assets/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="assets/jquery-ui-bootstrap/css/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+        <link href="assets/gritter/css/jquery.gritter.css" rel="stylesheet" />
+        <link href="assets/pnotify/css/jquery.pnotify.default.css" rel="stylesheet" />
+        <link href="assets/css/styles.css" rel="stylesheet" />
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.js"></script>
+        <![endif]-->
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+    </head>
+    <body>
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <a class="brand" href="index.html">Sharp Admin</a>
+                <ul class="nav">
+                    <li id="menu-icon"><a class="menu-icon" href="#"><i class="icon-reorder"></i></a></li>
+                    <li class="dropdown">
+                        <a  class="dropdown-toggle menu-icon" data-toggle="dropdown" href="#"><i class="icon-user"></i></a>
+                        <ul class="user dropdown-menu">
+                            <li>
+                                <div class="container-fluid">
+                                    <div class="row-fluid">
+                                        <div class="span4">
+                                            <img class="profile" src="assets/img/bruce.jpg" alt="">
+                                        </div>
+                                        <div class="span8 details">
+                                            <small>Welcome <a href="#">Roger</a>, busy?</small>
+                                            <ul class="unstyled">
+                                                <li><a href="#"><small><i class="icon-comments icon"></i> 12 new comments</small></a></li>
+                                                <li><a href="#"><small><i class="icon-calendar icon"></i> 6 new events</small></a></li>
+                                                <li><a href="#"><small><i class="icon-bar-chart icon"></i> 2 sales reports</small></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- End Row -->
+                                    <div class="row-fluid sales">
+                                        <div class="span12 well">
+                                            <div class="row-fluid">
+                                                <div class="border-right span6">
+                                                    <p class="text-center">Sales: $800</p>
+                                                </div>
+                                                <div class="span6">
+                                                    <p class="text-center">Users: 1267</p>
+                                                </div>
+                                            </div>
+                                            <!-- End Row -->
+                                        </div>
+                                    </div>
+                                    <!-- End Row -->
+                                </div>
+                                <!-- End Container -->
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">notifications <span class="top-alert vibrate"><span class="arrow"></span>4</span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">
+                                    <p class="padding"><img class="pull-left picture" src="assets/img/flat_icons/message.png" width="30" alt="" /><small>Hey, I wondered if you could help me as I can't log on to my account. Thanks</small></p>
+                                    <p><small class="muted"><i class="icon-user"></i> Stan Smith<span class="pull-right"><i class="icon-time"></i> 2 hours ago</span></small></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="padding"><img class="pull-left picture" src="assets/img/flat_icons/calendar.png" width="30" alt="" /><small>New calendar event: 'Greg's Birthday Party' in <span class="text-warning">2 days</span> time at 6pm</small></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="padding"><img class="pull-left picture" src="assets/img/flat_icons/charts.png" width="30" alt="" /><small>Sales of 'Product X' from 2013 Q3 are up <span class="text-success">15%</span> while others are up <span class="text-warning">2%</span></small></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="padding"><img class="pull-left picture" src="assets/img/flat_icons/cone.png" width="30" alt="" /><small><span class="text-error">An error has occurred.</span> The cron needs your attention</small></p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav pull-right search">
+                    <form class="nav-search" action="">
+                        <input type="text">
+                    </form>
+                </ul>
+            </div>
+            <!-- /.navbar-inner -->
+        </div>
+        <!-- /.navbar -->
+        <ul class="menu">
+            <li>
+                <a href="index.html"><span><img class="img-icon" src="assets/img/flat_icons/dashboard.png" alt="" />Dashboard</span></a>
+            </li>
+            <li class="active">
+                <span><img class="img-icon" src="assets/img/flat_icons/layered.png" alt="" />Ui Features<i class="icon-angle-down"></i></span>
+                <ul>
+                    <li><a href="elements.html">Elements</a></li>
+                    <li><a href="components.html">Components</a></li>
+                    <li><a href="typography.html">Typography</a></li>
+                    <li><a href="grid.html">Grid</a></li>
+                    <li><a href="icons.html">Icons</a></li>
+                </ul>
+            </li>
+            <li>
+                <span><img class="img-icon" src="assets/img/flat_icons/edit.png" alt="" />Form Elements<i class="icon-angle-down"></i></span>
+                <ul>
+                    <li><a href="form-components.html">Form Components</a></li>
+                    <li><a href="form-wizard.html">Form Wizard</a></li>
+                    <li><a href="form-editors.html">Form Editors</a></li>
+                </ul>
+            </li>
+            <li><a href="tables.html"><span><img class="img-icon" src="assets/img/flat_icons/ruler.png" alt="" />Data Tables</span></a></li>
+            <li>
+                <span><img class="img-icon" src="assets/img/flat_icons/map.png" alt="" />Maps<i class="icon-angle-down"></i></span>
+                <ul>
+                    <li><a href="google-maps.html">Google Maps</a></li>
+                    <li><a href="vector-maps.html">Vector Maps</a></li>
+                </ul>
+            </li>
+            <li><a href="charts.html"><span><img class="img-icon" src="assets/img/flat_icons/charts.png" alt="" />Charts</span></a></li>
+            <li><a href="calendar.html"><span><img class="img-icon" src="assets/img/flat_icons/calendar.png" alt="" />Calendar</span></a></li>
+            <li><a href="gallery.html"><span><img class="img-icon" src="assets/img/flat_icons/gallery.png" alt="" />Gallery</span></a></li>
+            <li>
+                <span><img class="img-icon" src="assets/img/flat_icons/projects.png" alt="" />Misc<i class="icon-angle-down"></i></span>
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="search.html">Search Results</a></li>
+                    <li><a href="invoice.html">Invoice</a></li>
+                    <li><a href="blank.html">Blank Page</a></li>
+                    <li><a href="pricing.html">Pricing Tables</a></li>
+                    <li><a href="404.html">404 Page</a></li>
+                    <li><a href="500.html">500 Page</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="page-wrap">
+            <div class="breadcrumb">
+                <a class="btn orange" href="elements.html"><i class="icon-refresh"></i></a> <a class="btn" href="elements.html">Elements</a>
+                <div class="pull-right">
+                    <a class="btn btn-info" href="#"><i class="icon-calendar"></i></a> <a class="btn" href="#">13/08/13</a>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">Theme Buttons</div>
+                                <div class="well-content">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td><button type="button" class="btn red">Red</button></td>
+                                                <td><code>btn red</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn blue">Blue</button></td>
+                                                <td><code>btn blue</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn lightblue">Light Blue</button></td>
+                                                <td><code>btn lightblue</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn green">Green</button></td>
+                                                <td><code>btn green</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn lightgreen">Light Green</button></td>
+                                                <td><code>btn lightgreen</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn purple">Purple</button></td>
+                                                <td><code>btn purple</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn black">Black</button></td>
+                                                <td><code>btn black</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn grey">Grey</button></td>
+                                                <td><code>btn grey</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn pink">Pink</button></td>
+                                                <td><code>btn pink</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn yellow">Yellow</button></td>
+                                                <td><code>btn yellow</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn orange">Orange</button></td>
+                                                <td><code>btn orange</code></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">Bootstrap Buttons</div>
+                                <div class="well-content">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td><button type="button" class="btn">Default</button></td>
+                                                <td><code>btn</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn btn-primary">Primary</button></td>
+                                                <td><code>btn btn-primary</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn btn-info">Info</button></td>
+                                                <td><code>btn btn-info</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn btn-success">Success</button></td>
+                                                <td><code>btn btn-success</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn btn-warning">Warning</button></td>
+                                                <td><code>btn btn-warning</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn btn-danger">Danger</button></td>
+                                                <td><code>btn btn-danger</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn btn-inverse">Inverse</button></td>
+                                                <td><code>btn btn-inverse</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="btn btn-link">Link</button></td>
+                                                <td><code>btn btn-link</code></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">Growl Alerts</div>
+                                <div class="well-content">
+                                    <div class="row-fluid">
+                                        <div class="alert">
+                                            <button type="button" class="close" data-dismiss="alert">
+                                            &times;
+                                            </button>
+                                            <strong>
+                                            Hey You!
+                                            </strong>
+                                            These notifications are in a growl like style, click on one to find out.
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span6">
+                                            <button id="add-regular" class="btn black btn-block">
+                                            Regular
+                                            </button>
+                                        </div>
+                                        <div class="span6">
+                                            <button id="add-sticky" class="btn yellow btn-block">
+                                            Sticky
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span6">
+                                            <button id="add-gritter-light" class="btn purple btn-block">
+                                            White Style
+                                            </button>
+                                        </div>
+                                        <div class="span6">
+                                            <button id="add-with-callbacks" class="btn red btn-block">
+                                            With Callbacks
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span6">
+                                            <button id="add-sticky-with-callbacks" class="btn green btn-block">
+                                            Sticky Callbacks
+                                            </button>
+                                        </div>
+                                        <div class="span6">
+                                            <button id="add-max" class="btn blue btn-block">
+                                            Max 3
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span6">
+                                            <button id="remove-all" class="btn btn-warning btn-block">
+                                            Remove All
+                                            </button>
+                                        </div>
+                                        <div class="span6">
+                                            <button id="remove-all-with-callbacks" class="btn btn-primary btn-block">
+                                            Remove with Callbacks
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">Pines Alerts</div>
+                                <div class="well-content">
+                                    <div class="row-fluid">
+                                        <div class="alert">
+                                            <button type="button" class="close" data-dismiss="alert">
+                                            &times;
+                                            </button>
+                                            <strong>
+                                            Hey You again!
+                                            </strong>
+                                            These notifications are Pines Notifications, click on one to find out.
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span6">
+                                            <button class="btn yellow btn-block" onclick="$.pnotify({ title: 'Regular Notice', text: 'Check me out! I\'m a notice.' });">
+                                            Regular Notice
+                                            </button>
+                                        </div>
+                                        <div class="span6">
+                                            <button class="btn yellow btn-block" onclick="$.pnotify({ title: 'Sticky Notice', text: 'Check me out! I\'m a sticky notice. You\'ll have to close me yourself.', hide: 									false });">
+                                            Sticky Notice
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span6">
+                                            <button class="btn purple btn-block" onclick="$.pnotify({ title: 'Sticky Success', text: 'Sticky success... I\'m not even gonna make a joke.', type: 'success', hide: 										false });">
+                                            Sticky Success
+                                            </button>
+                                        </div>
+                                        <div class="span6">
+                                            <button class="btn purple btn-block" onclick="$.pnotify({ title: 'Oh No!', text: 'Something terrible happened.', type: 'error' });">
+                                            Regular Error
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span6">
+                                            <button class="btn blue btn-block" onclick="dyn_notice();">
+                                            Dynamic Notice
+                                            </button>
+                                        </div>
+                                        <div class="span6">
+                                            <button class="btn blue btn-block" onclick="$.pnotify({ title: 'Big Notice', text: 'Check me out! I\'m tall and wide, even though my text isn\'t.', width: '500px', 										min_height: '400px' });">
+                                            Big Notice
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span12">
+                                            <button class="btn red btn-block" onclick="show_stack_info();">
+                                            What are stacks?
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">Bootstrap Alerts</div>
+                                <div class="well-content">
+                                    <div class="alert">
+                                        <button type="button" class="close" data-dismiss="alert">
+                                        &times;
+                                        </button>
+                                        <strong>
+                                        Warning!
+                                        </strong>
+                                        Best check yo self, you're not looking too good.
+                                    </div>
+                                    <div class="alert alert-error">
+                                        <button type="button" class="close" data-dismiss="alert">
+                                        &times;
+                                        </button>
+                                        <strong>
+                                        Error!
+                                        </strong>
+                                        Best check yo self, you're not looking too good.
+                                    </div>
+                                    <div class="alert alert-success">
+                                        <button type="button" class="close" data-dismiss="alert">
+                                        &times;
+                                        </button>
+                                        <strong>
+                                        Success!
+                                        </strong>
+                                        Best check yo self, you're not looking too good.
+                                    </div>
+                                    <div class="alert alert-info">
+                                        <button type="button" class="close" data-dismiss="alert">
+                                        &times;
+                                        </button>
+                                        <strong>
+                                        Info!
+                                        </strong>
+                                        Best check yo self, you're not looking too good.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">Quick Buttons</div>
+                                <div class="well-content">
+                                    <div class="row-fluid">
+                                        <div class="quick-button span4 pink">
+                                            <img class="img-icon" src="assets/img/flat_icons/message.png" alt="" />
+                                            <a href="#">
+                                                <div class="overlay">
+                                                    <p>Messages</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="quick-button span4 green">
+                                            <img class="img-icon" src="assets/img/flat_icons/person.png" alt="" />
+                                            <a href="#">
+                                                <div class="overlay">
+                                                    <p>Profile</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="quick-button span4 blue">
+                                            <img class="img-icon" src="assets/img/flat_icons/map.png" alt="" />
+                                            <a href="#">
+                                                <div class="overlay">
+                                                    <p>Map</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="quick-button span4 red">
+                                            <img class="img-icon" src="assets/img/flat_icons/calendar.png" alt="" />
+                                            <a href="#">
+                                                <div class="overlay">
+                                                    <p>Calendar</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="quick-button span4 grey">
+                                            <img class="img-icon" src="assets/img/flat_icons/ruler.png" alt="" />
+                                            <a href="#">
+                                                <div class="overlay">
+                                                    <p>Tables</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="quick-button span4 black">
+                                            <img class="img-icon" src="assets/img/flat_icons/edit.png" alt="" />
+                                            <a href="#">
+                                                <div class="overlay">
+                                                    <p>Forms</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">Progress Bars</div>
+                                <div class="well-content">
+                                    <div class="row-fluid">
+                                        <div class="span4">
+                                            <span>
+                                            Progress:
+                                            </span>
+                                            <span class="progress-bar-result-1">
+                                            </span>
+                                            %
+                                        </div>
+                                        <div class="span8">
+                                            <div id="progress-bar-1" class="progress-bar lightblue">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span4">
+                                            <span>
+                                            Coolness:
+                                            </span>
+                                            <span class="progress-bar-result-2">
+                                            </span>
+                                            %
+                                        </div>
+                                        <div class="span8">
+                                            <div id="progress-bar-2" class="blue">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span4">
+                                            <span>
+                                            Uploaded:
+                                            </span>
+                                            <span class="progress-bar-result-3">
+                                            </span>
+                                            / 78 Mb
+                                        </div>
+                                        <div class="span8">
+                                            <div id="progress-bar-3" class="grey">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">Bootstrap Bars</div>
+                                <div class="well-content">
+                                    <div class="progress">
+                                        <div class="bar pink" style="width: 69%;">
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-striped progress-success active">
+                                        <div class="bar" style="width: 58%;">
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-info">
+                                        <div class="bar lightgreen" style="width: 28%">
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-danger progress-striped">
+                                        <div class="bar lightblue" style="width: 72%">
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-striped active">
+                                        <div class="bar grey" style="width: 40%;"></div>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="bar bar-success" style="width: 15%;"></div>
+                                        <div class="bar bar-warning" style="width: 30%;"></div>
+                                        <div class="bar bar-danger" style="width: 20%;"></div>
+                                    </div>
+                                    <div class="progress progress-success">
+                                        <div class="bar orange" style="width: 40%"></div>
+                                    </div>
+                                    <div class="progress progress-warning">
+                                        <div class="bar red" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">Jquery Knobs</div>
+                                <div class="well-content">
+                                    <div class="row-fluid">
+                                        <div class="span6 knobs">
+                                            <input type="text" value="50" class="dial" data-thickness=".3" data-inputcolor="#333" data-fgcolor="#64A3D7" data-bgcolor="#ececec" data-width="150" data-height="150">
+                                        </div>
+                                        <div class="span6 knobs">
+                                            <input type="text" value="25" data-min="-50" data-max="50" class="dial2" data-thickness=".3" data-inputcolor="#333" data-fgcolor="#64A3D7" data-bgcolor="#ececec" data-width="150" data-height="150">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">Sliders</div>
+                                <div class="well-content">
+                                    <div class="row-fluid">
+                                        <div class="span4">
+                                            <span>
+                                            Profit Ratio:
+                                            </span>
+                                            <span class="slider-result">
+                                            22
+                                            </span>
+                                            %
+                                        </div>
+                                        <div class="span8">
+                                            <div id="slider" class="lightblue">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span4">
+                                            <span>
+                                            Min Profit:
+                                            </span>
+                                            $
+                                            <span class="slider-result-2">
+                                            170
+                                            </span>
+                                        </div>
+                                        <div class="span8">
+                                            <div id="slider2" class="lightblue">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span4">
+                                            <span>
+                                            Max Profit:
+                                            </span>
+                                            $
+                                            <span class="slider-result-3">
+                                            332
+                                            </span>
+                                        </div>
+                                        <div class="span8">
+                                            <div id="slider3" class="lightblue">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span4">
+                                            <span>
+                                            In Ten:
+                                            </span>
+                                            <span class="slider-result-4">
+                                            20
+                                            </span>
+                                        </div>
+                                        <div class="span8">
+                                            <div id="slider4" class="lightblue">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span4">
+                                            <span>
+                                            Price Range:
+                                            </span>
+                                            <span class="slider-result-5">
+                                            $163 - $354
+                                            </span>
+                                        </div>
+                                        <div class="span8">
+                                            <div id="slider5" class="lightblue">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">Vertical Sliders</div>
+                                <div class="well-content">
+                                    <div class="row-fluid">
+                                        <div class="span2">
+                                            <div id="slider-horizontal-1" class="slider-horizontal lightblue">
+                                            </div>
+                                        </div>
+                                        <div class="span2">
+                                            <div id="slider-horizontal-2" class="slider-horizontal blue">
+                                            </div>
+                                        </div>
+                                        <div class="span2">
+                                            <div id="slider-horizontal-3" class="slider-horizontal grey">
+                                            </div>
+                                        </div>
+                                        <div class="span2">
+                                            <div id="slider-horizontal-4" class="slider-horizontal black">
+                                            </div>
+                                        </div>
+                                        <div class="span2">
+                                            <div id="slider-horizontal-5" class="slider-horizontal pink">
+                                            </div>
+                                        </div>
+                                        <div class="span2">
+                                            <div id="slider-horizontal-6" class="slider-horizontal orange">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12 well">
+                                <div class="title">Badges & Labels</div>
+                                <div class="well-content">
+                                    <div class="row-fluid">
+                                        <div class="span6">
+                                            <div class="row-fluid">
+                                                <div class="12">
+                                                    <p>This is a
+                                                        <span class="label grey">
+                                                        Default
+                                                        </span>
+                                                        label
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="12">
+                                                    <p>This is
+                                                        <span class="label green">
+                                                        Success
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="12">
+                                                    <p>I'm
+                                                        <span class="label yellow">
+                                                        Warning
+                                                        </span>
+                                                        you
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="12">
+                                                    <p>Now this is
+                                                        <span class="label red">
+                                                        Important
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="12">
+                                                    <p>Not enough
+                                                        <span class="label lightblue">
+                                                        Info
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="12">
+                                                    <p>This is
+                                                        <span class="label black">
+                                                        Inverse
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="span6">
+                                            <div class="row-fluid">
+                                                <div class="12">
+                                                    <p>I'm number
+                                                        <span class="badge">
+                                                        1
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="12">
+                                                    <p>The number
+                                                        <span class="badge badge-success">
+                                                        2
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="12">
+                                                    <p>Its been
+                                                        <span class="badge badge-warning">
+                                                        4
+                                                        </span>
+                                                        hours
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="12">
+                                                    <p>Fav number
+                                                        <span class="badge badge-important">
+                                                        6
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="12">
+                                                    <p>7 
+                                                        <span class="badge badge-info">
+                                                        8
+                                                        </span>
+                                                        9
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="12">
+                                                    <p>and 
+                                                        <span class="badge badge-inverse">
+                                                        10
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid footer">
+		        <div class="row-fluid">
+		            <div class="span12">
+		                <p class="pull-right">© 2013 Company Name. All rights reserved</p>
+		            </div>
+		        </div>
+	        </div>
+        </div>
+        <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="assets/js/excanvas.min.js"></script><![endif]-->
+        <script src="http://code.jquery.com/jquery.js" type="text/javascript"></script>	
+        <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/jquery-ui-bootstrap/js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+        <script src="assets/gritter/js/jquery.gritter.min.js" type="text/javascript"></script>
+        <script src="assets/pnotify/js/jquery.pnotify.min.js" type="text/javascript"></script>
+        <script src="assets/jquery-knob/js/jquery.knob.js" type="text/javascript"></script>
+        <script src="assets/js/script.js" type="text/javascript"></script>
+        <script src="assets/js/menu.js" type="text/javascript"></script>
+        <script>ui_elements();</script>
+    </body>
+</html>
